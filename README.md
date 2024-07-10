@@ -1,4 +1,4 @@
-# 「7月10日」最高速度22.7M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接  更新时间 2024-07-10 10:47:28
+# 「7月10日」最高速度22M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接  更新时间 2024-07-10 11:54:12
 所有免费clash节点都爬取自网络，请勿用于非法用途 。节点地址：<a href="https://clashnyanpasu.github.io" target="_blank">点击跳转</a>
 
 ## clash使用教程：
