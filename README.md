@@ -1,4 +1,4 @@
-# 「12月11日」最高速度19M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐  更新时间 2024-12-11 10:10:44
+# 「12月14日」最高速度20.8M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐  更新时间 2024-12-14 10:18:49
 所有免费clash节点都爬取自网络，请勿用于非法用途 。节点地址：<a href="https://clashnyanpasu.github.io" target="_blank">点击跳转</a>
 
 ## clash使用教程：
@@ -9,19 +9,19 @@
 
 ### Clash订阅链接
 
-- https://clashnyanpasu.github.io/uploads/2024/12/0-20241211.yaml
-- https://clashnyanpasu.github.io/uploads/2024/12/1-20241211.yaml
-- https://clashnyanpasu.github.io/uploads/2024/12/2-20241211.yaml
-- https://clashnyanpasu.github.io/uploads/2024/12/3-20241211.yaml
-- https://clashnyanpasu.github.io/uploads/2024/12/4-20241211.yml
+- https://clashnyanpasu.github.io/uploads/2024/12/0-20241214.yaml
+- https://clashnyanpasu.github.io/uploads/2024/12/1-20241214.yaml
+- https://clashnyanpasu.github.io/uploads/2024/12/2-20241214.yaml
+- https://clashnyanpasu.github.io/uploads/2024/12/3-20241214.yaml
+- https://clashnyanpasu.github.io/uploads/2024/12/4-20241214.yml
 
 ### V2ray订阅链接
 
-- https://clashnyanpasu.github.io/uploads/2024/12/0-20241211.txt
-- https://clashnyanpasu.github.io/uploads/2024/12/1-20241211.txt
-- https://clashnyanpasu.github.io/uploads/2024/12/2-20241211.txt
-- https://clashnyanpasu.github.io/uploads/2024/12/3-20241211.txt
-- https://clashnyanpasu.github.io/uploads/2024/12/4-20241211.txt
+- https://clashnyanpasu.github.io/uploads/2024/12/0-20241214.txt
+- https://clashnyanpasu.github.io/uploads/2024/12/1-20241214.txt
+- https://clashnyanpasu.github.io/uploads/2024/12/2-20241214.txt
+- https://clashnyanpasu.github.io/uploads/2024/12/3-20241214.txt
+- https://clashnyanpasu.github.io/uploads/2024/12/4-20241214.txt
 
 ## 更多clash节点订阅 ：
 
