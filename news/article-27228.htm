@@ -1,0 +1,221 @@
+<!doctype html>
+<html class="no-js" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashnyanpasu.github.io/news/article-27228.htm" />
+    <meta charset="utf-8">
+    <!--====== Title ======-->
+    <title>ES的searchAfter使用详解</title>
+        <meta name="description" content="searchAfter简单来说就是将from。。。size中的from用searchAfter的sort字段表示，通过不断更新此sort字段实现向下滚动效果。但是和from不同的是对数据更新不敏感。 " />
+        <link rel="icon" href="/assets/website/img/clashnyanpasu/favicon.ico" type="image/x-icon"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--====== Magnific Popup CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/magnific-popup.css">
+    <!--====== Slick CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/slick.css">
+    <!--====== Line Icons CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/LineIcons.css">
+    <!--====== Bootstrap CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/bootstrap.min.css">
+    <!--====== Default CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/default.css">
+    <!--====== Style CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/style.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7F56WL29Y8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7F56WL29Y8');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!--====== PRELOADER PART START ======-->
+    <div class="preloader">
+        <div class="loader">
+            <div class="ytp-spinner">
+                <div class="ytp-spinner-container">
+                    <div class="ytp-spinner-rotator">
+                        <div class="ytp-spinner-left">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                        <div class="ytp-spinner-right">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--====== PRELOADER PART ENDS ======-->
+    <!--====== NAVBAR TWO PART START ======-->
+    <section class="navbar-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <nav class="navbar navbar-expand-lg">
+                                                <a class="navbar-brand top" href="/">
+                            Clash Nyanpasu
+                        </a>
+                                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTwo" aria-controls="navbarTwo" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="toggler-icon"></span>
+                            <span class="toggler-icon"></span>
+                            <span class="toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse sub-menu-bar" id="navbarTwo">
+                            <ul class="navbar-nav m-auto">
+                                                                <li class="nav-item"><a href="/">首页</a></li>
+                                                                <li class="nav-item"><a href="/free-nodes/">免费节点</a></li>
+                                                                <li class="nav-item"><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                <li class="nav-item"><a href="/news/">新闻资讯</a></li>
+                                                                <li class="nav-item"><a href="#">关于</a></li>
+                                <li class="nav-item"><a href="#">链接</a></li>
+                            </ul>
+                        </div>
+
+                    </nav> <!-- navbar -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+    <!--====== NAVBAR TWO PART ENDS ======-->
+    <!--====== SLIDER PART START ======-->
+    <section id="home" class="slider_area">
+        <div id="carouselThree" class="carousel slide sub-page" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="slider-content">
+                                    <h1 class="title">ES的searchAfter使用详解</h1>
+                                    <p class="text">
+                                        <a href="/">首页</a> / 
+                                        <a href="/news/">新闻资讯</a> / 
+                                        <span>正文</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div> <!-- row -->
+                    </div> <!-- container -->
+                    <div class="slider-image-box d-none d-lg-flex align-items-end">
+                        <div class="slider-image">
+                            <img href="/assets/website/img/clashnyanpasu/slider/1.png" alt="Hero">
+                        </div> <!-- slider-imgae -->
+                    </div> <!-- slider-imgae box -->
+                </div> <!-- carousel-item -->
+            </div>
+        </div>
+    </section>
+    <!--====== SLIDER PART ENDS ======-->
+    <!--====== ABOUT PART START ======-->
+    <section id=about class=about-area>
+        <div class=container>
+            <div class="row">
+                <div class="col-md-9">
+                                      				  				  				<div id="content_views" class="markdown_views prism-atom-one-dark"> <p>searchAfter简单来说就是将from。。。size中的from用searchAfter的sort字段表示，通过不断更新此sort字段实现向下滚动效果。但是和from不同的是对数据更新不敏感。</p> <p><a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://www.elastic.co/guide/en/elasticsearch/reference/8.0/paginate-search-results.html#search-after"  rel="nofollow">search after官网介绍</a><br /><img decoding="async" src="http://img.555519.xyz/uploads3/20220609/4f273cb0ff1b9cc906caeef24f386993.jpg" alt="ES的searchAfter使用详解"><br /> 使用search_after时要求你的query值和sort值相同。更具体点是要求你的字段相同，你可以修改它的逻辑，比如你可以查时间为a的数据，那么你将逻辑改为比a大或者比a小都可以，但是你的逻辑必须是时间。sort同理，你可以升序也可以降序但你用来排序的字段不要变。</p> <p>search-after使用需知：<br /> 1 使用search-after时不要修改你的query和sort字段<br /> 2 排序后的每条数据都是含有自己的sort值的，且他们都可以作为你接下来的search-after的值<br /> 3 请确保你的sort中最后得到的值是唯一的，比如有些数据你用时间排序，你的时间精确度不高导致sort有可能重复，那么你使用search-after后得到的值可能不符合你的预期。有可能有丢失，官方提供的思路是将_doc等元数据也放入排序字段中，因为_doc等数据一般是唯一的，将其加入一般可以保证你的sort字段唯一。</p> <p>我写了这样个实例，使用@timestamp和_doc来排序，并且将每条数据和它的sort值打印出来。</p> <pre><code class="prism language-c">public<span class="token keyword">static</span><span class="token keyword">void</span><span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span>         RestHighLevelClient restHighLevelClient<span class="token operator">=</span> TestEsCreate<span class="token punctuation">.</span><span class="token function">getEsClient</span><span class="token punctuation">(</span><span class="token string">"**.**.***.***:*****"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//这里是创建RestHighLevelClient的实例，具体实现可以看我之前的代码</span>         SearchRequest searchRequest<span class="token operator">=</span> new<span class="token function">SearchRequest</span><span class="token punctuation">(</span><span class="token string">"logstash-applog-*"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>         searchRequest<span class="token punctuation">.</span><span class="token function">source</span><span class="token punctuation">(</span>new<span class="token function">SearchSourceBuilder</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">query</span><span class="token punctuation">(</span>new<span class="token function">BoolQueryBuilder</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span>QueryBuilders<span class="token punctuation">.</span><span class="token function">termQuery</span><span class="token punctuation">(</span><span class="token string">"projectName"</span><span class="token punctuation">,</span><span class="token string">"*******"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token string">"@timestamp"</span><span class="token punctuation">,</span> SortOrder<span class="token punctuation">.</span>ASC<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token string">"_doc"</span><span class="token punctuation">,</span> SortOrder<span class="token punctuation">.</span>ASC<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>         try<span class="token punctuation">{<!-- --></span>             SearchResponse searchResponse<span class="token operator">=</span> restHighLevelClient<span class="token punctuation">.</span><span class="token function">search</span><span class="token punctuation">(</span>searchRequest<span class="token punctuation">,</span> RequestOptions<span class="token punctuation">.</span>DEFAULT<span class="token punctuation">)</span><span class="token punctuation">;</span>             Object<span class="token punctuation">[</span><span class="token punctuation">]</span> arrays<span class="token operator">=</span> new Object<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token keyword">for</span><span class="token punctuation">(</span>SearchHit hit<span class="token punctuation">:</span> searchResponse<span class="token punctuation">.</span><span class="token function">getHits</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getHits</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span>                 Map<span class="token operator">&lt;</span>String<span class="token punctuation">,</span> Object<span class="token operator">&gt;</span> map<span class="token operator">=</span> hit<span class="token punctuation">.</span><span class="token function">getSourceAsMap</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                 System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>JSONObject<span class="token punctuation">.</span><span class="token function">toJSONString</span><span class="token punctuation">(</span>map<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                                  System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>hit<span class="token punctuation">.</span><span class="token function">getSortValues</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token operator">+</span><span class="token string">" "</span><span class="token operator">+</span> hit<span class="token punctuation">.</span><span class="token function">getSortValues</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//打印sort值</span>                                  arrays<span class="token operator">=</span> hit<span class="token punctuation">.</span><span class="token function">getSortValues</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span>             SearchRequest searchRequest_2<span class="token operator">=</span> new<span class="token function">SearchRequest</span><span class="token punctuation">(</span><span class="token string">"logstash-applog-*"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>             searchRequest_2<span class="token punctuation">.</span><span class="token function">source</span><span class="token punctuation">(</span>new<span class="token function">SearchSourceBuilder</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">query</span><span class="token punctuation">(</span>new<span class="token function">BoolQueryBuilder</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">must</span><span class="token punctuation">(</span>QueryBuilders<span class="token punctuation">.</span><span class="token function">termQuery</span><span class="token punctuation">(</span><span class="token string">"projectName"</span><span class="token punctuation">,</span><span class="token string">"****"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token string">"@timestamp"</span><span class="token punctuation">,</span> SortOrder<span class="token punctuation">.</span>ASC<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token string">"_doc"</span><span class="token punctuation">,</span> SortOrder<span class="token punctuation">.</span>ASC<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">searchAfter</span><span class="token punctuation">(</span>arrays<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>             SearchResponse searchResponse_2<span class="token operator">=</span> restHighLevelClient<span class="token punctuation">.</span><span class="token function">search</span><span class="token punctuation">(</span>searchRequest_2<span class="token punctuation">,</span> RequestOptions<span class="token punctuation">.</span>DEFAULT<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token keyword">for</span><span class="token punctuation">(</span>SearchHit hit<span class="token punctuation">:</span> searchResponse_2<span class="token punctuation">.</span><span class="token function">getHits</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getHits</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span>                 Map<span class="token operator">&lt;</span>String<span class="token punctuation">,</span> Object<span class="token operator">&gt;</span> map<span class="token operator">=</span> hit<span class="token punctuation">.</span><span class="token function">getSourceAsMap</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                 System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>JSONObject<span class="token punctuation">.</span><span class="token function">toJSONString</span><span class="token punctuation">(</span>map<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                                  System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>hit<span class="token punctuation">.</span><span class="token function">getSortValues</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                                  arrays<span class="token operator">=</span> hit<span class="token punctuation">.</span><span class="token function">getSortValues</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span>             SearchRequest searchRequest_3<span class="token operator">=</span> new<span class="token function">SearchRequest</span><span class="token punctuation">(</span><span class="token string">"logstash-applog-*"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>             searchRequest_3<span class="token punctuation">.</span><span class="token function">source</span><span class="token punctuation">(</span>new<span class="token function">SearchSourceBuilder</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">query</span><span class="token punctuation">(</span>new<span class="token function">BoolQueryBuilder</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">must</span><span class="token punctuation">(</span>QueryBuilders<span class="token punctuation">.</span><span class="token function">termQuery</span><span class="token punctuation">(</span><span class="token string">"projectName"</span><span class="token punctuation">,</span><span class="token string">"****"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token string">"@timestamp"</span><span class="token punctuation">,</span> SortOrder<span class="token punctuation">.</span>ASC<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token string">"_doc"</span><span class="token punctuation">,</span> SortOrder<span class="token punctuation">.</span>ASC<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">searchAfter</span><span class="token punctuation">(</span>arrays<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>             SearchResponse searchResponse_3<span class="token operator">=</span> restHighLevelClient<span class="token punctuation">.</span><span class="token function">search</span><span class="token punctuation">(</span>searchRequest_3<span class="token punctuation">,</span> RequestOptions<span class="token punctuation">.</span>DEFAULT<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token keyword">for</span><span class="token punctuation">(</span>SearchHit hit<span class="token punctuation">:</span> searchResponse_3<span class="token punctuation">.</span><span class="token function">getHits</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getHits</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span>                 Map<span class="token operator">&lt;</span>String<span class="token punctuation">,</span> Object<span class="token operator">&gt;</span> map<span class="token operator">=</span> hit<span class="token punctuation">.</span><span class="token function">getSourceAsMap</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                 System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>JSONObject<span class="token punctuation">.</span><span class="token function">toJSONString</span><span class="token punctuation">(</span>map<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                 System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>hit<span class="token punctuation">.</span><span class="token function">getSortValues</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token function">catch</span><span class="token punctuation">(</span>Exception e<span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span>             e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token punctuation">}</span></code></pre> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220609/d52b0251369f9dc41466e4da4257fdfb.jpg" alt="ES的searchAfter使用详解"></p> <p>可以看到每条数据都有自己的sort值。</p> <p>然后我们选任意的一个去查，比如这里面的第三条，我往前查，那么应该只会有两条。查询的方式也很简单就是将第三条的sort值放到searchAfter方法内，并进行降序<br /> 如下</p> <pre><code class="prism language-c">Long a<span class="token operator">=</span><span class="token number">1646103038393000000L</span><span class="token punctuation">;</span><span class="token punctuation">.</span><span class="token function">searchAfter</span><span class="token punctuation">(</span>new Object<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">{<!-- --></span>a<span class="token punctuation">,</span><span class="token number">25102</span><span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre> <pre><code class="prism language-c">    public<span class="token keyword">static</span><span class="token keyword">void</span><span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span>         RestHighLevelClient restHighLevelClient<span class="token operator">=</span> TestEsCreate<span class="token punctuation">.</span><span class="token function">getEsClient</span><span class="token punctuation">(</span><span class="token string">"**.**.***.***:*****"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>         SearchRequest searchRequest<span class="token operator">=</span> new<span class="token function">SearchRequest</span><span class="token punctuation">(</span><span class="token string">"logstash-applog-*"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>         Long a<span class="token operator">=</span><span class="token number">1646103038393000000L</span><span class="token punctuation">;</span>         searchRequest<span class="token punctuation">.</span><span class="token function">source</span><span class="token punctuation">(</span>new<span class="token function">SearchSourceBuilder</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">query</span><span class="token punctuation">(</span>new<span class="token function">BoolQueryBuilder</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span>QueryBuilders<span class="token punctuation">.</span><span class="token function">termQuery</span><span class="token punctuation">(</span><span class="token string">"projectName"</span><span class="token punctuation">,</span><span class="token string">"*****"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">searchAfter</span><span class="token punctuation">(</span>new Object<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">{<!-- --></span>a<span class="token punctuation">,</span><span class="token number">25102</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token string">"@timestamp"</span><span class="token punctuation">,</span> SortOrder<span class="token punctuation">.</span>DESC<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token string">"_doc"</span><span class="token punctuation">,</span> SortOrder<span class="token punctuation">.</span>DESC<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>         try<span class="token punctuation">{<!-- --></span>             SearchResponse searchResponse<span class="token operator">=</span> restHighLevelClient<span class="token punctuation">.</span><span class="token function">search</span><span class="token punctuation">(</span>searchRequest<span class="token punctuation">,</span> RequestOptions<span class="token punctuation">.</span>DEFAULT<span class="token punctuation">)</span><span class="token punctuation">;</span>             Object<span class="token punctuation">[</span><span class="token punctuation">]</span> arrays<span class="token operator">=</span> new Object<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token keyword">for</span><span class="token punctuation">(</span>SearchHit hit<span class="token punctuation">:</span> searchResponse<span class="token punctuation">.</span><span class="token function">getHits</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getHits</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span>                 Map<span class="token operator">&lt;</span>String<span class="token punctuation">,</span> Object<span class="token operator">&gt;</span> map<span class="token operator">=</span> hit<span class="token punctuation">.</span><span class="token function">getSourceAsMap</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                 System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>JSONObject<span class="token punctuation">.</span><span class="token function">toJSONString</span><span class="token punctuation">(</span>map<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                 System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>hit<span class="token punctuation">.</span><span class="token function">getSortValues</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token operator">+</span><span class="token string">" "</span><span class="token operator">+</span> hit<span class="token punctuation">.</span><span class="token function">getSortValues</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                 arrays<span class="token operator">=</span> hit<span class="token punctuation">.</span><span class="token function">getSortValues</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token function">catch</span><span class="token punctuation">(</span>Exception e<span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span>             e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token punctuation">}</span></code></pre> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220609/c83dd533e3aaa8383f3a19eefe83783f.jpg" alt="ES的searchAfter使用详解"></p> <p>确实只有两条。而且你可以看到我上面是升序，下面是降序，可见search-after是可以向上向下滚动的。这一点相比scroll就有了很大的区别。而且可以看到我的size可以在滚动过程中进行修改，这一点也是scroll做不到的。</p> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-26767.htm">十大动物疫苗公司排名榜最新名单（动物疫苗生产厂家排名）</a></p>
+                                        <p>下一个：<a href="/news/article-27230.htm">动物疫苗价格表最新图片高清大图 动物疫苗价格表最新图片高清大图下载</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2024-7-28-clash-nyanpasu-node.htm" title="「7月28日」最高速度19.6M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接">「7月28日」最高速度19.6M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-8-7-free-clash.htm" title="「8月7日」最高速度22.5M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接">「8月7日」最高速度22.5M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-4-free-high-speed-nodes.htm" title="「11月4日」最高速度19.2M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐">「11月4日」最高速度19.2M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐</a></li>
+                        <li class="py-2"><a href="/news/article-23963.htm" title="南京宠物领养中心电话多少 南京宠物领养中心电话多少号">南京宠物领养中心电话多少 南京宠物领养中心电话多少号</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-15-linux-clash-nyanpasu.htm" title="「11月15日」最高速度22.1M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐">「11月15日」最高速度22.1M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐</a></li>
+                        <li class="py-2"><a href="/news/article-21217.htm" title="宠物买卖交易内容（宠物买卖交易内容怎么写）">宠物买卖交易内容（宠物买卖交易内容怎么写）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-27-clash-nyanpasu-node.htm" title="「11月27日」最高速度18M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐">「11月27日」最高速度18M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐</a></li>
+                        <li class="py-2"><a href="/news/article-19386.htm" title="猫疫苗打不打有什么区别（猫的疫苗不打行不行）">猫疫苗打不打有什么区别（猫的疫苗不打行不行）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-10-free-high-speed-nodes.htm" title="「10月10日」最高速度20.2M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接">「10月10日」最高速度20.2M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-8-2-free-clash-subscribe.htm" title="「8月2日」最高速度19.6M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接">「8月2日」最高速度19.6M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">51</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">34</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">31</span> <a href="/date/2024-10/" title="2024-10 归档">2024-10</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">30</span> <a href="/date/2024-09/" title="2024-09 归档">2024-09</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">31</span> <a href="/date/2024-08/" title="2024-08 归档">2024-08</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">27</span> <a href="/date/2024-07/" title="2024-07 归档">2024-07</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">7</span> <a href="/date/2024-06/" title="2024-06 归档">2024-06</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+        <!--====== FOOTER PART START ======-->
+    <section class="footer-area footer-dark">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="copyright text-center mt-35">
+                        <p class="text">
+                            ClashNyanpasu官网节点站 版权所有 Powered by WordPress
+                        </p>
+                    </div> <!--  copyright -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+    <!--====== FOOTER PART ENDS ======-->
+    <!--====== BACK TOP TOP PART START ======-->
+    <a href="#" class="back-to-top"><i class="lni lni-chevron-up"></i></a>
+    <!--====== BACK TOP TOP PART ENDS ======-->
+    <!--====== Jquery js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/vendor/jquery-1.12.4.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/vendor/modernizr-3.7.1.min.js"></script>
+    <!--====== Bootstrap js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/popper.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/slick.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/jquery.magnific-popup.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/ajax-contact.js"></script>
+    <!--====== Isotope js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/imagesloaded.pkgd.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/isotope.pkgd.min.js"></script>
+    <!--====== Scrolling Nav js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/jquery.easing.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/scrolling-nav.js"></script>
+    <!--====== Main js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
