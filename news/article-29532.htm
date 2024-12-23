@@ -1,0 +1,231 @@
+<!doctype html>
+<html class="no-js" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashnyanpasu.github.io/news/article-29532.htm" />
+    <meta charset="utf-8">
+    <!--====== Title ======-->
+    <title>Java的引用和内存</title>
+        <meta name="description" content="例子 public class Square {       long width;       public Square(long l) {            width = l;      " />
+        <link rel="icon" href="/assets/website/img/clashnyanpasu/favicon.ico" type="image/x-icon"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--====== Magnific Popup CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/magnific-popup.css">
+    <!--====== Slick CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/slick.css">
+    <!--====== Line Icons CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/LineIcons.css">
+    <!--====== Bootstrap CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/bootstrap.min.css">
+    <!--====== Default CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/default.css">
+    <!--====== Style CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/style.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7F56WL29Y8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7F56WL29Y8');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!--====== PRELOADER PART START ======-->
+    <div class="preloader">
+        <div class="loader">
+            <div class="ytp-spinner">
+                <div class="ytp-spinner-container">
+                    <div class="ytp-spinner-rotator">
+                        <div class="ytp-spinner-left">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                        <div class="ytp-spinner-right">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--====== PRELOADER PART ENDS ======-->
+    <!--====== NAVBAR TWO PART START ======-->
+    <section class="navbar-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <nav class="navbar navbar-expand-lg">
+                                                <a class="navbar-brand top" href="/">
+                            Clash Nyanpasu
+                        </a>
+                                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTwo" aria-controls="navbarTwo" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="toggler-icon"></span>
+                            <span class="toggler-icon"></span>
+                            <span class="toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse sub-menu-bar" id="navbarTwo">
+                            <ul class="navbar-nav m-auto">
+                                                                <li class="nav-item"><a href="/">首页</a></li>
+                                                                <li class="nav-item"><a href="/free-nodes/">免费节点</a></li>
+                                                                <li class="nav-item"><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                <li class="nav-item"><a href="/news/">新闻资讯</a></li>
+                                                                <li class="nav-item"><a href="#">关于</a></li>
+                                <li class="nav-item"><a href="#">链接</a></li>
+                            </ul>
+                        </div>
+
+                    </nav> <!-- navbar -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+    <!--====== NAVBAR TWO PART ENDS ======-->
+    <!--====== SLIDER PART START ======-->
+    <section id="home" class="slider_area">
+        <div id="carouselThree" class="carousel slide sub-page" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="slider-content">
+                                    <h1 class="title">Java的引用和内存</h1>
+                                    <p class="text">
+                                        <a href="/">首页</a> / 
+                                        <a href="/news/">新闻资讯</a> / 
+                                        <span>正文</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div> <!-- row -->
+                    </div> <!-- container -->
+                    <div class="slider-image-box d-none d-lg-flex align-items-end">
+                        <div class="slider-image">
+                            <img href="/assets/website/img/clashnyanpasu/slider/1.png" alt="Hero">
+                        </div> <!-- slider-imgae -->
+                    </div> <!-- slider-imgae box -->
+                </div> <!-- carousel-item -->
+            </div>
+        </div>
+    </section>
+    <!--====== SLIDER PART ENDS ======-->
+    <!--====== ABOUT PART START ======-->
+    <section id=about class=about-area>
+        <div class=container>
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="content_views" class="markdown_views prism-atom-one-dark"> <h3> <a id="_1" rel="nofollow"></a>例子</h3> <pre><code class="prism language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Square</span> <span class="token punctuation">{<!-- --></span>       <span class="token keyword">long</span> width<span class="token punctuation">;</span>       <span class="token keyword">public</span> <span class="token function">Square</span><span class="token punctuation">(</span><span class="token keyword">long</span> l<span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span>            width <span class="token operator">=</span> l<span class="token punctuation">;</span>       <span class="token punctuation">}</span>       <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String arg<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span>     	<span class="token comment">//声明了3个Square类型的变量a,b,c</span>     	<span class="token comment">//在stack中分配3个内存，名字为a,b,c</span>         Square a<span class="token punctuation">,</span> b<span class="token punctuation">,</span> c<span class="token punctuation">;</span>         <span class="token comment">//在heap中分配了一块新内存，里边包含自己的成员变量width值为42L，然后stack中的a指向这块内存</span>         a <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Square</span><span class="token punctuation">(</span><span class="token number">42</span>L<span class="token punctuation">)</span><span class="token punctuation">;</span>         <span class="token comment">//在heap中分配了一块新内存，里边包含自己的成员变量width值为42L，然后stack中的b指向这块内存</span>         b <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Square</span><span class="token punctuation">(</span><span class="token number">42</span>L<span class="token punctuation">)</span><span class="token punctuation">;</span>         <span class="token comment">//stack中的c也指向b所指向的内存 </span>         c <span class="token operator">=</span> b<span class="token punctuation">;</span>         <span class="token comment">//在stack中分配了一块内存，值为42   </span>         <span class="token keyword">long</span> s <span class="token operator">=</span> <span class="token number">42</span>L<span class="token punctuation">;</span>       <span class="token punctuation">}</span>  <span class="token punctuation">}</span> </code></pre> <p>以上代码在内存中的情况：<br /><img decoding="async" src="http://img.555519.xyz/uploads/20230205/72848dd3cea76511bfbd286d52f3a6b8.jpg" alt="Java的引用和内存"></p> <h3> <a id="_25" rel="nofollow"></a>如何来对各种不同的变量作比较？</h3> <p>java的数据类型分为：</p> <ol> <li>基本数据类型</li> <li>引用数据类型<br /><img decoding="async" src="http://img.555519.xyz/uploads/20230205/472d4edcb0bb689556a73ccc6b6b0398.jpg" alt="Java的引用和内存"><br /> 上例中的变量a,b,c属于引用数据类型，s属于基本数据类型</li> </ol> <p>==强调栈中的比较，可以理解为地址比较<br /> ==可以用于<strong>基本数据类型</strong>相互比较，此时比较二者的<strong>值</strong>是否相等<br /> ==也可以用于<strong>引用数据类型</strong>的相互比较，此时比较二者的<strong>地址</strong>是否相等<br /> ==不能用于基本数据类型和引用数据类型比较，不同的基本数据类型之间也不能比较，例如string不能与char[]比较</p> <p>equals强调对象的内容比较<br /> equals不能用于基本数据类型比较，因为这是一个方法，不是运算符，继承自object<br /> equals用于进行对象的比较，比较二者的引用地址是否相同</p> <p>特殊情况：<br /> 1)数值型基本类型和数值型类会存在自动装箱和自动拆箱.<br /> 2)字符串会以常量形式存在, 如果多个字符串变量值相同, 则他们指向同一个地址.<br /> 3)数值类型会存在类型自动转换.</p> <h3> <a id="_48" rel="nofollow"></a>根据给出的例子判断</h3> <ul> <li> <p>由图可以看出a和b指向的不是同一个引用，所以a!=b</p> </li> <li> <p>一个Square类型不能与一个long型比较，编译就错误，所以不存在s==a这种比较</p> </li> <li> <p>由图可以看出b和c指向的是同一个引用，所以b==c</p> </li> <li> <p>程序会把s封装成一个Long类型，由于Square没有重写Object的equals方法，<br /> 所以调用的是Object类的equals方法，源码如下<br /> public boolean equals(Object obj) {<!-- --><br /> return (this == obj);<br /> }<br /> 其实就是判断两个引用是否相等，所以a.equals(s) == false</p> <p>在java中进行比较，我们需要根据比较的类型来选择合适的比较方式：</p> </li> </ul> <ol> <li>对象域，使用equals方法 。</li> <li>类型安全的枚举，使用equals或== 。</li> <li>可能为null的对象域 : 使用 == 和 equals 。</li> <li>数组域 : 使用 Arrays.equals 。</li> <li>除float和double外的原始数据类型 : 使用 == 。</li> <li>float类型: 使用Float.foatToIntBits转换成int类型，然后使用==。</li> <li>double类型: 使用Double.doubleToLongBit转换成long类型，然后使用==。</li> </ol> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-29077.htm">宠物美容师要培训多久（宠物美容师要培训多久才能考证）</a></p>
+                                        <p>下一个：<a href="/news/article-29535.htm">领养宠物狗要注意什么（领养宠物狗需要注意什么）</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-21654.htm" title="springboot项目 Feign调用时，@RequestBody 接受字符串(String),json字符串多出引号">springboot项目 Feign调用时，@RequestBody 接受字符串(String),json字符串多出引号</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-17-node-share-links.htm" title="「10月17日」最高速度18M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐">「10月17日」最高速度18M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐</a></li>
+                        <li class="py-2"><a href="/news/article-19386.htm" title="猫疫苗打不打有什么区别（猫的疫苗不打行不行）">猫疫苗打不打有什么区别（猫的疫苗不打行不行）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-27-clash-nyanpasu-node.htm" title="「11月27日」最高速度18M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐">「11月27日」最高速度18M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-8-node-share.htm" title="「10月8日」最高速度20.6M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接">「10月8日」最高速度20.6M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-8-19-node-share.htm" title="「8月19日」最高速度19.7M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接">「8月19日」最高速度19.7M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-12-free-subscribe-node.htm" title="「12月12日」最高速度18.8M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐">「12月12日」最高速度18.8M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐</a></li>
+                        <li class="py-2"><a href="/news/article-25833.htm" title="react项目配置postcss-px2rem-exclude">react项目配置postcss-px2rem-exclude</a></li>
+                        <li class="py-2"><a href="/news/article-23506.htm" title="国内十大宠物粮食品牌（国内十大宠物粮食品牌排名）">国内十大宠物粮食品牌（国内十大宠物粮食品牌排名）</a></li>
+                        <li class="py-2"><a href="/news/article-21217.htm" title="宠物买卖交易内容（宠物买卖交易内容怎么写）">宠物买卖交易内容（宠物买卖交易内容怎么写）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">69</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">34</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">31</span> <a href="/date/2024-10/" title="2024-10 归档">2024-10</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">30</span> <a href="/date/2024-09/" title="2024-09 归档">2024-09</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">31</span> <a href="/date/2024-08/" title="2024-08 归档">2024-08</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">27</span> <a href="/date/2024-07/" title="2024-07 归档">2024-07</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">7</span> <a href="/date/2024-06/" title="2024-06 归档">2024-06</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+        <!--====== FOOTER PART START ======-->
+    <section class="footer-area footer-dark">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="copyright text-center mt-35">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                        <p class="text">
+                            ClashNyanpasu官网节点站 版权所有 Powered by WordPress
+                        </p>
+                    </div> <!--  copyright -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+    <!--====== FOOTER PART ENDS ======-->
+    <!--====== BACK TOP TOP PART START ======-->
+    <a href="#" class="back-to-top"><i class="lni lni-chevron-up"></i></a>
+    <!--====== BACK TOP TOP PART ENDS ======-->
+    <!--====== Jquery js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/vendor/jquery-1.12.4.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/vendor/modernizr-3.7.1.min.js"></script>
+    <!--====== Bootstrap js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/popper.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/slick.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/jquery.magnific-popup.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/ajax-contact.js"></script>
+    <!--====== Isotope js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/imagesloaded.pkgd.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/isotope.pkgd.min.js"></script>
+    <!--====== Scrolling Nav js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/jquery.easing.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/scrolling-nav.js"></script>
+    <!--====== Main js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
