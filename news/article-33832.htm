@@ -1,0 +1,234 @@
+<!doctype html>
+<html class="no-js" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashnyanpasu.github.io/news/article-33832.htm" />
+    <meta charset="utf-8">
+    <!--====== Title ======-->
+    <title>FreeRTOS实时操作系统队列基础_操作系统</title>
+        <meta name="description" content="目录  前言 1.FreeRTOS队列 2.使用模型：最简单、最灵活 3.队列阻塞    前言 本文介绍队列的基本知识，详细源码分析见FreeRTOS进阶之队列示例分析  1.FreeRTOS队列 队" />
+        <link rel="icon" href="/assets/website/img/clashnyanpasu/favicon.ico" type="image/x-icon"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--====== Magnific Popup CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/magnific-popup.css">
+    <!--====== Slick CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/slick.css">
+    <!--====== Line Icons CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/LineIcons.css">
+    <!--====== Bootstrap CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/bootstrap.min.css">
+    <!--====== Default CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/default.css">
+    <!--====== Style CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/style.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7F56WL29Y8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7F56WL29Y8');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!--====== PRELOADER PART START ======-->
+    <div class="preloader">
+        <div class="loader">
+            <div class="ytp-spinner">
+                <div class="ytp-spinner-container">
+                    <div class="ytp-spinner-rotator">
+                        <div class="ytp-spinner-left">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                        <div class="ytp-spinner-right">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--====== PRELOADER PART ENDS ======-->
+    <!--====== NAVBAR TWO PART START ======-->
+    <section class="navbar-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <nav class="navbar navbar-expand-lg">
+                                                <a class="navbar-brand top" href="/">
+                            Clash Nyanpasu
+                        </a>
+                                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTwo" aria-controls="navbarTwo" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="toggler-icon"></span>
+                            <span class="toggler-icon"></span>
+                            <span class="toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse sub-menu-bar" id="navbarTwo">
+                            <ul class="navbar-nav m-auto">
+                                                                <li class="nav-item"><a href="/">首页</a></li>
+                                                                <li class="nav-item"><a href="/free-nodes/">免费节点</a></li>
+                                                                <li class="nav-item"><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                <li class="nav-item"><a href="/news/">新闻资讯</a></li>
+                                                                <li class="nav-item"><a href="#">关于</a></li>
+                                <li class="nav-item"><a href="#">链接</a></li>
+                            </ul>
+                        </div>
+
+                    </nav> <!-- navbar -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+    <!--====== NAVBAR TWO PART ENDS ======-->
+    <!--====== SLIDER PART START ======-->
+    <section id="home" class="slider_area">
+        <div id="carouselThree" class="carousel slide sub-page" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="slider-content">
+                                    <h1 class="title">FreeRTOS实时操作系统队列基础_操作系统</h1>
+                                    <p class="text">
+                                        <a href="/">首页</a> / 
+                                        <a href="/news/">新闻资讯</a> / 
+                                        <span>正文</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div> <!-- row -->
+                    </div> <!-- container -->
+                    <div class="slider-image-box d-none d-lg-flex align-items-end">
+                        <div class="slider-image">
+                            <img href="/assets/website/img/clashnyanpasu/slider/1.png" alt="Hero">
+                        </div> <!-- slider-imgae -->
+                    </div> <!-- slider-imgae box -->
+                </div> <!-- carousel-item -->
+            </div>
+        </div>
+    </section>
+    <!--====== SLIDER PART ENDS ======-->
+    <!--====== ABOUT PART START ======-->
+    <section id=about class=about-area>
+        <div class=container>
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="navCategory"> <h5 class="catalogue">目录</h5> <ul class="first_class_ul"> <li><a href="#_label0" rel="nofollow">前言</a></li> <li><a href="#_label1" rel="nofollow">1.FreeRTOS队列</a></li> <li><a href="#_label2" rel="nofollow">2.使用模型：最简单、最灵活</a></li> <li><a href="#_label3" rel="nofollow">3.队列阻塞</a></li> </ul> </div> <p class="maodian"><a name="_label0" rel="nofollow"></a></p> <h2>前言</h2> <p>本文介绍队列的基本知识，详细源码分析见<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://www.jb51.net/article/243774.htm"   target="_blank" rel="nofollow">FreeRTOS进阶之队列示例分析</a></p> <p class="maodian"><a name="_label1" rel="nofollow"></a></p> <h2>1.FreeRTOS队列</h2> <p>队列是主要的任务间通讯方式。可以在任务与任务间、中断和任务间传送信息。大多数情况下，队列用于具有线程保护的FIFO（先进先出）缓冲区：新数据放在队列的后面。当然，数据也可以放在队列的前面，在下一篇讲队列API函数时，会涉及到数据的存放位置。</p> <p style="text-align:center"><img decoding="async" alt="" src="http://img.555519.xyz/uploads3/20220424/18fc0ac5bdc0a91bfadffaedce31ef06.jpg"></p> <p>图1-1：读写队列</p> <p>图1-1所示的队列中，最多能保存5个项目，并且假设队列永远不会满。任务A使用API函数xQueueSendToBack()向队列发送数据，每次发送一个数据，新入队的数据置于上一次入队数据的后面。任务B使用API函数xQueueReceive()将数据从队列取出，先入队的数据先出队。</p> <p class="maodian"><a name="_label2" rel="nofollow"></a></p> <h2>2.使用模型：最简单、最灵活</h2> <p>通常情况下，鱼和熊掌是不可兼得的，但FreeRTOS的队列用户模型管理却兼顾简单和灵活。发送到队列的消息是通过拷贝实现的，这意味着队列存储的数据是原数据，而不是原数据的引用。FreeRTOS队列具有以下特性：</p> <p>C变量（整形、简单结构体等等）中的简单信息可以直接传送到队列。这样就不需要为信息分配缓存也不需要再进行什么拷贝工作。同样的，信息可以直接从队列读取到C变量中。用直接拷贝的方法入队，可以允许任务立即覆写已经入队的变量或者缓存，实际上队列中已经保存了这些变量或缓冲区携带的信息。因为变量中的数据内容是以拷贝的方式入队的，所以变量自身是允许重复使用的。发送信息的任务和接收信息的任务并不需要就哪个任务拥有信息、哪个任务释放信息（当信息不再使用时）而达成一致。</p> <p>队列是通过拷贝传递数据的，但这并不妨碍队列通过引用来传递数据。当信息的大小到达一个临界点后，逐字节拷贝整个信息是不实际的，可以定义一个指针队列，只拷贝指向消息的指针来代替整个信息拷贝。FreeRTOS+UDP IP栈例程正是使用这种方法向FreeRTOS协议栈传递大量网络数据的。</p> <p>队列内存区域分配由内核完成。</p> <p>变长消息可以通过定义保存一个结构体变量的队列实现，结构体一个成员指向要入队的缓存，另一个成员保存缓存数据的大小。</p> <p>单个队列可以接收不同类型信息，并且信息可以来自不同的位置。通过定义保存一个结构体变量的队列来实现，结构体的一个成员保存信息类型，另一个成员保存信息数据（或者指向信息数据的指针）。数据如何解读取决于信息类型。管理FreeRTOS+UDP IP栈的任务正是使用单个队列接收ARP定时器时间通知、以太网硬件传送来的数据包、从应用层传送来的数据包、网络关闭事件等等。</p> <p>天生适用于那些内存保护（MPU）场合。一个具有内存区域保护的任务可以向另一个具有内存区域保护的任务传递数据，因为调用队列发送函数会引起RTOS提升微控制器特权级别。只有RTOS（具有所有特权）才可以访问队列存储区域。</p> <p>在中断函数中使用独立的API。将RTOS任务API和中断服务例程API分来实现意味着可以避免执行时的上下文调用检查开销，还意味着在大多数情况下，与其它RTOS产品相比，用户创建中断服务例程会更简单。</p> <p>API函数很简单。</p> <p class="maodian"><a name="_label3" rel="nofollow"></a></p> <h2>3.队列阻塞</h2> <p>API函数允许指定阻塞时间。</p> <p>每当任务企图从一个空的队列读取数据时，任务会进入阻塞状态（这样任务不会消耗任何CPU时间并且另一个任务可以运行）直到队列中出现有效数据或者阻塞时间到期。</p> <p>每当任务企图向一个满的队列写数据时，任务会进入阻塞状态，直到队列中出现有效空间或者阻塞时间到期。</p> <p>如果多个任务阻塞在一个队列上，那么最高优先级别的任务会第一个解除阻塞。</p> <p>注：中断程序中必须使用“FromISR”结尾的API函数！</p> <p>总结一下队列的基本用法：</p> <p>定义一个队列句柄变量，用于保存创建的队列：xQueueHandle xQueue1;</p> <p>使用API函数xQueueCreate()创建一个队列。</p> <p>如果希望使用先进先出队列，使用API函数xQueueSend()或xQueueSendToBack()向队列投递队列项。如果希望使用后进先出队列，使用API函数xQueueSendToFront()向队列投递队列项。如果在中断服务程序中，切记使用它们的带中断保护版本。</p> <p>使用API函数xQueueReceive()从队列读取队列项，如果在中断服务程序中，切记使用它们的带中断保护版本。</p> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-33419.htm">Shell基础Bash基本功能（多命令顺序执行）</a></p>
+                                        <p>下一个：<a href="/news/article-33834.htm">养猫要打什么疫苗多少钱（养猫需要打的疫苗）</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-25833.htm" title="react项目配置postcss-px2rem-exclude">react项目配置postcss-px2rem-exclude</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-18-free-node-subscribe.htm" title="「12月18日」最高速度20.6M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐">「12月18日」最高速度20.6M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-7-node-share-links.htm" title="「12月7日」最高速度21.7M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐">「12月7日」最高速度21.7M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-26-clash-node-daily-updates.htm" title="「11月26日」最高速度19.2M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐">「11月26日」最高速度19.2M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-8-29-free-clash-nyanpasu.htm" title="「8月29日」最高速度20.8M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接">「8月29日」最高速度20.8M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-9-1-node-share.htm" title="「9月1日」最高速度23M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接">「9月1日」最高速度23M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-20756.htm" title="丹阳有宠物医院吗（丹阳哪里有宠物医院）">丹阳有宠物医院吗（丹阳哪里有宠物医院）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-24-free-clash-subscribe.htm" title="「12月24日」最高速度22M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐">「12月24日」最高速度22M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐</a></li>
+                        <li class="py-2"><a href="/news/article-33417.htm" title="vue初始化动画加载">vue初始化动画加载</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-9-12-linux-clash-nyanpasu.htm" title="「9月12日」最高速度21.6M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接">「9月12日」最高速度21.6M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">3</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">93</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">34</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">31</span> <a href="/date/2024-10/" title="2024-10 归档">2024-10</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">30</span> <a href="/date/2024-09/" title="2024-09 归档">2024-09</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">31</span> <a href="/date/2024-08/" title="2024-08 归档">2024-08</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">27</span> <a href="/date/2024-07/" title="2024-07 归档">2024-07</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">7</span> <a href="/date/2024-06/" title="2024-06 归档">2024-06</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+        <!--====== FOOTER PART START ======-->
+    <section class="footer-area footer-dark">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="copyright text-center mt-35">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                        <p class="text">
+                            ClashNyanpasu官网节点站 版权所有 Powered by WordPress
+                        </p>
+                    </div> <!--  copyright -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+    <!--====== FOOTER PART ENDS ======-->
+    <!--====== BACK TOP TOP PART START ======-->
+    <a href="#" class="back-to-top"><i class="lni lni-chevron-up"></i></a>
+    <!--====== BACK TOP TOP PART ENDS ======-->
+    <!--====== Jquery js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/vendor/jquery-1.12.4.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/vendor/modernizr-3.7.1.min.js"></script>
+    <!--====== Bootstrap js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/popper.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/slick.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/jquery.magnific-popup.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/ajax-contact.js"></script>
+    <!--====== Isotope js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/imagesloaded.pkgd.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/isotope.pkgd.min.js"></script>
+    <!--====== Scrolling Nav js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/jquery.easing.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/scrolling-nav.js"></script>
+    <!--====== Main js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
