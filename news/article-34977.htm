@@ -1,0 +1,234 @@
+<!doctype html>
+<html class="no-js" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashnyanpasu.github.io/news/article-34977.htm" />
+    <meta charset="utf-8">
+    <!--====== Title ======-->
+    <title>springboot项目中访问druid内置监控页面</title>
+        <meta name="description" content="1、首先加入druid依赖 &lt;dependency&gt; &lt;groupId&gt;com.alibaba&lt;/groupId&gt; &lt;artifactId&gt;druid-" />
+        <link rel="icon" href="/assets/website/img/clashnyanpasu/favicon.ico" type="image/x-icon"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--====== Magnific Popup CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/magnific-popup.css">
+    <!--====== Slick CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/slick.css">
+    <!--====== Line Icons CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/LineIcons.css">
+    <!--====== Bootstrap CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/bootstrap.min.css">
+    <!--====== Default CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/default.css">
+    <!--====== Style CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/style.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7F56WL29Y8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7F56WL29Y8');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!--====== PRELOADER PART START ======-->
+    <div class="preloader">
+        <div class="loader">
+            <div class="ytp-spinner">
+                <div class="ytp-spinner-container">
+                    <div class="ytp-spinner-rotator">
+                        <div class="ytp-spinner-left">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                        <div class="ytp-spinner-right">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--====== PRELOADER PART ENDS ======-->
+    <!--====== NAVBAR TWO PART START ======-->
+    <section class="navbar-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <nav class="navbar navbar-expand-lg">
+                                                <a class="navbar-brand top" href="/">
+                            Clash Nyanpasu
+                        </a>
+                                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTwo" aria-controls="navbarTwo" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="toggler-icon"></span>
+                            <span class="toggler-icon"></span>
+                            <span class="toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse sub-menu-bar" id="navbarTwo">
+                            <ul class="navbar-nav m-auto">
+                                                                <li class="nav-item"><a href="/">首页</a></li>
+                                                                <li class="nav-item"><a href="/free-nodes/">免费节点</a></li>
+                                                                <li class="nav-item"><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                <li class="nav-item"><a href="/news/">新闻资讯</a></li>
+                                                                <li class="nav-item"><a href="#">关于</a></li>
+                                <li class="nav-item"><a href="#">链接</a></li>
+                            </ul>
+                        </div>
+
+                    </nav> <!-- navbar -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+    <!--====== NAVBAR TWO PART ENDS ======-->
+    <!--====== SLIDER PART START ======-->
+    <section id="home" class="slider_area">
+        <div id="carouselThree" class="carousel slide sub-page" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="slider-content">
+                                    <h1 class="title">springboot项目中访问druid内置监控页面</h1>
+                                    <p class="text">
+                                        <a href="/">首页</a> / 
+                                        <a href="/news/">新闻资讯</a> / 
+                                        <span>正文</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div> <!-- row -->
+                    </div> <!-- container -->
+                    <div class="slider-image-box d-none d-lg-flex align-items-end">
+                        <div class="slider-image">
+                            <img href="/assets/website/img/clashnyanpasu/slider/1.png" alt="Hero">
+                        </div> <!-- slider-imgae -->
+                    </div> <!-- slider-imgae box -->
+                </div> <!-- carousel-item -->
+            </div>
+        </div>
+    </section>
+    <!--====== SLIDER PART ENDS ======-->
+    <!--====== ABOUT PART START ======-->
+    <section id=about class=about-area>
+        <div class=container>
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="content_views" class="htmledit_views"> <p><strong>1、首先加入druid依赖</strong></p> <p><code>&lt;dependency&gt;</code></p> <p><code>&lt;groupId&gt;com.alibaba&lt;/groupId&gt;</code></p> <p><code>&lt;artifactId&gt;druid-spring-boot-starter&lt;/artifactId&gt;</code></p> <p><code>&lt;version&gt;1.1.9&lt;/version&gt;</code></p> <p><code>&nbsp; &lt;/dependency&gt;</code></p> <p><strong>2、设置配置文件：</strong></p> <p><code># 数据库访问配置</code></p> <p><code># 主数据源，默认的</code></p> <p><code>spring.datasource.type=com.alibaba.druid.pool.DruidDataSource</code></p> <p><code>spring.datasource.driver-class-name=com.mysql.jdbc.Driver</code></p> <p><code>spring.datasource.url=jdbc:mysql://localhost:3306/test</code></p> <p><code>spring.datasource.username=root</code></p> <p><code>spring.datasource.password=123456</code></p> <p>&nbsp;</p> <p><code># 下面为连接池的补充设置，应用到上面所有数据源中</code></p> <p><code># 初始化大小，最小，最大</code></p> <p><code>spring.datasource.initialSize=5</code></p> <p><code>spring.datasource.minIdle=5</code></p> <p><code>spring.datasource.maxActive=20</code></p> <p><code># 配置获取连接等待超时的时间</code></p> <p><code>spring.datasource.maxWait=60000</code></p> <p><code># 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒</code></p> <p><code>spring.datasource.timeBetweenEvictionRunsMillis=60000</code></p> <p><code># 配置一个连接在池中最小生存的时间，单位是毫秒</code></p> <p><code>spring.datasource.minEvictableIdleTimeMillis=300000</code></p> <p><code>spring.datasource.validationQuery=SELECT 1 FROM DUAL</code></p> <p><code>spring.datasource.testWhileIdle=true</code></p> <p><code>spring.datasource.testOnBorrow=false</code></p> <p><code>spring.datasource.testOnReturn=false</code></p> <p><code># 打开PSCache，并且指定每个连接上PSCache的大小</code></p> <p><code>spring.datasource.poolPreparedStatements=true</code></p> <p><code>spring.datasource.maxPoolPreparedStatementPerConnectionSize=20</code></p> <p><code># 配置监控统计拦截的filters，去掉后监控界面sql无法统计，'wall'用于防火墙</code></p> <p><code>spring.datasource.filters=stat,wall,log4j</code></p> <p><code># 通过connectProperties属性来打开mergeSql功能；慢SQL记录</code></p> <p><code>spring.datasource.connectionProperties=druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000</code></p> <p><code># 合并多个DruidDataSource的监控数据</code></p> <p><code>#spring.datasource.useGlobalDataSourceStat=true </code></p> <p><code>注意点：</code></p> <p><code>配置oracle数据库时 spring.datasource.validationQuery=SELECT 1 FROM DUAL否则会报语法错误</code></p> <p><code>如果springboot中使用的默认的logback日志框架，不要设置filters=</code>log4j，否则会报错：</p> <p>Caused by: java.lang.ClassNotFoundException: org.apache.log4j.Priority</p> <p><code>stat查看sql的，wall是防火墙</code><br /><strong>3、设置druid访问页面的用户名和密码，只需要在springboot启动类中加入@bean配置即可：</strong></p> <p><code>@Bean</code></p> <p><code>public ServletRegistrationBean&lt;StatViewServlet&gt; druidStatViewServlet() {<!-- --></code></p> <p><code>ServletRegistrationBean&lt;StatViewServlet&gt; registrationBean = new ServletRegistrationBean&lt;&gt;(new StatViewServlet(), "/druid/*");</code></p> <p><code>registrationBean.addInitParameter("allow", "127.0.0.1");// IP白名单 (没有配置或者为空，则允许所有访问)</code></p> <p><code>registrationBean.addInitParameter("deny", "");// IP黑名单 (存在共同时，deny优先于allow)</code></p> <p><code>registrationBean.addInitParameter("loginUsername", "root");</code></p> <p><code>registrationBean.addInitParameter("loginPassword", "1234");</code></p> <p><code>registrationBean.addInitParameter("resetEnable", "false");</code></p> <p><code>return registrationBean;</code></p> <p><code>}</code></p> <p><strong>4、启动项目后，访问页面<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=http://127.0.0.1:8001/druid/sql.html"  rel="nofollow">http://127.0.0.1:8001/druid/index.html</a>，就可以访问监控页面了，其中ip和端口号为项目的ip和端口号。页面效果如下：</strong></p> <p><img fetchpriority="high" decoding="async" alt="" height="260" src="http://img.555519.xyz/uploads/20221230/bffa7faee7808727ae73cd0cd075ae7a.jpg"></p> <p><img decoding="async" alt="" height="240" src="http://img.555519.xyz/uploads/20221230/ad213785468bb38a9b1b7f0e8ed7a91d.jpg"></p> </p></div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-34789.htm">宠物领养协议书范本大全最新版下载（宠物的领养协议是有法律保护的吗）</a></p>
+                                        <p>下一个：<a href="/news/article-34978.htm">Linux下 tomcat整体目录迁移</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-27230.htm" title="动物疫苗价格表最新图片高清大图 动物疫苗价格表最新图片高清大图下载">动物疫苗价格表最新图片高清大图 动物疫苗价格表最新图片高清大图下载</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-30-free-node-subscribe-links.htm" title="「10月30日」最高速度18.6M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐">「10月30日」最高速度18.6M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-4-free-high-speed-nodes.htm" title="「11月4日」最高速度19.2M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐">「11月4日」最高速度19.2M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-9-28-clash-nyanpasu.htm" title="「9月28日」最高速度21.1M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接">「9月28日」最高速度21.1M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-32398.htm" title="领养协议范本模板图片（领养协议有法律效力吗）">领养协议范本模板图片（领养协议有法律效力吗）</a></li>
+                        <li class="py-2"><a href="/news/article-32876.htm" title="JS实现导出Excel和CSV文件操作_javascript技巧">JS实现导出Excel和CSV文件操作_javascript技巧</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-7-30-clash-nyanpasu-node.htm" title="「7月30日」最高速度22.7M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接">「7月30日」最高速度22.7M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-8-node-share.htm" title="「10月8日」最高速度20.6M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接">「10月8日」最高速度20.6M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-9-22-clash-node-daily-updates.htm" title="「9月22日」最高速度18.2M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接">「9月22日」最高速度18.2M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-9-11-node-share.htm" title="「9月11日」最高速度22.2M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接">「9月11日」最高速度22.2M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">11</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">93</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">34</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">31</span> <a href="/date/2024-10/" title="2024-10 归档">2024-10</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">30</span> <a href="/date/2024-09/" title="2024-09 归档">2024-09</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">31</span> <a href="/date/2024-08/" title="2024-08 归档">2024-08</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">27</span> <a href="/date/2024-07/" title="2024-07 归档">2024-07</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">7</span> <a href="/date/2024-06/" title="2024-06 归档">2024-06</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+        <!--====== FOOTER PART START ======-->
+    <section class="footer-area footer-dark">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="copyright text-center mt-35">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                        <p class="text">
+                            ClashNyanpasu官网节点站 版权所有 Powered by WordPress
+                        </p>
+                    </div> <!--  copyright -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+    <!--====== FOOTER PART ENDS ======-->
+    <!--====== BACK TOP TOP PART START ======-->
+    <a href="#" class="back-to-top"><i class="lni lni-chevron-up"></i></a>
+    <!--====== BACK TOP TOP PART ENDS ======-->
+    <!--====== Jquery js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/vendor/jquery-1.12.4.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/vendor/modernizr-3.7.1.min.js"></script>
+    <!--====== Bootstrap js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/popper.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/slick.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/jquery.magnific-popup.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/ajax-contact.js"></script>
+    <!--====== Isotope js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/imagesloaded.pkgd.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/isotope.pkgd.min.js"></script>
+    <!--====== Scrolling Nav js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/jquery.easing.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/scrolling-nav.js"></script>
+    <!--====== Main js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
