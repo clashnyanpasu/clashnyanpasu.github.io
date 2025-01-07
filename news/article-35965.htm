@@ -1,0 +1,222 @@
+<!doctype html>
+<html class="no-js" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashnyanpasu.github.io/news/article-35965.htm" />
+    <meta charset="utf-8">
+    <!--====== Title ======-->
+    <title>HCNP Routing&amp;Switching之MUX VLAN</title>
+        <meta name="description" content="　　前文我们了解了代理ARP相关话题，回顾请参考https://www.cnblogs.com/qiuhom-1874/p/16188230.html；今天我们再来聊一聊vlan隔离相关话题MUX V" />
+        <link rel="icon" href="/assets/website/img/clashnyanpasu/favicon.ico" type="image/x-icon"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--====== Magnific Popup CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/magnific-popup.css">
+    <!--====== Slick CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/slick.css">
+    <!--====== Line Icons CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/LineIcons.css">
+    <!--====== Bootstrap CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/bootstrap.min.css">
+    <!--====== Default CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/default.css">
+    <!--====== Style CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/style.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7F56WL29Y8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7F56WL29Y8');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!--====== PRELOADER PART START ======-->
+    <div class="preloader">
+        <div class="loader">
+            <div class="ytp-spinner">
+                <div class="ytp-spinner-container">
+                    <div class="ytp-spinner-rotator">
+                        <div class="ytp-spinner-left">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                        <div class="ytp-spinner-right">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--====== PRELOADER PART ENDS ======-->
+    <!--====== NAVBAR TWO PART START ======-->
+    <section class="navbar-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <nav class="navbar navbar-expand-lg">
+                                                <a class="navbar-brand top" href="/">
+                            Clash Nyanpasu
+                        </a>
+                                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTwo" aria-controls="navbarTwo" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="toggler-icon"></span>
+                            <span class="toggler-icon"></span>
+                            <span class="toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse sub-menu-bar" id="navbarTwo">
+                            <ul class="navbar-nav m-auto">
+                                                                <li class="nav-item"><a href="/">首页</a></li>
+                                                                <li class="nav-item"><a href="/free-nodes/">免费节点</a></li>
+                                                                <li class="nav-item"><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                <li class="nav-item"><a href="/news/">新闻资讯</a></li>
+                                                                <li class="nav-item"><a href="#">关于</a></li>
+                                <li class="nav-item"><a href="#">链接</a></li>
+                            </ul>
+                        </div>
+
+                    </nav> <!-- navbar -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+    <!--====== NAVBAR TWO PART ENDS ======-->
+    <!--====== SLIDER PART START ======-->
+    <section id="home" class="slider_area">
+        <div id="carouselThree" class="carousel slide sub-page" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="slider-content">
+                                    <h1 class="title">HCNP Routing&amp;Switching之MUX VLAN</h1>
+                                    <p class="text">
+                                        <a href="/">首页</a> / 
+                                        <a href="/news/">新闻资讯</a> / 
+                                        <span>正文</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div> <!-- row -->
+                    </div> <!-- container -->
+                    <div class="slider-image-box d-none d-lg-flex align-items-end">
+                        <div class="slider-image">
+                            <img href="/assets/website/img/clashnyanpasu/slider/1.png" alt="Hero">
+                        </div> <!-- slider-imgae -->
+                    </div> <!-- slider-imgae box -->
+                </div> <!-- carousel-item -->
+            </div>
+        </div>
+    </section>
+    <!--====== SLIDER PART ENDS ======-->
+    <!--====== ABOUT PART START ======-->
+    <section id=about class=about-area>
+        <div class=container>
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<p>　　前文我们了解了代理ARP相关话题，回顾请参考<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://www.cnblogs.com/qiuhom-1874/p/16188230.html"  target="_blank" rel="nofollow">https://www.cnblogs.com/qiuhom-1874/p/16188230.html</a>；今天我们再来聊一聊vlan隔离相关话题MUX VLAN；</p> <p>　　vlan隔离-端口隔离回顾</p> <p>　　在同一网段的同一vlan内，为了使各端口互不干扰影响，我们可以使用端口隔离技术，配置交换机某些端口双向隔离或者单向隔离；这是从二层的角度去隔离；但是我们可以使用三层接口，开启代理arp绕过二层端口隔离，于是为了防止代理arp绕过二层端口隔离，我们也可以修改端口隔离模式为all，即二层和三层都隔离；</p> <p>　　MUX VLAN</p> <p>　　今天聊的MUX VLAN 也是一种vlan隔离技术，相对于同VLAN内的端口隔离，它更灵活；它能实现部分VLAN间可以互通、部分VLAN间隔离，同时也可以实现VLAN内端口隔离；它也是通过vlan进行网络资源控制的一种机制，只适用于二层网络中，对同一网段的用户进行隔离（注意，是同一网段）和互通；简单说MUX VLAN实现了处于相同网段的设备划入不同VLAN后，虽然二层通信是隔离的，但可以和指定vlan通信，还可以实现禁止相同VLAN内地不同设备间的通信；</p> <p>　　示例：如下拓扑</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220509/e78bca9eea5b8f301b624fe6b9acdc52.jpg" alt="HCNP Routing&amp;Switching之MUX VLAN"></p> <p>　　如图所示，服务器与汇聚层交换机相连，为了实现所有用户可以访问企业服务器，我们可以通过配置vlan间通信实现；对于企业来说，希望企业内部员工之间可以互相访问，第三方企业访客之间是隔离的，我们可以通过配置每个访客使用不同的vlan来实现，这样一来如果有大量的第三方访客，此时不但要消耗大量VLAN ID，还增加了管理员维护网络的难度，那怎么来解决这样的需求呢？使用MUX VLAN来解决；MUX VLAN提供二层流量隔离的机制可以实现企业内部员工之间互相通信，而第三方外来访客之间是相互隔离；</p> <p>　　MUX VLAN通信规则</p> <p>　　MUX VLAN主要有2种类型的VLAN，主VLAN和子VLAN；而子VLAN由分两种类型，一种是互通型子VLAN，一种是隔离型子VLAN，通信规则如下；</p> <p>　　1、主VLAN（Principal VLAN）：可以与MUX VLAN内所有VLAN通信，即不管是那种类型的子VLAN，主VLAN都可以和它通信；</p> <p>　　2、隔离型子VLAN（Separate VLAN）:该类型子VLAN只能和主VLAN通信，和其他类型的VLAN完全隔离，同时子VLAN内部也完全隔离；即只能和主VLAN通信，不能和其他VLAN通信，包括同一VLAN内地其他成员；</p> <p>　　3、互通型子VLAN（Group VLAN）：可以和主VLAN 通信，在同一子VLAN内部用户可以相互通信；但不能与其他互通型子 VLAN 或隔离型子VLAN内的用户通信；即互通型子VLAN 只能和主VLAN和本VLAN内用户通信，其他VLAN都不行；</p> <p>　　通过了解MUX VLAN通信规则，上述示例实现起来就非常简单，我们可以把服务器所在VLAN设置成主VLAN，把企业内部员工所在VLAN设置成互通型VLAN，把第三方访客所在VLAN设置成隔离型子VLAN；如下图所示</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220509/7f8967cc1e872fe92548e8e094dda550.jpg" alt="HCNP Routing&amp;Switching之MUX VLAN"></p> <p>　　实验：如下拓扑，配置MUX VLAN</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220509/2987f6418f6468bbb232b75f1815103c.jpg" alt="HCNP Routing&amp;Switching之MUX VLAN"></p> <p>　　交换机划分VLAN</p> <div class="cnblogs_code"><img decoding="async" src="https://images.cnblogs.com/OutliningIndicators/ContractedBlock.gif" alt="HCNP Routing&amp;Switching之MUX VLAN" id="code_img_closed_79819365-1492-4f17-b20b-1458ca5bb20d" class="code_img_closed"/><img decoding="async" src="https://images.cnblogs.com/OutliningIndicators/ExpandedBlockStart.gif" alt="HCNP Routing&amp;Switching之MUX VLAN" id="code_img_opened_79819365-1492-4f17-b20b-1458ca5bb20d" class="code_img_opened" style="display: none"/></p> <div id="cnblogs_code_open_79819365-1492-4f17-b20b-1458ca5bb20d" class="cnblogs_code_hide"> <pre><span style="color: rgba(0, 0, 0, 1)">sys sys sw1 vlan batch</span><span style="color: rgba(128, 0, 128, 1)">12</span><span style="color: rgba(128, 0, 128, 1)">15</span><span style="color: rgba(128, 0, 128, 1)">34</span><span style="color: rgba(0, 0, 255, 1)">int</span> g0/<span style="color: rgba(128, 0, 128, 1)">0</span>/<span style="color: rgba(128, 0, 128, 1)">1</span><span style="color: rgba(0, 0, 0, 1)"> port link</span>-<span style="color: rgba(0, 0, 0, 1)">type access port default vlan</span><span style="color: rgba(128, 0, 128, 1)">12</span><span style="color: rgba(0, 0, 255, 1)">int</span> g0/<span style="color: rgba(128, 0, 128, 1)">0</span>/<span style="color: rgba(128, 0, 128, 1)">2</span><span style="color: rgba(0, 0, 0, 1)"> port link</span>-<span style="color: rgba(0, 0, 0, 1)">type access port default vlan</span><span style="color: rgba(128, 0, 128, 1)">12</span><span style="color: rgba(0, 0, 255, 1)">int</span> g0/<span style="color: rgba(128, 0, 128, 1)">0</span>/<span style="color: rgba(128, 0, 128, 1)">3</span><span style="color: rgba(0, 0, 0, 1)"> port link</span>-<span style="color: rgba(0, 0, 0, 1)">type access port default vlan</span><span style="color: rgba(128, 0, 128, 1)">34</span><span style="color: rgba(0, 0, 255, 1)">int</span> g0/<span style="color: rgba(128, 0, 128, 1)">0</span>/<span style="color: rgba(128, 0, 128, 1)">4</span><span style="color: rgba(0, 0, 0, 1)"> port link</span>-<span style="color: rgba(0, 0, 0, 1)">type access port default vlan</span><span style="color: rgba(128, 0, 128, 1)">34</span><span style="color: rgba(0, 0, 255, 1)">int</span> g0/<span style="color: rgba(128, 0, 128, 1)">0</span>/<span style="color: rgba(128, 0, 128, 1)">5</span><span style="color: rgba(0, 0, 0, 1)"> port link</span>-<span style="color: rgba(0, 0, 0, 1)">type access port default vlan</span><span style="color: rgba(128, 0, 128, 1)">15</span></pre> </div> <p><span class="cnblogs_code_collapse">View Code</span></div> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220509/6ac85e918409c26c48e220e0c9043be4.jpg" alt="HCNP Routing&amp;Switching之MUX VLAN"></p> <p>　　验证：各vlan成员互通型</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220509/0904d9185062dfd15905a70f271fc6c3.jpg" alt="HCNP Routing&amp;Switching之MUX VLAN"></p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220509/29c010c5e45e9240aa751f6a02f588a4.jpg" alt="HCNP Routing&amp;Switching之MUX VLAN"></p> <p>　　提示：可以看到pc1只能和本vlan里的pc2通信，和其他pc和服务器是能通信的；同样pc3也只能和同VLAN内的PC4通信和其他VLAN 、服务器不能通信；</p> <p>　　配置MUX VLAN，实现VLAN 12能和VLAN 15通信，能在本VLAN 内互通;VLAN 34能和VLAN 15通信，本VLAN内成员相互隔离；</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220509/b2128bcae70a22cbdc6630daed375eb9.jpg" alt="HCNP Routing&amp;Switching之MUX VLAN"></p> <p>　　提示：我们配置MUX VLAN 只需要在主VLAN里配置即可，首先配置主VLAN为mux-vlan，然后再配置子VLAN即可；</p> <p>　　验证MUX VLAN</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220509/aa2cc18fcc828c20821e8ba26835f573.jpg" alt="HCNP Routing&amp;Switching之MUX VLAN"></p> <p>　　提示：通过上面的信息，我们可以看到vlan 15是主VLAN，vlan34是隔离型子VLAN，vlan12是互通型子VLAN；</p> <p>　　在相关接口开启mux-vlan 功能</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220509/7148f2b9e6070d3c8dd38d1863442599.jpg" alt="HCNP Routing&amp;Switching之MUX VLAN"></p> <p>　　提示：我们需要在相关VLAN接口上开启mux-vlan功能即可；</p> <p>　　验证：各vlan成员间互通型</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220509/23d331e4c0019f3d1993f961b2ec3cc0.jpg" alt="HCNP Routing&amp;Switching之MUX VLAN"></p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220509/a6c582eba93d57a8a90abb5e08a2c052.jpg" alt="HCNP Routing&amp;Switching之MUX VLAN"></p> <p>　　提示：可以看到我们配置上mux-vlan以后，vlan12里的成员可以和本VLAN内地成员互通，同时也能和主VLAN vlan15里的成员互通；不可用和其他vlan成员通信；vlan34只能和主VLAN vlan15里的成员互通，和本vlan内的成员相互隔离，同样也不能和其他vlan成员互通；</p> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-35480.htm">广州猫领养中心地址 广州猫领养中心地址在哪里</a></p>
+                                        <p>下一个：<a href="/news/article-35967.htm">给动物打的疫苗人注射会有什么后果（给动物打疫苗有什么用）</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2024-10-31-node-share.htm" title="「10月31日」最高速度21.1M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐">「10月31日」最高速度21.1M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐</a></li>
+                        <li class="py-2"><a href="/news/article-23503.htm" title="关于MySQL92和99 等值连接、非等值连接、自连接、外连接及多表查询的代码示例总结！">关于MySQL92和99 等值连接、非等值连接、自连接、外连接及多表查询的代码示例总结！</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-16-node-share.htm" title="「12月16日」最高速度20.4M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐">「12月16日」最高速度20.4M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐</a></li>
+                        <li class="py-2"><a href="/news/article-34311.htm" title="广州猫宠物市场（广州猫宠物市场电话）">广州猫宠物市场（广州猫宠物市场电话）</a></li>
+                        <li class="py-2"><a href="/news/article-26300.htm" title="被宠物猫抓伤出一丝丝血要***吗多少钱一针（被宠物猫抓伤出一丝丝血要***吗多少钱一针）">被宠物猫抓伤出一丝丝血要***吗多少钱一针（被宠物猫抓伤出一丝丝血要***吗多少钱一针）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-9-free-clash-nyanpasu.htm" title="「12月9日」最高速度19.5M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐">「12月9日」最高速度19.5M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-31-node-share-links.htm" title="「12月31日」最高速度18.6M/S，2025年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐">「12月31日」最高速度18.6M/S，2025年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-30-free-node-subscribe-links.htm" title="「10月30日」最高速度18.6M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐">「10月30日」最高速度18.6M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐</a></li>
+                        <li class="py-2"><a href="/news/article-27228.htm" title="ES的searchAfter使用详解">ES的searchAfter使用详解</a></li>
+                        <li class="py-2"><a href="/news/article-23050.htm" title="动物医院参观有感作文400字（动物医院参观有感作文400字怎么写）">动物医院参观有感作文400字（动物医院参观有感作文400字怎么写）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">20</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">93</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">34</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">25</span> <a href="/date/2024-10/" title="2024-10 归档">2024-10</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+        <!--====== FOOTER PART START ======-->
+    <section class="footer-area footer-dark">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="copyright text-center mt-35">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                        <p class="text">
+                            ClashNyanpasu官网节点站 版权所有 Powered by WordPress
+                        </p>
+                    </div> <!--  copyright -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+    <!--====== FOOTER PART ENDS ======-->
+    <!--====== BACK TOP TOP PART START ======-->
+    <a href="#" class="back-to-top"><i class="lni lni-chevron-up"></i></a>
+    <!--====== BACK TOP TOP PART ENDS ======-->
+    <!--====== Jquery js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/vendor/jquery-1.12.4.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/vendor/modernizr-3.7.1.min.js"></script>
+    <!--====== Bootstrap js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/popper.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/slick.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/jquery.magnific-popup.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/ajax-contact.js"></script>
+    <!--====== Isotope js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/imagesloaded.pkgd.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/isotope.pkgd.min.js"></script>
+    <!--====== Scrolling Nav js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/jquery.easing.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/scrolling-nav.js"></script>
+    <!--====== Main js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
