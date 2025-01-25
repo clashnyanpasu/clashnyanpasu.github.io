@@ -1,0 +1,249 @@
+<!doctype html>
+<html class="no-js" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashnyanpasu.github.io/news/article-46112.htm" />
+    <meta charset="utf-8">
+    <!--====== Title ======-->
+    <title>iOS全埋点解决方案-应用退出和启动</title>
+        <meta name="description" content="前言 	通过应用程序退出事件，可以分析应用程序的平均使用时长；通过应用程序的启动事件，可以分析日活和新增。我们可以通过全埋点方式 SDK 实现应用程序的退出和启动事件。 一、全埋点的简介 	目前、全埋" />
+        <link rel="icon" href="/assets/website/img/clashnyanpasu/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="ClashNyanpasu官网节点站">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://clashnyanpasu.github.io/news/article-46112.htm" />
+    <meta property="og:site_name" content="ClashNyanpasu官网节点站" />
+    <meta property="og:title" content="iOS全埋点解决方案-应用退出和启动" />
+    <meta property="og:image" content="https://clashnyanpasu.github.io/uploads/20240623/992bae791afbeca135b218b8d99ddac3.webp" />
+        <meta property="og:release_date" content="2025-01-25T09:53:41" />
+    <meta property="og:updated_time" content="2025-01-25T09:53:41" />
+        <meta property="og:description" content="前言 	通过应用程序退出事件，可以分析应用程序的平均使用时长；通过应用程序的启动事件，可以分析日活和新增。我们可以通过全埋点方式 SDK 实现应用程序的退出和启动事件。 一、全埋点的简介 	目前、全埋" />
+        
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--====== Magnific Popup CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/magnific-popup.css">
+    <!--====== Slick CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/slick.css">
+    <!--====== Line Icons CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/LineIcons.css">
+    <!--====== Bootstrap CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/bootstrap.min.css">
+    <!--====== Default CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/default.css">
+    <!--====== Style CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/style.css">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="iOS全埋点解决方案-应用退出和启动">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7F56WL29Y8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7F56WL29Y8');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!--====== PRELOADER PART START ======-->
+    <div class="preloader">
+        <div class="loader">
+            <div class="ytp-spinner">
+                <div class="ytp-spinner-container">
+                    <div class="ytp-spinner-rotator">
+                        <div class="ytp-spinner-left">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                        <div class="ytp-spinner-right">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--====== PRELOADER PART ENDS ======-->
+    <!--====== NAVBAR TWO PART START ======-->
+    <section class="navbar-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <nav class="navbar navbar-expand-lg">
+                                                <a class="navbar-brand top" href="/">
+                            Clash Nyanpasu
+                        </a>
+                                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTwo" aria-controls="navbarTwo" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="toggler-icon"></span>
+                            <span class="toggler-icon"></span>
+                            <span class="toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse sub-menu-bar" id="navbarTwo">
+                            <ul class="navbar-nav m-auto">
+                                                                <li class="nav-item"><a href="/">首页</a></li>
+                                                                <li class="nav-item"><a href="/free-nodes/">免费节点</a></li>
+                                                                <li class="nav-item"><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                <li class="nav-item"><a href="/news/">新闻资讯</a></li>
+                                                                <li class="nav-item"><a href="#">关于</a></li>
+                                <li class="nav-item"><a href="#">链接</a></li>
+                            </ul>
+                        </div>
+
+                    </nav> <!-- navbar -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+    <!--====== NAVBAR TWO PART ENDS ======-->
+    <!--====== SLIDER PART START ======-->
+    <section id="home" class="slider_area">
+        <div id="carouselThree" class="carousel slide sub-page" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="slider-content">
+                                    <h1 class="title">iOS全埋点解决方案-应用退出和启动</h1>
+                                    <p class="text">
+                                        <a href="/">首页</a> / 
+                                        <a href="/news/">新闻资讯</a> / 
+                                        <span>正文</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div> <!-- row -->
+                    </div> <!-- container -->
+                    <div class="slider-image-box d-none d-lg-flex align-items-end">
+                        <div class="slider-image">
+                            <img href="/assets/website/img/clashnyanpasu/slider/1.png" alt="Hero">
+                        </div> <!-- slider-imgae -->
+                    </div> <!-- slider-imgae box -->
+                </div> <!-- carousel-item -->
+            </div>
+        </div>
+    </section>
+    <!--====== SLIDER PART ENDS ======-->
+    <!--====== ABOUT PART START ======-->
+    <section id=about class=about-area>
+        <div class=container>
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<h3 id="前言">前言</h3> <p>	通过应用程序退出事件，可以分析应用程序的平均使用时长；通过应用程序的启动事件，可以分析日活和新增。我们可以通过全埋点方式 SDK 实现应用程序的退出和启动事件。</p> <h3 id="一全埋点的简介">一、全埋点的简介</h3> <p>	目前、全埋点采集可以采集一下4个事件。</p> <p>1、$AppEnd 事件：应用程序退出事件</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220510/237fd17efe18013bc691c5452e9a4fc9.jpg" alt="iOS全埋点解决方案-应用退出和启动"></p> <p>2、$AppStart 事件：应用程序启动事件</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220510/f03bf691b71390d9266fef0ed889d5b0.jpg" alt="iOS全埋点解决方案-应用退出和启动"></p> <p>3、$AppViewScreen 事件:  应用程序内界面预览事件，对于 iOS 来说就是切换不同的 UIViewController。</p> <p>4、$AppClick 事件: 控件的点击事件，比如点击 UIButton 、UITableView 等。</p> <p>预置事件：在 SDK 中自动采集的事件称为预置事件。</p> <h3 id="二应用程序退出">二、应用程序退出</h3> <h4 id="21-应用程序状态">2.1 应用程序状态：</h4> <p>	一个标准的 iOS 程序在不同的时期会有不同的运行状态，在 iOS 程序中常见的状态有5中。如图所示：</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220510/caefb059fd6d47858d0935c2b92b143a.jpg" alt="iOS全埋点解决方案-应用退出和启动"></p> <p>1、Not running：非运行状态，指应用程序还没有被启动，或者已经被系统终止。</p> <p>2、Inactive: 前台非活跃状态，指应用程序即将进入前台状态。</p> <p>3、Active: 前台活跃状态，指应用程序正在前台运行，可接受事件并进行处理。</p> <p>4、Background: 进入后台状态，指应用程序进入后台并可执行代码。</p> <p>5、Suspended: 挂起状态，指应用程序进入后台并没有执行代码，系统会自动将应用程序转移到该状态。挂起时，应用程序会保留在内存中，但不执行任何代码，当系统出现内存不足情况时，系统会清除被挂起的应用程序。</p> <p>	在应用程序的状态转换过程中，系统会调用实现 UIApplicationDelegate 协议类的一些方法，并发送相应的本地通知（先调用方法，待回调方法执行后，再发相应的通知），回调方法和本地通知的对应关系如下表</p> <table> <thead> <tr> <th style="text-align: center">回调方法</th> <th style="text-align: center">本地通知</th> </tr> </thead> <tbody> <tr> <td style="text-align: center">- application:didFinishI aunchingWithOptions:</td> <td style="text-align: center">UIApplicationDidFinishLaunchingNotification</td> </tr> <tr> <td style="text-align: center">- applicationDidBecomeActive:</td> <td style="text-align: center">UIApplicationDidBecomeActiveNotification</td> </tr> <tr> <td style="text-align: center">- applicationWillResignActive:</td> <td style="text-align: center">UIApplicationWillResignActiveNotification</td> </tr> <tr> <td style="text-align: center">- applicationDidEnterBack ground:·</td> <td style="text-align: center">UIApplicationDidEnterBackgroundNotification</td> </tr> <tr> <td style="text-align: center">- applicationWillEnterForeground:</td> <td style="text-align: center">UIApplicationWillEnterForegroundNotificatio</td> </tr> <tr> <td style="text-align: center">- applicationWillTerminate:</td> <td style="text-align: center">UIApplicationWillTerminateNotification</td> </tr> </tbody> </table> <h4 id="22-实现步骤">2.2 实现步骤</h4> <p>	通过上面介绍的内容可知，当一个 iOS 应用程序退出时，就意味着该应用程序进入了“后台”，即处于 Background 状态。因此，对于实现 $AppEnd 事件的全埋点，我们只需要注册监听 UIApplicationDidEnterBackgroundNotification 通知，然后在收到通知时触发 $AppEnd 事件，即可达到 $AppEnd 事件全埋点的效果。</p> <p>第一步：注册监听 UIApplicationDidEnterBackgroundNotification 本地通知。</p> <p>在 SensorsAnalyticsSDK.m 文件中实现 - setupListeners 方法，用来监听 UIApplicationDidEnterBackgroundNotification 本地通知，然后再相应的回调方法中触发 $AppEnd 事件。</p> <pre><code>- (void)setupListeners {     NSNotificationCenter *center = [NSNotificationCenter defaultCenter];     // 注册监听 UIApplicationDidEnterBackgroundNotification 本地通知     // 当应用程序进入后台，调用通知方法     [center addObserver:self                selector:@selector(applicationDidEnterBackground:)                    name:UIApplicationDidEnterBackgroundNotification                  object:nil]; }  - (void)applicationDidEnterBackground:(NSNotification *)notification {     NSLog(@"Application did enter background.");          // 触发 AppEnd 事件     [self track:@"$AppEnd" properties:nil]; }</code></pre> <p>第二步：在 SensorsAnalyticsSDK.m 文件中初始化 - init 方法中调用 - setupListeners，并在 - dealloc 方法中移除监听。</p> <pre><code>- (instancetype)init {     self = [super init];     if (self) {         _automaticProperties = [self collectAutomaticProperties];                  // 添加应用程序状态监听         [self setupListeners];     }     return self; }  - (void)dealloc {     [[NSNotificationCenter defaultCenter] removeObserver:self]; }</code></pre> <p>第三步：测试验证</p> <p>我们可以在 Xcode 中打印控制台中查看如下的打印信息。</p> <pre><code>{   "event" : "$AppEnd",   "time" : 1648520301691,   "propeerties" : {     "$model" : "x86_64",     "$manufacturer" : "Apple",     "$lib_version" : "1.0.0",     "$os" : "iOS",     "$app_version" : "1.0",     "$os_version" : "15.2",     "$lib" : "iOS"   } }</code></pre> <h3 id="三应用程序启动">三、应用程序启动</h3> <p>应用程序的启动，一般情况下，大致可以分为两类场景：</p> <p>• 冷启动</p> <p>• 热启动（从后台恢复）</p> <p>	不管是冷启动还是热启动，触发 $AppStart 事件的时机，都可以理解成是当“应用程序开始进入前台并处于活动状态”，也即前文介绍的 Active 状态。因此，为了实现 $AppStart 事件的全埋点，我们可以注册监听 UIApplicationDidBecomeActiveNotification 本地通知，然后在其相应的回调方法里触发 $AppStart 事件。</p> <h4 id="31-实现步骤">3.1 实现步骤</h4> <p>第一步：在 SensorsAnalyticsSDK.m 文件 - setupListeners 方法中，添加 UIApplicationDidBecomeActiveNotification 本地通知，然后再相应的回调方法中触发 $AppStart 事件。</p> <pre><code>- (void)setupListeners {     NSNotificationCenter *center = [NSNotificationCenter defaultCenter];     // 注册监听 UIApplicationDidBecomeActiveNotification 本地通知     // 当应用程序进入前台台，调用通知方法     [center addObserver:self                selector:@selector(applicationDidBecomeActive:)                    name:UIApplicationDidBecomeActiveNotification                  object:nil]; }  - (void)applicationDidBecomeActive:(NSNotification *)notification {     NSLog(@"Application did enter active.");          // 触发 AppEnd 事件     [self track:@"$AppStart" properties:nil]; }</code></pre> <p>第二步: 测试验证</p> <p>	可以在 Xcode 打印控制台中查看下面的打印信息。</p> <pre><code>{   "event" : "$AppStart",   "time" : 1648520708355,   "propeerties" : {     "$model" : "x86_64",     "$manufacturer" : "Apple",     "$lib_version" : "1.0.0",     "$os" : "iOS",     "$app_version" : "1.0",     "$os_version" : "15.2",     "$lib" : "iOS"   } }</code></pre> <h4 id="32-优化">3.2 优化</h4> <p>问题：</p> <p>通过测试可以发现，仍有以下几个特殊场景存在问题：</p> <p>• 下拉通知栏并上滑，会触发 $AppStart 事件</p> <p>• 上滑控制中心并下拉，会触发 $AppStart 事件</p> <p>• 双击 Home 键进入切换应用程序页面，最后又选择当前应用程序，会触发 $AppStart 事件</p> <p>以上几个场景均会触发 $AppStart 事件，明显与实际情况有所不符。</p> <p>那这些现象是什么原因导致的呢？</p> <p>我们继续分析可以发现以下几个现象：</p> <p>• 下拉通知栏时，系统会发送 UIApplicationWillResignActiveNotification 通知；上滑通知栏时，系统会发送 UIApplicationDidBecomeActiveNotification 通知</p> <p>• 上滑控制中心时，系统会发送 UIApplicationWillResignActiveNotification 通知；下拉控制中心时，系统会发送 UIApplicationDidBecomeActiveNotification 通知</p> <p>• 双击 Home 键进入切换应用程序页面时，系统会发送 UIApplicationWillResignActiveNotification 通知，然后选择当前应用程序，系统会再发送 UIApplicationDidBecomeActiveNotification 通知</p> <p>很容易总结出规律：在以上几个场景下，系统均是先发送UIApplicationWillResignActiveNotification 通知，然后再发送 UIApplicationDidBecomeActiveNotification 通知。而我们又是通过注册监听 UIApplicationDidBecomeActiveNotification 通知来实现 $AppStart 事件全埋点，因此均会触发 $AppStart 事件。</p> <p>那如何解决这个问题呢？</p> <p>在解决这个问题之前，我们先看另一个现象：不管是冷启动还是热启动，系统均没有发送 UIApplicationWillResignActiveNotification 通知。</p> <p>因此，只要在收到 UIApplicationDidBecomeActiveNotification 通知时，判断之前是否收到过 UIApplicationWillResignActiveNotification 通知，若没有收到，则触发 $AppStart 事件；若已收到，则不触发 $AppStart 事件。这样即可解决上面的问题。</p> <p>优化方案：</p> <p>第一步：在 SensorsAnalyticsSDK.m 文件中添加 applicationWillResignActive 标记位。</p> <pre><code>/// 标记应用程序是否收到 UIApplicationWillResignActiveNotification 本地通知 @property (nonatomic, assign) BOOL applicationWillResignActive;</code></pre> <p>第二步：在 - setupListeners 方法中新增注册监听 UIApplicationWillResignActiveNotification 的本地通知。</p> <pre><code>- (void)setupListeners {     NSNotificationCenter *center = [NSNotificationCenter defaultCenter];     // 注册监听 UIApplicationDidEnterBackgroundNotification 本地通知     // 当应用程序进入后台，调用通知方法     [center addObserver:self                selector:@selector(applicationDidEnterBackground:)                    name:UIApplicationDidEnterBackgroundNotification                  object:nil];          // 注册监听 UIApplicationDidBecomeActiveNotification 本地通知     // 当应用程序进入前台台，调用通知方法     [center addObserver:self                selector:@selector(applicationDidBecomeActive:)                    name:UIApplicationDidBecomeActiveNotification                  object:nil];          // 注册监听 UIApplicationWillResignActiveNotification 本地通知     // 当应用程序进入前台台，调用通知方法     [center addObserver:self                selector:@selector(applicationWillResignActive:)                    name:UIApplicationWillResignActiveNotification                  object:nil]; }  - (void)applicationWillResignActive:(NSNotification *)notification {          // 设置标记位     self.applicationWillResignActive = YES; }</code></pre> <p>第三步：在UIApplicationDidBecomeActiveNotification 的回调方法中还原 applicationWillResignActive 的标记位</p> <pre><code>- (void)applicationDidBecomeActive:(NSNotification *)notification {     NSLog(@"Application did enter active.");          // 还原标记位     if (self.applicationWillResignActive) {         self.applicationWillResignActive = NO;         return;     }          // 触发 AppStart 事件     [self track:@"$AppStart" properties:nil]; }</code></pre> <p>第四步：在 UIApplicationDidEnterBackgroundNotification 回调方法中还原 applicationWillResignActive 的标记位</p> <pre><code>- (void)applicationDidEnterBackground:(NSNotification *)notification {     NSLog(@"Application did enter background.");          // 还原标记位     self.applicationWillResignActive = NO;          // 触发 AppEnd 事件     [self track:@"$AppEnd" properties:nil]; }</code></pre> <p>第五步：测试验证</p> <pre><code>{   "event" : "$AppStart",   "time" : 1648533646735,   "propeerties" : {     "$model" : "x86_64",     "$manufacturer" : "Apple",     "$lib_version" : "1.0.0",     "$os" : "iOS",     "$app_version" : "1.0",     "$os_version" : "15.2",     "$lib" : "iOS"   } }</code></pre> <h3 id="四应用程序被动启动">四、应用程序被动启动</h3> <p>	被动启动：我们把由 iOS 系统触发的应用程序自动进入后台运行的启动称之为（应用程序的）被动启动，使用 $AppStartPassively 事件来表示。</p> <h4 id="41background-modes">4.1、Background modes</h4> <p>	使用 Xcode 创建新的应用程序，默认情况下后台刷新功能是关闭的，我们可以在 Capabilities 标签中开启 Background Modes，然后就可以勾选所需要的功能了，如下图所示：</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220510/d061a77b0cf77f9e89c5ea01b681b70b.jpg" alt="iOS全埋点解决方案-应用退出和启动"></p> <p>通过上图可知，有如下几种后台运行模式，它们都会触发被动启动（$AppStartPassively 事件）。</p> <p>1、Audio，AirPlay，and Picture in Picture : 音频的播放，录音，AirPlay及画中画的视频播放</p> <p>2、Location updates：此模式下，会由于地理位置变化而触发应用程序启动</p> <p>3、Voice over IP : IP网络电话，通过对语音信号进行编码数字化，然后转换成IP数据包在TCP/IP网络上进行传输，从而达到在网络上进行语音通信的目的</p> <p>4、External Accessory communication：此模式下，一些 MFi 外设通过蓝牙或者 Lightning 接头等方式与 iOS 设备连接，从而可在外设给应用程序发送消息时，触发对应的应用程序启动</p> <p>5、Uses Bluetooth LE accessories：此模式与 External Accessory communication 类似，只是无需限制 MFi 外设，而需要的是 Bluetooth LE 设备</p> <p>6、Acts as a Bluetooth LE accessory：此模式下，iPhone 作为一个蓝牙外设连接，可以触发应用程序启动</p> <p>7、Background fetch：此模式下，iOS 系统会在一定的时间间隔内触发应用程序启动，去获取应用程序数据</p> <p>8、Remote notifications：此模式是支持静默推送，当应用程序收到这种推送后，不会有任何界面提示，但会触发应用程序启动</p> <p>9、Background processing: 后端处理</p> <h4 id="42-实现步骤">4.2 实现步骤</h4> <p>	后台用程序刷新拉起应用程序后，首先会回调 AppDelegate 中的 -application:didFinishLaunchingWithOptions: 方法。因此，我们可以通过注册监听 UIApplicationgDidFinishLaunchingNotification 本地通知来采集被动启动事件信息。</p> <p>第一步：在 - setupListeners 方法中添加 UIApplicationgDidFinishLaunchingNotification 本地通知，在回调方法中上报数据。</p> <pre><code>- (void)setupListeners {     NSNotificationCenter *center = [NSNotificationCenter defaultCenter];     // 注册监听 UIApplicationDidFinishLaunchingNotification 本地通知     // 当应用程序被动，调用通知方法     [center addObserver:self                selector:@selector(applicationDidFinishLaunching:)                    name:UIApplicationDidFinishLaunchingNotification                  object:nil]; } - (void)applicationDidFinishLaunching:(NSNotification *)notification {          // 触发 AppStartPassively 事件     [self track:@"$AppStartPassively" properties:nil]; }</code></pre> <p>第二步：新增一个私有属性 launchedPassively，标记应用程序是否处于被动启动</p> <pre><code>/// 标记应用程序是否是被动启动 @property (nonatomic, assign, getter=isLaunchedPassively) BOOL launchedPassively;</code></pre> <p>第三步：在 - init 初始化方法中，通过 backgroundTimeRemaining 属性是否等于 UIApplicationBackgroundFetchIntervalNever 来设置</p> <pre><code>- (instancetype)init {     self = [super init];     if (self) {         _automaticProperties = [self collectAutomaticProperties];          // 设置是否需是被动启动标记         _launchedPassively = UIApplication.sharedApplication.backgroundTimeRemaining != UIApplicationBackgroundFetchIntervalNever;                  // 添加应用程序状态监听         [self setupListeners];     }     return self; }</code></pre> <p>第四步：在 - applicationDidFinishLaunching 回调方法中，如果 isLaunchedPassively 为 YES，再触发 $AppStartPassively 事件</p> <pre><code>- (void)applicationDidFinishLaunching:(NSNotification *)notification {     NSLog(@"Application did finish launching.");     // 当应用程序后台运行时，触发被动启动事件     if (self.isLaunchedPassively) {         // 触发 AppStartPassively 事件         [self track:@"$AppStartPassively" properties:nil];     } }</code></pre> <p>第五步：测试验证</p> <p>1、开启 Background modes 中的 Background fetch 复选框</p> <p>2、选择 Demo Scheme , 一次单击 Xcode 菜单栏中的 Product -&gt; Scheme -&gt; Edit -&gt; Scheme -&gt; Run -&gt; Options</p> <p>3、勾选 Background Fetch 选项，然后点击 Close 按钮。运行 Demo</p> <pre><code>{   "event" : "$AppStartPassively",   "time" : 1648537321216,   "propeerties" : {     "$model" : "x86_64",     "$manufacturer" : "Apple",     "$lib_version" : "1.0.0",     "$os" : "iOS",     "$app_version" : "1.0",     "$os_version" : "15.2",     "$lib" : "iOS"   }</code></pre> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-45609.htm">怎么样正确使用动物疫苗呢（被动物咬了不打疫苗会怎么样）</a></p>
+                                        <p>下一个：<a href="/news/article-46113.htm">docker-compose部署Yapi的方法_docker</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-29532.htm" title="Java的引用和内存">Java的引用和内存</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-23-node-share.htm" title="「10月23日」最高速度22.6M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐">「10月23日」最高速度22.6M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐</a></li>
+                        <li class="py-2"><a href="/news/article-41137.htm" title="动物疫苗接种时间要求（动物疫苗的使用方法及注意事项）">动物疫苗接种时间要求（动物疫苗的使用方法及注意事项）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-21-free-clash-nyanpasu.htm" title="「11月21日」最高速度18.3M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐">「11月21日」最高速度18.3M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-21-clash-node-daily-updates.htm" title="「10月21日」最高速度21.3M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐">「10月21日」最高速度21.3M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐</a></li>
+                        <li class="py-2"><a href="/news/article-45122.htm" title="宠物领养中心是什么部门管理的（宠物领养中心是什么部门管理的呢）">宠物领养中心是什么部门管理的（宠物领养中心是什么部门管理的呢）</a></li>
+                        <li class="py-2"><a href="/news/article-42631.htm" title="动物注射疫苗后过敏反应的处理方法（动物打了疫苗的,伤了人怎么办）">动物注射疫苗后过敏反应的处理方法（动物打了疫苗的,伤了人怎么办）</a></li>
+                        <li class="py-2"><a href="/news/article-43619.htm" title="兽药十大品牌排行榜（兽药排行榜前三十名）">兽药十大品牌排行榜（兽药排行榜前三十名）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-18-node-share.htm" title="「10月18日」最高速度19M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐">「10月18日」最高速度19M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-9-clash-nyanpasu.htm" title="「11月9日」最高速度18.7M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐">「11月9日」最高速度18.7M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">74</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">93</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">34</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">25</span> <a href="/date/2024-10/" title="2024-10 归档">2024-10</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+        <!--====== FOOTER PART START ======-->
+    <section class="footer-area footer-dark">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="copyright text-center mt-35">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                        <p class="text">
+                            ClashNyanpasu官网节点站 版权所有 Powered by WordPress
+                        </p>
+                    </div> <!--  copyright -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+    <!--====== FOOTER PART ENDS ======-->
+    <!--====== BACK TOP TOP PART START ======-->
+    <a href="#" class="back-to-top"><i class="lni lni-chevron-up"></i></a>
+    <!--====== BACK TOP TOP PART ENDS ======-->
+    <!--====== Jquery js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/vendor/jquery-1.12.4.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/vendor/modernizr-3.7.1.min.js"></script>
+    <!--====== Bootstrap js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/popper.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/slick.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/jquery.magnific-popup.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/ajax-contact.js"></script>
+    <!--====== Isotope js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/imagesloaded.pkgd.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/isotope.pkgd.min.js"></script>
+    <!--====== Scrolling Nav js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/jquery.easing.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/scrolling-nav.js"></script>
+    <!--====== Main js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
