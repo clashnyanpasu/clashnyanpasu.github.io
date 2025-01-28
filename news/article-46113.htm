@@ -149,6 +149,7 @@
                   				  				  				<h3>1 安装docker</h3> <div class="ay1code"> <pre class="brush:bash;">sudo yum install -y yum-utils device-mapper-persistent-data lvm2  sudo yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo  sudo yum install docker-ce  systemctl start docker</pre> </div> <h3>2 安装docker-compose</h3> <div class="ay1code"> <pre class="brush:bash;">curl -L https://get.daocloud.io/docker/compose/releases/download/1.29.1/docker-compose-`uname -s`-`uname -m` &gt; /usr/local/bin/docker-compose  chmod +x /usr/local/bin/docker-compose</pre> </div> <h3>3 新建docker-compose.yml</h3> <blockquote> <p>vim docker-compose.yml</p> </blockquote> <div class="ay1code"> <pre class="brush:bash;">version: '3'  services:    yapi-web:      image: liuqingzheng/yapi:latest      container_name: yapi-web      ports:        - 3000:3000      environment:        - YAPI_ADMIN_ACCOUNT=123@qq.com        - YAPI_ADMIN_PASSWORD=admin        - YAPI_CLOSE_REGISTER=true        - YAPI_DB_SERVERNAME=yapi-mongo        - YAPI_DB_PORT=27017        - YAPI_DB_DATABASE=yapi        - YAPI_MAIL_ENABLE=false        - YAPI_LDAP_LOGIN_ENABLE=false        - YAPI_PLUGINS=[]      depends_on:        - yapi-mongo      links:      restart: unless-stopped    yapi-mongo:      image: mongo:latest      container_name: yapi-mongo      volumes:        - ./data/db:/data/db      expose:        - 27017</pre> </div> <h3>4 启动</h3> <div class="ay1code"> <pre class="brush:bash;">docker-compose up -d # 启动  docker-compose stop  # 停止  docker-compose rm    # 删除</pre> </div> <h3>5 访问</h3> <div class="ay1code"> <pre class="brush:plain;">http://127.0.0.1:3000/  输入邮箱：123@qq.com  输入密码：admin</pre> </div> <p style="text-align:center"><img decoding="async" alt="" src="http://img.555519.xyz/uploads3/20220424/2f3b994c86d0ebf27dbd20127875b1c4.jpg"></p> 			                <div class="clearfix"></div>
                 <div class="col-md-12 mt-5">
                                         <p>上一个：<a href="/news/article-46112.htm">iOS全埋点解决方案-应用退出和启动</a></p>
+                                        <p>下一个：<a href="/news/article-46608.htm">详解盒子模型和div布局</a></p>
                                     </div>
                                 </div>
                 <div class="col-md-3">
@@ -158,16 +159,16 @@
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/news/article-29076.htm" title="成都宠物托运公司哪家比较好一点（成都宠物物流公司）">成都宠物托运公司哪家比较好一点（成都宠物物流公司）</a></li>
-                        <li class="py-2"><a href="/news/article-21655.htm" title="宠物粮食加工厂设备哪的好点呢视频 宠物粮食加工厂设备哪的好点呢视频讲解">宠物粮食加工厂设备哪的好点呢视频 宠物粮食加工厂设备哪的好点呢视频讲解</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-10-29-node-share-links.htm" title="「10月29日」最高速度22.6M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐">「10月29日」最高速度22.6M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-12-1-free-node-subscribe.htm" title="「12月1日」最高速度21.5M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐">「12月1日」最高速度21.5M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-10-13-linux-clash-nyanpasu.htm" title="「10月13日」最高速度22.5M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接">「10月13日」最高速度22.5M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接</a></li>
-                        <li class="py-2"><a href="/news/article-46112.htm" title="iOS全埋点解决方案-应用退出和启动">iOS全埋点解决方案-应用退出和启动</a></li>
-                        <li class="py-2"><a href="/news/article-30970.htm" title="[转]图解分布式一致性协议Paxos">[转]图解分布式一致性协议Paxos</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-11-24-node-share.htm" title="「11月24日」最高速度22.5M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐">「11月24日」最高速度22.5M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-10-21-clash-node-daily-updates.htm" title="「10月21日」最高速度21.3M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐">「10月21日」最高速度21.3M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐</a></li>
-                        <li class="py-2"><a href="/news/article-21217.htm" title="宠物买卖交易内容（宠物买卖交易内容怎么写）">宠物买卖交易内容（宠物买卖交易内容怎么写）</a></li>
+                        <li class="py-2"><a href="/news/article-21216.htm" title="猫三联一共几针,间隔多久打第二针好呢（猫三联一共几针分几次打完?）">猫三联一共几针,间隔多久打第二针好呢（猫三联一共几针分几次打完?）</a></li>
+                        <li class="py-2"><a href="/news/article-41634.htm" title="仓鼠去宠物医院贵吗知乎推荐（宠物医院给仓鼠看病贵吗）">仓鼠去宠物医院贵吗知乎推荐（宠物医院给仓鼠看病贵吗）</a></li>
+                        <li class="py-2"><a href="/news/article-41136.htm" title="Vue的v-for和v-bind实现列表颜色切换">Vue的v-for和v-bind实现列表颜色切换</a></li>
+                        <li class="py-2"><a href="/news/article-43127.htm" title="宠物领养app的名字叫什么好听（宠物领养app的名字叫什么好听一点）">宠物领养app的名字叫什么好听（宠物领养app的名字叫什么好听一点）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-27-clash-nyanpasu.htm" title="「10月27日」最高速度22.1M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐">「10月27日」最高速度22.1M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-23-node-share.htm" title="「10月23日」最高速度22.6M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐">「10月23日」最高速度22.6M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐</a></li>
+                        <li class="py-2"><a href="/news/article-41137.htm" title="动物疫苗接种时间要求（动物疫苗的使用方法及注意事项）">动物疫苗接种时间要求（动物疫苗的使用方法及注意事项）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-11-node-share.htm" title="「10月11日」最高速度18.6M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接">「10月11日」最高速度18.6M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-22589.htm" title="广州宠物领养微信群号是什么（广州宠物狗领养网站）">广州宠物领养微信群号是什么（广州宠物狗领养网站）</a></li>
+                        <li class="py-2"><a href="/news/article-29824.htm" title="大型颗粒饲料机图片及价格（大型饲料颗粒机图片和价格）">大型颗粒饲料机图片及价格（大型饲料颗粒机图片和价格）</a></li>
                     </ul>
     </div>
 </div>
@@ -179,7 +180,7 @@
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">74</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+                <h4><span class="badge" style="float: right;">83</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
             </li>
                         <li class="py-2">
                 <h4><span class="badge" style="float: right;">93</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
