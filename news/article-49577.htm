@@ -1,0 +1,252 @@
+<!doctype html>
+<html class="no-js" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashnyanpasu.github.io/news/article-49577.htm" />
+    <meta charset="utf-8">
+    <!--====== Title ======-->
+    <title>Qt的.pro文件格式解析</title>
+        <meta name="description" content="在Qt中用qmake生成makefile文件，它是由.pro文件生成而来的，.pro文件的具体格式语法如下： 1.注释 .pro文件中注释采用#号，从“#”号开始，到该行的结束，例如： 2.模板TEM" />
+        <link rel="icon" href="/assets/website/img/clashnyanpasu/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="ClashNyanpasu官网节点站">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://clashnyanpasu.github.io/news/article-49577.htm" />
+    <meta property="og:site_name" content="ClashNyanpasu官网节点站" />
+    <meta property="og:title" content="Qt的.pro文件格式解析" />
+    <meta property="og:image" content="https://clashnyanpasu.github.io/uploads/20240623/7bcb8be466e1b3d09fd2576cd9d484df.webp" />
+        <meta property="og:release_date" content="2025-02-01T07:14:57" />
+    <meta property="og:updated_time" content="2025-02-01T07:14:57" />
+        <meta property="og:description" content="在Qt中用qmake生成makefile文件，它是由.pro文件生成而来的，.pro文件的具体格式语法如下： 1.注释 .pro文件中注释采用#号，从“#”号开始，到该行的结束，例如： 2.模板TEM" />
+        
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--====== Magnific Popup CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/magnific-popup.css">
+    <!--====== Slick CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/slick.css">
+    <!--====== Line Icons CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/LineIcons.css">
+    <!--====== Bootstrap CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/bootstrap.min.css">
+    <!--====== Default CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/default.css">
+    <!--====== Style CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/style.css">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Qt的.pro文件格式解析">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7F56WL29Y8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7F56WL29Y8');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!--====== PRELOADER PART START ======-->
+    <div class="preloader">
+        <div class="loader">
+            <div class="ytp-spinner">
+                <div class="ytp-spinner-container">
+                    <div class="ytp-spinner-rotator">
+                        <div class="ytp-spinner-left">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                        <div class="ytp-spinner-right">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--====== PRELOADER PART ENDS ======-->
+    <!--====== NAVBAR TWO PART START ======-->
+    <section class="navbar-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <nav class="navbar navbar-expand-lg">
+                                                <a class="navbar-brand top" href="/">
+                            Clash Nyanpasu
+                        </a>
+                                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTwo" aria-controls="navbarTwo" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="toggler-icon"></span>
+                            <span class="toggler-icon"></span>
+                            <span class="toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse sub-menu-bar" id="navbarTwo">
+                            <ul class="navbar-nav m-auto">
+                                                                <li class="nav-item"><a href="/">首页</a></li>
+                                                                <li class="nav-item"><a href="/free-nodes/">免费节点</a></li>
+                                                                <li class="nav-item"><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                <li class="nav-item"><a href="/news/">新闻资讯</a></li>
+                                                                <li class="nav-item"><a href="#">关于</a></li>
+                                <li class="nav-item"><a href="#">链接</a></li>
+                            </ul>
+                        </div>
+
+                    </nav> <!-- navbar -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+    <!--====== NAVBAR TWO PART ENDS ======-->
+    <!--====== SLIDER PART START ======-->
+    <section id="home" class="slider_area">
+        <div id="carouselThree" class="carousel slide sub-page" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="slider-content">
+                                    <h1 class="title">Qt的.pro文件格式解析</h1>
+                                    <p class="text">
+                                        <a href="/">首页</a> / 
+                                        <a href="/news/">新闻资讯</a> / 
+                                        <span>正文</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div> <!-- row -->
+                    </div> <!-- container -->
+                    <div class="slider-image-box d-none d-lg-flex align-items-end">
+                        <div class="slider-image">
+                            <img src="/assets/website/img/clashnyanpasu/slider/1.png" alt="Hero">
+                        </div> <!-- slider-imgae -->
+                    </div> <!-- slider-imgae box -->
+                </div> <!-- carousel-item -->
+            </div>
+        </div>
+    </section>
+    <!--====== SLIDER PART ENDS ======-->
+    <!--====== ABOUT PART START ======-->
+    <section id=about class=about-area>
+        <div class=container>
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				</h1> <p>在Qt中用qmake生成makefile文件，它是由.pro文件生成而来的，.pro文件的具体格式语法如下：</p> <h2 id="1注释">1.注释</h2> <p>.pro文件中注释采用#号，从“#”号开始，到该行的结束，例如：</p> <h2 id="2模板template">2.模板TEMPLATE</h2> <p>模板变量告诉qmake为这个应用程序生成那种makefile文件。下面是可提供使用的选择：</p> <pre><code class="language-makefile">TEMPLATE=app</code></pre> <ol> <li>app-建立一个应用程序的makefile。这是个默认值，所以如果模板没有被指定，该模板将会被使用。</li> <li>lib  -建立一个库的makefile。</li> <li>vcapp -建立一个应用程序的Visual Studio项目文件。</li> <li>vclib -建立一个库的VisualStudio项目文件。</li> <li>subdirs -这是一个特殊的模板，它可以创建一个能够进入特定目录并且为一个项目文件生成makefile，并且为它调用make的makefile。</li> </ol> <h2 id="3添加文件路径">3.添加文件路径</h2> <ol> <li> <p><code>HEADERS +=</code> 用来添加头文件</p> </li> <li> <p><code>SOURCES +=</code> 用来添加源文件</p> </li> <li> <p><code>FORMS +=</code> 用来添加 ui 文件</p> </li> <li> <p><code>RESOURCES +=</code> 用来添加资源文件</p> </li> <li> <p><code>INCLUDEPATH +=</code> 用来存放添加头文件的路径</p> </li> <li> <p><code>DEPENDPATH +=</code> 用来添加依赖相关路径</p> </li> <li> <p><code>LIBS +=</code> 用来添加库文件</p> </li> </ol> <p><strong>注意：</strong></p> <pre><code> INCLUDEPATH一般用在添加第三方 .dll 的时候所需的头文件路径；  HEADERS用来添加当前项目的路径；  LIBS += -LC:/Windows/System32/ -luser32  格式为：-L 路径 -l 库名  库比较多的时候可以用 \来达到换行目的  引用相对路径的库文件的时候，$$PWD 指的是项目 .pro 文件所在的路径，`$$OUT_PWD` 指的是编译的目标所在的路径。如果不清楚路径，可以使用 message($$PWD) 打印路径查看绝对路径。</code></pre> <ul> <li><code>DESTDIR +=</code> 指定生成的应用程序的存放目录。</li> <li><code>TARGET =</code> 指定生成的应用程序的名字。</li> <li><code>UI_DIR +=</code> 用来存放编译的时候 ui 生成的 ui_*.h 文件。</li> <li><code>RCC_DIR +=</code> 存放 .qrc 生成的 qrc_*.h 文件。</li> <li><code>MOC_DIR +=</code> 用来存放 moc 命令转换添加的<code>Q_OBJECT</code> 的 .h 文件为标准 .h 文件的存放路径。</li> <li><code>OBJECTS_DIR +=</code> 用来存放目标文件 .obj 存放的路径。</li> </ul> <p><strong>注：</strong></p> <p><code>UI_DIR</code> 、<code>RCC_DIR</code> 、<code>MOC_DIR</code> 、<code>OBJECTS_DIR</code> 可以认为都是用来存放中间文件，只是存放的中间文件有所不同，不指定的话默认会存放在 .pro 文件所在的路径，显得工程看起来比较乱</p> <h2 id="4添加配置信息">4.添加配置信息</h2> <ul> <li><code>CONFIG +=</code> 用来指的应用程序的配置信息。</li> </ul> <table> <thead> <tr> <th>参数</th> <th style="text-align: center">说明</th> </tr> </thead> <tbody> <tr> <td>release</td> <td style="text-align: center">项目被联编为一个发布的应用程序</td> </tr> <tr> <td>debug</td> <td style="text-align: center">项目被联编为一个debug的应用程序，debug 和 release 同时设置的时候，最后面的一个生效</td> </tr> <tr> <td>debug_and_release</td> <td style="text-align: center">项目被联编为 debug 和 release</td> </tr> <tr> <td>warn_on</td> <td style="text-align: center">编译器输出尽可能多的警告信息</td> </tr> <tr> <td>c++11</td> <td style="text-align: center">支持 c++11 的标准</td> </tr> <tr> <td>thread</td> <td style="text-align: center">支持线程，当 CONFIG 参数包含 qt 的时候，这个是默认支持的</td> </tr> </tbody> </table> <h2 id="5实例">5.实例</h2> <pre><code class="language-makefile">TEMPLATE	= app LANGUAGE	= C++  QT += widgets xml sql network opengl CONFIG	+= qt warn_on release  HEADERS	+= *.h SOURCES	+= *.cpp FORMS  += *.ui  RESOURCES += \     DiffusionFilter.qrc</code></pre> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-49063.htm">jsp中使用vue，jsp中使用elementUI</a></p>
+                                        <p>下一个：<a href="/news/article-49578.htm">宠物粮食生产配方有哪些 宠物粮食生产配方有哪些种类</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-28147.htm" title="做宠物生意怎么样（宠物生意如何做吸引人）">做宠物生意怎么样（宠物生意如何做吸引人）</a></li>
+                        <li class="py-2"><a href="/news/article-28619.htm" title="兽用疫苗销售管理制度（销售兽用疫苗需要什么资质）">兽用疫苗销售管理制度（销售兽用疫苗需要什么资质）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-8-clash-nyanpasu-node.htm" title="「11月8日」最高速度20.2M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐">「11月8日」最高速度20.2M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐</a></li>
+                        <li class="py-2"><a href="/news/article-33834.htm" title="养猫要打什么疫苗多少钱（养猫需要打的疫苗）">养猫要打什么疫苗多少钱（养猫需要打的疫苗）</a></li>
+                        <li class="py-2"><a href="/news/article-37197.htm" title="关于Hadoop在java客户端进行下载时的异常java.io.FileNotFoundException: Hadoop home directory is no existed的解决办法">关于Hadoop在java客户端进行下载时的异常java.io.FileNotFoundException: Hadoop home directory is no existed的解决办法</a></li>
+                        <li class="py-2"><a href="/news/article-27685.htm" title="属马的适不适合养猫（属马的可以养猫吗?）">属马的适不适合养猫（属马的可以养猫吗?）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-1-free-subscribe-node.htm" title="「11月1日」最高速度20.9M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐">「11月1日」最高速度20.9M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐</a></li>
+                        <li class="py-2"><a href="/news/article-35967.htm" title="给动物打的疫苗人注射会有什么后果（给动物打疫苗有什么用）">给动物打的疫苗人注射会有什么后果（给动物打疫苗有什么用）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-15-clash-nyanpasu.htm" title="「12月15日」最高速度21.5M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐">「12月15日」最高速度21.5M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-24-free-clash-subscribe.htm" title="「12月24日」最高速度22M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐">「12月24日」最高速度22M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">3</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">92</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">93</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">34</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">25</span> <a href="/date/2024-10/" title="2024-10 归档">2024-10</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+        <!--====== FOOTER PART START ======-->
+    <section class="footer-area footer-dark">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="copyright text-center mt-35">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                        <p class="text">
+                            ClashNyanpasu官网节点站 版权所有 Powered by WordPress
+                        </p>
+                    </div> <!--  copyright -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+    <!--====== FOOTER PART ENDS ======-->
+    <!--====== BACK TOP TOP PART START ======-->
+    <a href="#" class="back-to-top"><i class="lni lni-chevron-up"></i></a>
+    <!--====== BACK TOP TOP PART ENDS ======-->
+    <!--====== Jquery js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/vendor/jquery-1.12.4.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/vendor/modernizr-3.7.1.min.js"></script>
+    <!--====== Bootstrap js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/popper.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/slick.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/jquery.magnific-popup.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/ajax-contact.js"></script>
+    <!--====== Isotope js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/imagesloaded.pkgd.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/isotope.pkgd.min.js"></script>
+    <!--====== Scrolling Nav js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/jquery.easing.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/scrolling-nav.js"></script>
+    <!--====== Main js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>

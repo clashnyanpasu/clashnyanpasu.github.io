@@ -1,0 +1,252 @@
+<!doctype html>
+<html class="no-js" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashnyanpasu.github.io/news/article-48435.htm" />
+    <meta charset="utf-8">
+    <!--====== Title ======-->
+    <title>当我们更改小于当前序列号的AUTO_INCREMENT值时，MySQL将返回什么？</title>
+        <meta name="description" content="当我们在MySQL列上使用AUTO_INCREMENT时，序列号总是从默认值1或我们指定的值开始以升序递增。 MySQL不允许将AUTO_INCREMENT值更改为小于当前序列号的值。通过以下示例可以" />
+        <link rel="icon" href="/assets/website/img/clashnyanpasu/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="ClashNyanpasu官网节点站">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://clashnyanpasu.github.io/news/article-48435.htm" />
+    <meta property="og:site_name" content="ClashNyanpasu官网节点站" />
+    <meta property="og:title" content="当我们更改小于当前序列号的AUTO_INCREMENT值时，MySQL将返回什么？" />
+    <meta property="og:image" content="https://clashnyanpasu.github.io/uploads/20240623/70a6029b4b18b501f935493b3e7dc213.webp" />
+        <meta property="og:release_date" content="2025-01-30T06:45:26" />
+    <meta property="og:updated_time" content="2025-01-30T06:45:26" />
+        <meta property="og:description" content="当我们在MySQL列上使用AUTO_INCREMENT时，序列号总是从默认值1或我们指定的值开始以升序递增。 MySQL不允许将AUTO_INCREMENT值更改为小于当前序列号的值。通过以下示例可以" />
+        
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--====== Magnific Popup CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/magnific-popup.css">
+    <!--====== Slick CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/slick.css">
+    <!--====== Line Icons CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/LineIcons.css">
+    <!--====== Bootstrap CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/bootstrap.min.css">
+    <!--====== Default CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/default.css">
+    <!--====== Style CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/style.css">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="当我们更改小于当前序列号的AUTO_INCREMENT值时，MySQL将返回什么？">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7F56WL29Y8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7F56WL29Y8');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!--====== PRELOADER PART START ======-->
+    <div class="preloader">
+        <div class="loader">
+            <div class="ytp-spinner">
+                <div class="ytp-spinner-container">
+                    <div class="ytp-spinner-rotator">
+                        <div class="ytp-spinner-left">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                        <div class="ytp-spinner-right">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--====== PRELOADER PART ENDS ======-->
+    <!--====== NAVBAR TWO PART START ======-->
+    <section class="navbar-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <nav class="navbar navbar-expand-lg">
+                                                <a class="navbar-brand top" href="/">
+                            Clash Nyanpasu
+                        </a>
+                                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTwo" aria-controls="navbarTwo" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="toggler-icon"></span>
+                            <span class="toggler-icon"></span>
+                            <span class="toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse sub-menu-bar" id="navbarTwo">
+                            <ul class="navbar-nav m-auto">
+                                                                <li class="nav-item"><a href="/">首页</a></li>
+                                                                <li class="nav-item"><a href="/free-nodes/">免费节点</a></li>
+                                                                <li class="nav-item"><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                <li class="nav-item"><a href="/news/">新闻资讯</a></li>
+                                                                <li class="nav-item"><a href="#">关于</a></li>
+                                <li class="nav-item"><a href="#">链接</a></li>
+                            </ul>
+                        </div>
+
+                    </nav> <!-- navbar -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+    <!--====== NAVBAR TWO PART ENDS ======-->
+    <!--====== SLIDER PART START ======-->
+    <section id="home" class="slider_area">
+        <div id="carouselThree" class="carousel slide sub-page" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="slider-content">
+                                    <h1 class="title">当我们更改小于当前序列号的AUTO_INCREMENT值时，MySQL将返回什么？</h1>
+                                    <p class="text">
+                                        <a href="/">首页</a> / 
+                                        <a href="/news/">新闻资讯</a> / 
+                                        <span>正文</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div> <!-- row -->
+                    </div> <!-- container -->
+                    <div class="slider-image-box d-none d-lg-flex align-items-end">
+                        <div class="slider-image">
+                            <img src="/assets/website/img/clashnyanpasu/slider/1.png" alt="Hero">
+                        </div> <!-- slider-imgae -->
+                    </div> <!-- slider-imgae box -->
+                </div> <!-- carousel-item -->
+            </div>
+        </div>
+    </section>
+    <!--====== SLIDER PART ENDS ======-->
+    <!--====== ABOUT PART START ======-->
+    <section id=about class=about-area>
+        <div class=container>
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<p>当我们在MySQL列上使用AUTO_INCREMENT时，序列号总是从默认值1或我们指定的值开始以升序递增。</p> <p>MySQL不允许将AUTO_INCREMENT值更改为小于当前序列号的值。通过以下示例可以理解-</p> <h2>示例</h2> <p>假设我们有一个名为“ emp1”的表，并在创建表时将AUTO_INCREMENT VALUE指定为100。在表中插入值之后，该序列将从100开始，如以下查询的输出所示-</p> <pre>mysql&gt;&nbsp;Select&nbsp;*&nbsp;from&nbsp;emp1; +-----+---------+ |&nbsp;id&nbsp;|&nbsp;NAME&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| +-----+---------+ |&nbsp;100&nbsp;|&nbsp;Sohan&nbsp;&nbsp;&nbsp;| |&nbsp;101&nbsp;|&nbsp;Harshit&nbsp;| +-----+---------+ 2&nbsp;rows&nbsp;in&nbsp;set&nbsp;(0.00&nbsp;sec)</pre> <p>当我们尝试通过ALTER TABLE查询将AUTO_INCREMENT值更改为90时，MySQL不会返回错误和警告，因为查询还可以，但是当我们在表中插入新值时，MySQL会将指定的AUTO_INCREMENT值与当前序列号进行比较。由于指定的AUTO_INCREMENT值(90)小于当前序列号(101)，MySQL开始从102开始累积新值，可以从以下查询中观察到-</p> <pre>mysql&gt;&nbsp;ALTER&nbsp;TABLE&nbsp;EMP1&nbsp;AUTO_INCREMENT&nbsp;=&nbsp;90; Records:&nbsp;2&nbsp;Duplicates:&nbsp;0&nbsp;Warnings:&nbsp;0  mysql&gt;&nbsp;Insert&nbsp;into&nbsp;emp1(name)&nbsp;values('Aryan');  mysql&gt;&nbsp;Select&nbsp;*&nbsp;from&nbsp;emp1; +-----+---------+ |&nbsp;id&nbsp;&nbsp;|&nbsp;NAME&nbsp;&nbsp;&nbsp;&nbsp;| +-----+---------+ |&nbsp;100&nbsp;|&nbsp;Sohan&nbsp;&nbsp;&nbsp;| |&nbsp;101&nbsp;|&nbsp;Harshit&nbsp;| |&nbsp;102&nbsp;|&nbsp;Aryan&nbsp;&nbsp;&nbsp;| +-----+---------+ 3&nbsp;rows&nbsp;in&nbsp;set&nbsp;(0.00&nbsp;sec)</pre> <p>相反，如果我们尝试将AUTO_INCREMENT更改为高于当前序列号的值，则MySQL将开始从指定值开始累积新值。</p> <p>为了在表'emp1'中更加清楚，我们将AUTO_INCREMENT值更改为108，高于当前序列号，因此MySQL从指定的AUTO_INCREMENT值（即从108开始）开始累积新插入的值。</p> <pre>mysql&gt;&nbsp;ALTER&nbsp;TABLE&nbsp;EMP1&nbsp;AUTO_INCREMENT&nbsp;=&nbsp;108; Records:&nbsp;3&nbsp;Duplicates:&nbsp;0&nbsp;Warnings:&nbsp;0  mysql&gt;&nbsp;Insert&nbsp;into&nbsp;emp1(name)&nbsp;values('Daksh');  mysql&gt;&nbsp;Insert&nbsp;into&nbsp;emp1(name)&nbsp;values('Yashraj');  mysql&gt;&nbsp;Select&nbsp;*&nbsp;from&nbsp;emp1; +-----+---------+ |&nbsp;id&nbsp;&nbsp;|&nbsp;NAME&nbsp;&nbsp;&nbsp;&nbsp;| +-----+---------+ |&nbsp;100&nbsp;|&nbsp;Sohan&nbsp;&nbsp;&nbsp;| |&nbsp;101&nbsp;|&nbsp;Harshit&nbsp;| |&nbsp;102&nbsp;|&nbsp;Aryan&nbsp;&nbsp;&nbsp;| |&nbsp;108&nbsp;|&nbsp;Daksh&nbsp;&nbsp;&nbsp;| |&nbsp;109&nbsp;|&nbsp;Yashraj&nbsp;| +-----+---------+ 5&nbsp;rows&nbsp;in&nbsp;set&nbsp;(0.00&nbsp;sec)</pre> <div></div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-48063.htm">国内动物疫苗龙头企业名单最新（动物疫苗龙头股排名）</a></p>
+                                        <p>下一个：<a href="/news/article-48436.htm">机器学习系列：LightGBM 可视化调参</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-47093.htm" title="正规宠物领养机构 正规宠物领养机构有哪些">正规宠物领养机构 正规宠物领养机构有哪些</a></li>
+                        <li class="py-2"><a href="/news/article-44107.htm" title="k8s 部署Redis集群">k8s 部署Redis集群</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-11-free-clash-nyanpasu.htm" title="「12月11日」最高速度19.3M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐">「12月11日」最高速度19.3M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-17-node-share-links.htm" title="「10月17日」最高速度18M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐">「10月17日」最高速度18M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐</a></li>
+                        <li class="py-2"><a href="/news/article-42632.htm" title="动物疫苗的制造技术包括什么（动物疫苗的制造技术包括什么技术）">动物疫苗的制造技术包括什么（动物疫苗的制造技术包括什么技术）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-15-free-clash-nyanpasu.htm" title="「1月15日」最高速度20.2M/S，2025年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐">「1月15日」最高速度20.2M/S，2025年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐</a></li>
+                        <li class="py-2"><a href="/news/article-45121.htm" title="动物疫苗去哪买便宜（动物疫苗那里买）">动物疫苗去哪买便宜（动物疫苗那里买）</a></li>
+                        <li class="py-2"><a href="/news/article-46608.htm" title="详解盒子模型和div布局">详解盒子模型和div布局</a></li>
+                        <li class="py-2"><a href="/news/article-28620.htm" title="动物疫苗上市公司龙头博晖创新（动物疫苗行业龙头）">动物疫苗上市公司龙头博晖创新（动物疫苗行业龙头）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-18-free-high-speed-nodes.htm" title="「11月18日」最高速度22.4M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐">「11月18日」最高速度22.4M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">3</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">92</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">93</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">34</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">25</span> <a href="/date/2024-10/" title="2024-10 归档">2024-10</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+        <!--====== FOOTER PART START ======-->
+    <section class="footer-area footer-dark">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="copyright text-center mt-35">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                        <p class="text">
+                            ClashNyanpasu官网节点站 版权所有 Powered by WordPress
+                        </p>
+                    </div> <!--  copyright -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+    <!--====== FOOTER PART ENDS ======-->
+    <!--====== BACK TOP TOP PART START ======-->
+    <a href="#" class="back-to-top"><i class="lni lni-chevron-up"></i></a>
+    <!--====== BACK TOP TOP PART ENDS ======-->
+    <!--====== Jquery js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/vendor/jquery-1.12.4.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/vendor/modernizr-3.7.1.min.js"></script>
+    <!--====== Bootstrap js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/popper.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/slick.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/jquery.magnific-popup.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/ajax-contact.js"></script>
+    <!--====== Isotope js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/imagesloaded.pkgd.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/isotope.pkgd.min.js"></script>
+    <!--====== Scrolling Nav js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/jquery.easing.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/scrolling-nav.js"></script>
+    <!--====== Main js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
