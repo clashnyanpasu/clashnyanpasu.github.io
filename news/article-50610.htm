@@ -1,0 +1,248 @@
+<!doctype html>
+<html class="no-js" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashnyanpasu.github.io/news/article-50610.htm" />
+    <meta charset="utf-8">
+    <!--====== Title ======-->
+    <title>[Redis] Redis实战</title>
+        <meta name="description" content="✨✨个人主页:沫洺的主页 ????????系列专栏:&nbsp;????&nbsp;JavaWeb专栏????&nbsp;JavaSE专栏 ????&nbsp;Java基础专栏????vue3专栏&n" />
+        <link rel="icon" href="/assets/website/img/clashnyanpasu/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="ClashNyanpasu官网节点站">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://clashnyanpasu.github.io/news/article-50610.htm" />
+    <meta property="og:site_name" content="ClashNyanpasu官网节点站" />
+    <meta property="og:title" content="[Redis] Redis实战" />
+    <meta property="og:image" content="https://clashnyanpasu.github.io/uploads/20240623/573b6457d2cb7160ddc04bfe81b14ef2.webp" />
+        <meta property="og:release_date" content="2025-02-03T09:27:38" />
+    <meta property="og:updated_time" content="2025-02-03T09:27:38" />
+        <meta property="og:description" content="✨✨个人主页:沫洺的主页 ????????系列专栏:&nbsp;????&nbsp;JavaWeb专栏????&nbsp;JavaSE专栏 ????&nbsp;Java基础专栏????vue3专栏&n" />
+        
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--====== Magnific Popup CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/magnific-popup.css">
+    <!--====== Slick CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/slick.css">
+    <!--====== Line Icons CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/LineIcons.css">
+    <!--====== Bootstrap CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/bootstrap.min.css">
+    <!--====== Default CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/default.css">
+    <!--====== Style CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/style.css">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="[Redis] Redis实战">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7F56WL29Y8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7F56WL29Y8');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!--====== PRELOADER PART START ======-->
+    <div class="preloader">
+        <div class="loader">
+            <div class="ytp-spinner">
+                <div class="ytp-spinner-container">
+                    <div class="ytp-spinner-rotator">
+                        <div class="ytp-spinner-left">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                        <div class="ytp-spinner-right">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--====== PRELOADER PART ENDS ======-->
+    <!--====== NAVBAR TWO PART START ======-->
+    <section class="navbar-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <nav class="navbar navbar-expand-lg">
+                                                <a class="navbar-brand top" href="/">
+                            Clash Nyanpasu                        </a>
+                                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTwo" aria-controls="navbarTwo" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="toggler-icon"></span>
+                            <span class="toggler-icon"></span>
+                            <span class="toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse sub-menu-bar" id="navbarTwo">
+                            <ul class="navbar-nav m-auto">
+                                                                <li class="nav-item"><a href="/">首页</a></li>
+                                                                <li class="nav-item"><a href="/free-nodes/">免费节点</a></li>
+                                                                <li class="nav-item"><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                <li class="nav-item"><a href="/news/">新闻资讯</a></li>
+                                                                <li class="nav-item"><a href="#">关于</a></li>
+                                <li class="nav-item"><a href="#">链接</a></li>
+                            </ul>
+                        </div>
+
+                    </nav> <!-- navbar -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+    <!--====== NAVBAR TWO PART ENDS ======-->
+    <!--====== SLIDER PART START ======-->
+    <section id="home" class="slider_area">
+        <div id="carouselThree" class="carousel slide sub-page" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="slider-content">
+                                    <h1 class="title">[Redis] Redis实战</h1>
+                                    <p class="text">
+                                        <a href="/">首页</a> / 
+                                        <a href="/news/">新闻资讯</a> / 
+                                        <span>正文</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div> <!-- row -->
+                    </div> <!-- container -->
+                    <div class="slider-image-box d-none d-lg-flex align-items-end">
+                        <div class="slider-image">
+                            <img src="/assets/website/img/clashnyanpasu/slider/1.png" alt="Hero">
+                        </div> <!-- slider-imgae -->
+                    </div> <!-- slider-imgae box -->
+                </div> <!-- carousel-item -->
+            </div>
+        </div>
+    </section>
+    <!--====== SLIDER PART ENDS ======-->
+    <!--====== ABOUT PART START ======-->
+    <section id=about class=about-area>
+        <div class=container>
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="content_views" class="htmledit_views"> <blockquote> <p><span style="color:#0d0016;">✨✨个人主页:<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://blog.csdn.net/HeyVIrBbox"  title="沫洺的主页" rel="nofollow">沫洺的主页</a></span></p> <p><span style="color:#0d0016;">????????系列专栏:&nbsp;????&nbsp;<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://blog.csdn.net/heyvirbbox/category_11983520.html?spm=1001.2014.3001.5482"  title="JavaWeb专栏" rel="nofollow">JavaWeb专栏</a>????&nbsp;<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://blog.csdn.net/heyvirbbox/category_11945603.html?spm=1001.2014.3001.5482"  title="JavaSE专栏" rel="nofollow">JavaSE专栏</a> ????&nbsp;<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://blog.csdn.net/heyvirbbox/category_11945602.html?spm=1001.2014.3001.5482"  title="Java基础专栏" rel="nofollow">Java基础专栏</a>????<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://blog.csdn.net/heyvirbbox/category_12011830.html?spm=1001.2014.3001.5482"  title="vue3专栏" rel="nofollow">vue3专栏</a>&nbsp;</span></p> <p><span style="color:#0d0016;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;????<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://blog.csdn.net/heyvirbbox/category_12022649.html?spm=1001.2014.3001.5482"  title="MyBatis专栏" rel="nofollow">MyBatis专栏</a>????<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://blog.csdn.net/heyvirbbox/category_12027090.html?spm=1001.2014.3001.5482"  title="Spring专栏" rel="nofollow">Spring专栏</a>????<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://blog.csdn.net/heyvirbbox/category_12021670.html?spm=1001.2014.3001.5482"  title="SpringMVC专栏" rel="nofollow">SpringMVC专栏</a>????<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://blog.csdn.net/heyvirbbox/category_12043464.html?spm=1001.2014.3001.5482"  title="SpringBoot专栏" rel="nofollow">SpringBoot专栏</a></span></p> <p><span style="color:#0d0016;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;????<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://blog.csdn.net/heyvirbbox/category_12093739.html?spm=1001.2014.3001.5482"  title="Docker专栏" rel="nofollow">Docker专栏</a>????<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://blog.csdn.net/heyvirbbox/category_12093753.html?spm=1001.2014.3001.5482"  title="Reids专栏" rel="nofollow">Reids专栏</a>????<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://blog.csdn.net/heyvirbbox/category_12101846.html?spm=1001.2014.3001.5482"  title="MQ专栏" rel="nofollow">MQ专栏</a>????<a class="link-info" href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://blog.csdn.net/heyvirbbox/category_12107421.html?spm=1001.2014.3001.5482"  title="SpringCloud专栏&nbsp; &nbsp;" rel="nofollow">SpringCloud专栏&nbsp; &nbsp;</a> &nbsp;</span></p> <p><span style="color:#0d0016;">????????如果文章对你有所帮助请留下三连✨✨</span></p> </blockquote> </h1> <blockquote> <pre><code class="language-java">@SpringBootTest public class AppTests_Scan {      @Resource(name = "redisTemplate")     private ValueOperations&lt;String, User&gt; valueOperations;      @Autowired     private StringRedisTemplate stringRedisTemplate;      @Test     void test1() {         for (int i =1 ;i&lt;11;i++){             User user = User.builder().name(i+"号张").age(18).build();             valueOperations.set("user."+i,user);         }     }      }</code></pre> <p><span style="color:#0d0016;">原生的scan用法</span></p> <p><img fetchpriority="high" decoding="async" alt="" height="977" src="http://img.555519.xyz/uploads/20221230/dc0b1f8de2cd75d3060ce629107bbdc4.jpg"></p> <p><span style="color:#0d0016;">RedisTemplate使用Scan&nbsp;</span></p> <pre><code class="language-java">@SpringBootTest public class AppTests_Scan {      @Resource(name = "redisTemplate")     private ValueOperations&lt;String, User&gt; valueOperations;      @Autowired     private StringRedisTemplate stringRedisTemplate;      @Test     void test1() {         for (int i =1 ;i&lt;11;i++){             User user = User.builder().name(i+"号张").age(18).build();             valueOperations.set("user."+i,user);         }     }     @Test     void test2(){         //迭代扫描,指定模糊匹配,预想数量         ScanOptions scanOptions = ScanOptions.scanOptions().match("user.*").count(3).build();         //获取游标         Cursor&lt;String&gt; cursor = stringRedisTemplate.scan(scanOptions);         while (cursor.hasNext()){             //获取游标id             System.out.println(cursor.getCursorId());             System.out.println(cursor.next());         }         cursor.close();     } }</code></pre> <p><img decoding="async" alt="" height="1027" src="http://img.555519.xyz/uploads/20221230/008184e4e1484f7cd3f85016dae5aeff.jpg"></p> </blockquote> </h1> <blockquote> <p><span style="color:#0d0016;">模拟高并发场景线上购物,多个用户(线程)同时选购某产品,提示库存信息</span></p> <p><span style="color:#0d0016;">先初始化产品库存</span></p> <pre><code class="language-java">@SpringBootTest class AppTests_DecrBy {      @Resource(name = "redisTemplate")     private ValueOperations&lt;String, Integer&gt; valueOperations;      @Autowired     private StringRedisTemplate stringRedisTemplate;     //定义一个产品     private final static String productKey = "product01";      @Test     void test1() {         //设置初始化库存5个         valueOperations.set(productKey, 5);     } }</code></pre> <p><span style="color:#0d0016;">不考虑并发的情况下</span></p> <pre><code class="language-java">    @Test     void test2() throws InterruptedException {         //获取线程池         ExecutorService executorService = Executors.newCachedThreadPool();         //模拟开启10个线程         for (int i = 1; i &lt;= 10; i++) {             //开启线程执行             executorService.execute(() -&gt; {                 //获取库存                 Integer qty = valueOperations.get(productKey);                 //如果库存充足,产品数量就减一                 if (qty &gt; 0) {                     qty = qty - 1;                     //重新设置库存                     valueOperations.set(productKey, qty);                     System.out.println(Thread.currentThread().getName() + " 库存充足");                 } else {                     System.out.println(Thread.currentThread().getName() + " 库存不足");                 }             });         }         //防止主线程停止,导致模拟线程不执行         Thread.sleep(60 * 1000);     }</code></pre> <p><span style="color:#0d0016;">出现问题,明明库存只有5个,10个用户却都提示库存充足</span></p> <p><img decoding="async" alt="" height="1032" src="http://img.555519.xyz/uploads/20221230/006782f9aa82502b7768a280b90376ec.jpg"></p> <p><span style="color:#0d0016;">考虑高并发的情况下&nbsp;</span></p> <p><span style="color:#0d0016;">使用decrement来保证原子性,解决高并发问题</span></p> <pre><code class="language-java">    @Test     void test3() throws InterruptedException {         //获取线程池         ExecutorService executorService = Executors.newCachedThreadPool();         //模拟开启10个线程         for (int i = 1; i &lt;= 10; i++) {             //开启线程执行             executorService.execute(() -&gt; {                 //获取库存                 Long qty = valueOperations.decrement(productKey, 1);                 if (qty &gt;= 0) {                     System.out.println(Thread.currentThread().getName() + " 库存充足");                 } else {                     System.out.println(Thread.currentThread().getName() + " 库存不足");                 }             });         }         //防止主线程停止,导致模拟线程不执行         Thread.sleep(60 * 1000);     }</code></pre> <p><img loading="lazy" decoding="async" alt="" height="1029" src="http://img.555519.xyz/uploads/20221230/1efd4137a7666abec24fc763e2321e5c.jpg"></p> <p><span style="color:#0d0016;">解决了并发问题但是出现了新的问题,库存量为负数不合理(意思就是某个线程在执行删减库存时,其他线程也在同一时刻去执行,没有保障redis原子性问题)</span></p> <p><img loading="lazy" decoding="async" alt="" height="977" src="http://img.555519.xyz/uploads/20221230/df96d3f734e633c9299f63ec6627e59f.jpg"></p> <p><span style="color:#0d0016;">有一种解决办法就是通过加锁synchronized来解决,但是响应能力就会大幅降低,也就失去了redis高性能的意义</span></p> <p><span style="color:#0d0016;">所以最好的解决方式就是通过EVAL命令执行Lua脚本来解决这类问题</span></p> </blockquote> </h1> <blockquote> <p><span style="color:#0d0016;">模拟某一个产品的出入库单据只能一个人(线程)操作的场景(分布式锁),当有人操作时,其他人只能等待该人操作结束之后进行操作</span></p> <pre><code class="language-java">@SpringBootTest @Slf4j class AppTests_SetNx {      @Resource(name = "redisTemplate")     private ValueOperations&lt;String, Integer&gt; valueOperations;      @Autowired     private StringRedisTemplate stringRedisTemplate;     //定义一个产品     private final static String productKey = "product01";     //定义锁     private final static String lockKey = "lock.1";      //业务     private void doing(){         while (true){             //设置锁             Boolean b = valueOperations.setIfAbsent(lockKey, 1);             if(b){                 log.info(Thread.currentThread().getName() + " 获取到分布式锁");                 //业务代码开始                 ThreadUtil.sleep(3000);//模拟执行业务操作用时                 //业务代码结束                 stringRedisTemplate.delete(lockKey);                 log.info(Thread.currentThread().getName() + " 释放分布式锁");                 break;              } else {                 //log.info(Thread.currentThread().getName() + " 没有获取到分布式锁,开始睡眠");                 ThreadUtil.sleep(2000);             }         }     }      @Test     void test1() {         //设置初始化库存5个         valueOperations.set(productKey, 0);     }      @Test     void test2() throws InterruptedException {         //获取线程池         ExecutorService executorService = Executors.newCachedThreadPool();         //模拟开启10个线程         for (int i = 1; i &lt;= 10; i++) {             //开启线程执行             executorService.execute(this::doing);         }         //防止主线程停止,导致模拟线程不执行         Thread.sleep(60 * 1000);     }  }</code></pre> <p><img loading="lazy" decoding="async" alt="" height="1033" src="http://img.555519.xyz/uploads/20221230/2b3d2fcc3c73104748357294ca62bd6e.jpg"></p> <p><span style="color:#0d0016;">使用分布式锁模拟用户下单操作,防止恶意并发(一般来说用户下单产品操作时间最少也需要几秒的时间,这里预设5秒),也就是说5秒内只允许下单成功一次,也就解决了恶意并发的问题</span></p> <pre><code class="language-java">    @Test     void test3() throws InterruptedException {         String user = "用户1";         //获取线程池         ExecutorService executorService = Executors.newCachedThreadPool();         //模拟开启10个线程         for (int i = 1; i &lt;= 10; i++) {             //开启线程执行             executorService.execute(() -&gt; {                 Boolean b = valueOperations.setIfAbsent("lock." + user, 1, 5, TimeUnit.SECONDS);                 if (b) {                     //下单                     log.info("{} 下单成功", Thread.currentThread().getName());                 } else {                     log.info("{} 稍后再试", Thread.currentThread().getName());                 }             });         }         //防止主线程停止,导致模拟线程不执行         Thread.sleep(60 * 1000);     }</code></pre> <p><img loading="lazy" decoding="async" alt="" height="1034" src="http://img.555519.xyz/uploads/20221230/4d9ea04100cbca459e2463c89b0f9843.jpg"></p> </blockquote> </h1> <blockquote> <p><span style="color:#0d0016;">在网关设置防止恶意并发访问,将用户ip作为key,只允许用户ip在短时间内访问2次</span></p> <pre><code class="language-java">package com.moming;  import cn.hutool.core.date.DateUtil; import cn.hutool.core.thread.ThreadUtil; import lombok.extern.slf4j.Slf4j; import org.junit.jupiter.api.Test; import org.springframework.beans.factory.annotation.Autowired; import org.springframework.boot.test.context.SpringBootTest; import org.springframework.data.redis.core.StringRedisTemplate; import org.springframework.data.redis.core.ValueOperations;  import javax.annotation.Resource; import java.util.concurrent.ExecutorService; import java.util.concurrent.Executors; import java.util.concurrent.TimeUnit;  @SpringBootTest @Slf4j class AppTests_Increment {      @Resource(name = "redisTemplate")     private ValueOperations&lt;String, Integer&gt; valueOperations;      @Autowired     private StringRedisTemplate stringRedisTemplate;      @Test     void test4() throws InterruptedException {         //模拟用户ip         String userIp = "127.0.0.1";         //获取线程池         ExecutorService executorService = Executors.newCachedThreadPool();         //模拟开启10个线程         for (int i = 1; i &lt;= 10; i++) {             //开启线程执行             executorService.execute(() -&gt; {                 String seconds = DateUtil.format(DateUtil.date(), "yyyyMMddHHmmss");                  String key = seconds + userIp;                  Long count = valueOperations.increment(key, 1);                  if(count&gt;2){                     //下单                     log.info("{} 超过请求次数",Thread.currentThread().getName());                 } else  {                     log.info("{} 请求正常",Thread.currentThread().getName());                 }             });         }         //防止主线程停止,导致模拟线程不执行         Thread.sleep(60 * 1000);     }  }</code></pre> <p><img loading="lazy" decoding="async" alt="" height="1028" src="http://img.555519.xyz/uploads/20221230/2c920a8328061bcd602c1ffb6cd1d06c.jpg"></p> </blockquote> </h1> <blockquote> <p><span style="color:#0d0016;">模拟某线上活动要举办3天,参与活动的人员可以线上签到,后台通过3天人员的签到情况,统计信息</span></p> <ol> <li><span style="color:#0d0016;">3天满勤人数: 三天都签到才算一位</span></li> <li> <span style="color:#0d0016;">3天活跃人数: 任何一天签到都算一位</span><span style="color:#0d0016;"> </span> </li> </ol> <pre><code class="language-java">@SpringBootTest class AppTests_BitMap {      @Autowired     private StringRedisTemplate stringRedisTemplate;      @Test     public void test2() {         //2022111 20221112 20221113 三天活动         //张三 1, 李四 2, 王五:3         //满勤人数,1人         //活跃人数,3人         stringRedisTemplate.opsForValue().setBit("20221111",1,true);         stringRedisTemplate.opsForValue().setBit("20221112",2,true);         stringRedisTemplate.opsForValue().setBit("20221112",2,true);         stringRedisTemplate.opsForValue().setBit("20221111",3,true);         stringRedisTemplate.opsForValue().setBit("20221112",3,true);         stringRedisTemplate.opsForValue().setBit("20221113",3,true);         //RedisStringCommands.BitOperation.AND 满勤人数         //RedisStringCommands.BitOperation.OR 活跃人数         RedisCallback&lt;Long&gt; callback1 = connection -&gt; {             connection.bitOp(RedisStringCommands.BitOperation.OR,                     "人数统计".getBytes(StandardCharsets.UTF_8),                     "20221111".getBytes(StandardCharsets.UTF_8),                     "20221112".getBytes(StandardCharsets.UTF_8),                     "20221113".getBytes(StandardCharsets.UTF_8)             );             Long count = connection.bitCount("人数统计".getBytes(StandardCharsets.UTF_8));             return count;         };         Long count1 = stringRedisTemplate.execute(callback1);         System.out.println(count1);     } }</code></pre> <p><span style="color:#0d0016;">RedisStringCommands.BitOperation.AND 满勤人数</span></p> <p><img loading="lazy" decoding="async" alt="" height="1027" src="http://img.555519.xyz/uploads/20221230/2a5eb48de00f8703a05f2c61e2f2056d.jpg"></p> <p><span style="color:#0d0016;">RedisStringCommands.BitOperation.OR 活跃人数</span></p> <p><img loading="lazy" decoding="async" alt="" height="1035" src="http://img.555519.xyz/uploads/20221230/f9345d3e5894573e6b779dd6f3ce19b4.jpg"></p> </blockquote></div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-50609.htm">win11系统照相机亮度怎么调节</a></p>
+                                        <p>下一个：<a href="/news/article-51108.htm">动物疫苗生产厂家排名前十名有哪些（动物疫苗企业名单）</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-42133.htm" title="被猫抓伤了需要打几针（被猫抓伤了需要打几针免疫球蛋白）">被猫抓伤了需要打几针（被猫抓伤了需要打几针免疫球蛋白）</a></li>
+                        <li class="py-2"><a href="/news/article-43619.htm" title="兽药十大品牌排行榜（兽药排行榜前三十名）">兽药十大品牌排行榜（兽药排行榜前三十名）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-10-clash-node-daily-updates.htm" title="「1月10日」最高速度22.8M/S，2025年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐">「1月10日」最高速度22.8M/S，2025年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-29-free-subscribe-node.htm" title="「11月29日」最高速度19.7M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐">「11月29日」最高速度19.7M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐</a></li>
+                        <li class="py-2"><a href="/news/article-38671.htm" title="动物疫苗需要冷藏吗多少度保存好（动物疫苗使用时的注意事项有哪些）">动物疫苗需要冷藏吗多少度保存好（动物疫苗使用时的注意事项有哪些）</a></li>
+                        <li class="py-2"><a href="/news/article-31919.htm" title="动物疫苗管理员工作年度总结（动物疫苗管理员工作年度总结怎么写）">动物疫苗管理员工作年度总结（动物疫苗管理员工作年度总结怎么写）</a></li>
+                        <li class="py-2"><a href="/news/article-30504.htm" title="动物打预防针多少钱（动物防疫***收费吗）">动物打预防针多少钱（动物防疫***收费吗）</a></li>
+                        <li class="py-2"><a href="/news/article-18707.htm" title="宠物店赔钱吗安全吗（宠物店赔钱吗安全吗现在）">宠物店赔钱吗安全吗（宠物店赔钱吗安全吗现在）</a></li>
+                        <li class="py-2"><a href="/news/article-35965.htm" title="HCNP Routing&amp;Switching之MUX VLAN">HCNP Routing&amp;Switching之MUX VLAN</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-1-free-subscribe-node.htm" title="「1月1日」最高速度22.1M/S，2025年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐">「1月1日」最高速度22.1M/S，2025年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">12</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">92</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">93</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">30</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+        <!--====== FOOTER PART START ======-->
+    <section class="footer-area footer-dark">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="copyright text-center mt-35">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                        <p class="text">
+                            ClashNyanpasu官网节点站 版权所有 Powered by WordPress
+                        </p>
+                    </div> <!--  copyright -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+    <!--====== FOOTER PART ENDS ======-->
+    <!--====== BACK TOP TOP PART START ======-->
+    <a href="#" class="back-to-top"><i class="lni lni-chevron-up"></i></a>
+    <!--====== BACK TOP TOP PART ENDS ======-->
+    <!--====== Jquery js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/vendor/jquery-1.12.4.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/vendor/modernizr-3.7.1.min.js"></script>
+    <!--====== Bootstrap js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/popper.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/slick.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/jquery.magnific-popup.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/ajax-contact.js"></script>
+    <!--====== Isotope js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/imagesloaded.pkgd.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/isotope.pkgd.min.js"></script>
+    <!--====== Scrolling Nav js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/jquery.easing.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/scrolling-nav.js"></script>
+    <!--====== Main js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
