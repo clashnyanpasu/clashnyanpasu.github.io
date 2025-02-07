@@ -1,0 +1,248 @@
+<!doctype html>
+<html class="no-js" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashnyanpasu.github.io/news/article-52727.htm" />
+    <meta charset="utf-8">
+    <!--====== Title ======-->
+    <title>python数据分析与挖掘实战————银行分控模型（几种算法模型的比较）</title>
+        <meta name="description" content="一、神经网络算法：   1import pandas as pd 2from keras.modelsimport Sequential 3from keras.layers.coreimport D" />
+        <link rel="icon" href="/assets/website/img/clashnyanpasu/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="ClashNyanpasu官网节点站">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://clashnyanpasu.github.io/news/article-52727.htm" />
+    <meta property="og:site_name" content="ClashNyanpasu官网节点站" />
+    <meta property="og:title" content="python数据分析与挖掘实战————银行分控模型（几种算法模型的比较）" />
+    <meta property="og:image" content="https://clashnyanpasu.github.io/uploads/20240623/573b6457d2cb7160ddc04bfe81b14ef2.webp" />
+        <meta property="og:release_date" content="2025-02-07T07:20:04" />
+    <meta property="og:updated_time" content="2025-02-07T07:20:04" />
+        <meta property="og:description" content="一、神经网络算法：   1import pandas as pd 2from keras.modelsimport Sequential 3from keras.layers.coreimport D" />
+        
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--====== Magnific Popup CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/magnific-popup.css">
+    <!--====== Slick CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/slick.css">
+    <!--====== Line Icons CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/LineIcons.css">
+    <!--====== Bootstrap CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/bootstrap.min.css">
+    <!--====== Default CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/default.css">
+    <!--====== Style CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/style.css">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="python数据分析与挖掘实战————银行分控模型（几种算法模型的比较）">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7F56WL29Y8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7F56WL29Y8');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!--====== PRELOADER PART START ======-->
+    <div class="preloader">
+        <div class="loader">
+            <div class="ytp-spinner">
+                <div class="ytp-spinner-container">
+                    <div class="ytp-spinner-rotator">
+                        <div class="ytp-spinner-left">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                        <div class="ytp-spinner-right">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--====== PRELOADER PART ENDS ======-->
+    <!--====== NAVBAR TWO PART START ======-->
+    <section class="navbar-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <nav class="navbar navbar-expand-lg">
+                                                <a class="navbar-brand top" href="/">
+                            Clash Nyanpasu                        </a>
+                                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTwo" aria-controls="navbarTwo" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="toggler-icon"></span>
+                            <span class="toggler-icon"></span>
+                            <span class="toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse sub-menu-bar" id="navbarTwo">
+                            <ul class="navbar-nav m-auto">
+                                                                <li class="nav-item"><a href="/">首页</a></li>
+                                                                <li class="nav-item"><a href="/free-nodes/">免费节点</a></li>
+                                                                <li class="nav-item"><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                <li class="nav-item"><a href="/news/">新闻资讯</a></li>
+                                                                <li class="nav-item"><a href="#">关于</a></li>
+                                <li class="nav-item"><a href="#">链接</a></li>
+                            </ul>
+                        </div>
+
+                    </nav> <!-- navbar -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+    <!--====== NAVBAR TWO PART ENDS ======-->
+    <!--====== SLIDER PART START ======-->
+    <section id="home" class="slider_area">
+        <div id="carouselThree" class="carousel slide sub-page" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="slider-content">
+                                    <h1 class="title">python数据分析与挖掘实战————银行分控模型（几种算法模型的比较）</h1>
+                                    <p class="text">
+                                        <a href="/">首页</a> / 
+                                        <a href="/news/">新闻资讯</a> / 
+                                        <span>正文</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div> <!-- row -->
+                    </div> <!-- container -->
+                    <div class="slider-image-box d-none d-lg-flex align-items-end">
+                        <div class="slider-image">
+                            <img src="/assets/website/img/clashnyanpasu/slider/1.png" alt="Hero">
+                        </div> <!-- slider-imgae -->
+                    </div> <!-- slider-imgae box -->
+                </div> <!-- carousel-item -->
+            </div>
+        </div>
+    </section>
+    <!--====== SLIDER PART ENDS ======-->
+    <!--====== ABOUT PART START ======-->
+    <section id=about class=about-area>
+        <div class=container>
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<p>一、神经网络算法：</p> <div class="cnblogs_code"> <pre><span style="color: rgba(0, 128, 128, 1)"> 1</span><span style="color: rgba(0, 0, 255, 1)">import</span><span style="color: rgba(0, 0, 0, 1)"> pandas as pd</span><span style="color: rgba(0, 128, 128, 1)"> 2</span><span style="color: rgba(0, 0, 255, 1)">from</span> keras.models<span style="color: rgba(0, 0, 255, 1)">import</span><span style="color: rgba(0, 0, 0, 1)"> Sequential</span><span style="color: rgba(0, 128, 128, 1)"> 3</span><span style="color: rgba(0, 0, 255, 1)">from</span> keras.layers.core<span style="color: rgba(0, 0, 255, 1)">import</span><span style="color: rgba(0, 0, 0, 1)"> Dense, Activation</span><span style="color: rgba(0, 128, 128, 1)"> 4</span><span style="color: rgba(0, 0, 255, 1)">import</span><span style="color: rgba(0, 0, 0, 1)"> numpy as np</span><span style="color: rgba(0, 128, 128, 1)"> 5</span><span style="color: rgba(0, 128, 0, 1)">#</span><span style="color: rgba(0, 128, 0, 1)"> 参数初始化</span><span style="color: rgba(0, 128, 128, 1)"> 6</span> inputfile =<span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">C:/Users/76319/Desktop/bankloan.xls</span><span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(0, 128, 128, 1)"> 7</span> data =<span style="color: rgba(0, 0, 0, 1)"> pd.read_excel(inputfile)</span><span style="color: rgba(0, 128, 128, 1)"> 8</span> x_test = data.iloc[:,:8<span style="color: rgba(0, 0, 0, 1)">].values</span><span style="color: rgba(0, 128, 128, 1)"> 9</span> y_test = data.iloc[:,8<span style="color: rgba(0, 0, 0, 1)">].values</span><span style="color: rgba(0, 128, 128, 1)">10</span> inputfile =<span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">C:/Users/76319/Desktop/bankloan.xls</span><span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(0, 128, 128, 1)">11</span> data =<span style="color: rgba(0, 0, 0, 1)"> pd.read_excel(inputfile)</span><span style="color: rgba(0, 128, 128, 1)">12</span> x_test = data.iloc[:,:8<span style="color: rgba(0, 0, 0, 1)">].values</span><span style="color: rgba(0, 128, 128, 1)">13</span> y_test = data.iloc[:,8<span style="color: rgba(0, 0, 0, 1)">].values</span><span style="color: rgba(0, 128, 128, 1)">14</span><span style="color: rgba(0, 128, 128, 1)">15</span> model = Sequential()<span style="color: rgba(0, 128, 0, 1)">#</span><span style="color: rgba(0, 128, 0, 1)"> 建立模型</span><span style="color: rgba(0, 128, 128, 1)">16</span> model.add(Dense(input_dim = 8, units = 8<span style="color: rgba(0, 0, 0, 1)">))</span><span style="color: rgba(0, 128, 128, 1)">17</span> model.add(Activation(<span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">relu</span><span style="color: rgba(128, 0, 0, 1)">'</span>))<span style="color: rgba(0, 128, 0, 1)">#</span><span style="color: rgba(0, 128, 0, 1)"> 用relu函数作为激活函数，能够大幅提供准确度</span><span style="color: rgba(0, 128, 128, 1)">18</span> model.add(Dense(input_dim = 8, units = 1<span style="color: rgba(0, 0, 0, 1)">))</span><span style="color: rgba(0, 128, 128, 1)">19</span> model.add(Activation(<span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">sigmoid</span><span style="color: rgba(128, 0, 0, 1)">'</span>))<span style="color: rgba(0, 128, 0, 1)">#</span><span style="color: rgba(0, 128, 0, 1)"> 由于是0-1输出，用sigmoid函数作为激活函数</span><span style="color: rgba(0, 128, 128, 1)">20</span> model.compile(loss =<span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">mean_squared_error</span><span style="color: rgba(128, 0, 0, 1)">'</span>, optimizer =<span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">adam</span><span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(0, 0, 0, 1)">)</span><span style="color: rgba(0, 128, 128, 1)">21</span><span style="color: rgba(0, 128, 0, 1)">#</span><span style="color: rgba(0, 128, 0, 1)"> 编译模型。由于我们做的是二元分类，所以我们指定损失函数为binary_crossentropy，以及模式为binary</span><span style="color: rgba(0, 128, 128, 1)">22</span><span style="color: rgba(0, 128, 0, 1)">#</span><span style="color: rgba(0, 128, 0, 1)"> 另外常见的损失函数还有mean_squared_error、categorical_crossentropy等，请阅读帮助文件。</span><span style="color: rgba(0, 128, 128, 1)">23</span><span style="color: rgba(0, 128, 0, 1)">#</span><span style="color: rgba(0, 128, 0, 1)"> 求解方法我们指定用adam，还有sgd、rmsprop等可选</span><span style="color: rgba(0, 128, 128, 1)">24</span> model.fit(x_test, y_test, epochs = 1000, batch_size = 10<span style="color: rgba(0, 0, 0, 1)">)</span><span style="color: rgba(0, 128, 128, 1)">25</span> predict_x=<span style="color: rgba(0, 0, 0, 1)">model.predict(x_test)</span><span style="color: rgba(0, 128, 128, 1)">26</span> classes_x=np.argmax(predict_x,axis=1<span style="color: rgba(0, 0, 0, 1)">)</span><span style="color: rgba(0, 128, 128, 1)">27</span> yp =<span style="color: rgba(0, 0, 0, 1)"> classes_x.reshape(len(y_test))</span><span style="color: rgba(0, 128, 128, 1)">28</span><span style="color: rgba(0, 128, 128, 1)">29</span><span style="color: rgba(0, 0, 255, 1)">def</span><span style="color: rgba(0, 0, 0, 1)"> cm_plot(y, yp):</span><span style="color: rgba(0, 128, 128, 1)">30</span><span style="color: rgba(0, 0, 255, 1)">from</span> sklearn.metrics<span style="color: rgba(0, 0, 255, 1)">import</span><span style="color: rgba(0, 0, 0, 1)"> confusion_matrix</span><span style="color: rgba(0, 128, 128, 1)">31</span>   cm =<span style="color: rgba(0, 0, 0, 1)"> confusion_matrix(y, yp)</span><span style="color: rgba(0, 128, 128, 1)">32</span><span style="color: rgba(0, 0, 255, 1)">import</span><span style="color: rgba(0, 0, 0, 1)"> matplotlib.pyplot as plt</span><span style="color: rgba(0, 128, 128, 1)">33</span>   plt.matshow(cm, cmap=<span style="color: rgba(0, 0, 0, 1)">plt.cm.Greens)</span><span style="color: rgba(0, 128, 128, 1)">34</span><span style="color: rgba(0, 0, 0, 1)">  plt.colorbar()</span><span style="color: rgba(0, 128, 128, 1)">35</span><span style="color: rgba(0, 0, 255, 1)">for</span> x<span style="color: rgba(0, 0, 255, 1)">in</span><span style="color: rgba(0, 0, 0, 1)"> range(len(cm)):</span><span style="color: rgba(0, 128, 128, 1)">36</span><span style="color: rgba(0, 0, 255, 1)">for</span> y<span style="color: rgba(0, 0, 255, 1)">in</span><span style="color: rgba(0, 0, 0, 1)"> range(len(cm)):</span><span style="color: rgba(0, 128, 128, 1)">37</span>       plt.annotate(cm[x,y], xy=(x, y), horizontalalignment=<span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">center</span><span style="color: rgba(128, 0, 0, 1)">'</span>, verticalalignment=<span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">center</span><span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(0, 0, 0, 1)">)</span><span style="color: rgba(0, 128, 128, 1)">38</span>   plt.ylabel(<span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">True label</span><span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(0, 0, 0, 1)">)</span><span style="color: rgba(0, 128, 128, 1)">39</span>   plt.xlabel(<span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">Predicted label</span><span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(0, 0, 0, 1)">)</span><span style="color: rgba(0, 128, 128, 1)">40</span><span style="color: rgba(0, 0, 255, 1)">return</span><span style="color: rgba(0, 0, 0, 1)"> plt</span><span style="color: rgba(0, 128, 128, 1)">41</span> cm_plot(y_test,yp).show()<span style="color: rgba(0, 128, 0, 1)">#</span><span style="color: rgba(0, 128, 0, 1)"> 显示混淆矩阵可视化结果</span><span style="color: rgba(0, 128, 128, 1)">42</span> score  = model.evaluate(x_test,y_test,batch_size=128)<span style="color: rgba(0, 128, 0, 1)">#</span><span style="color: rgba(0, 128, 0, 1)"> 模型评估</span><span style="color: rgba(0, 128, 128, 1)">43</span><span style="color: rgba(0, 0, 255, 1)">print</span>(score)</pre> </div> <p>结果以及混淆矩阵可视化如下：</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220510/778c70266e7b0f80e1fa0efe02345f5c.jpg" alt="python数据分析与挖掘实战————银行分控模型（几种算法模型的比较）"></p> <p>&nbsp;二、然后我们使用逻辑回归模型进行分析和预测：</p> <div class="cnblogs_code"> <pre><span style="color: rgba(0, 0, 255, 1)">import</span><span style="color: rgba(0, 0, 0, 1)"> pandas as pd inputfile</span>=<span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">C:/Users/76319/Desktop/bankloan.xls</span><span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(0, 0, 0, 1)"> data</span>=<span style="color: rgba(0, 0, 0, 1)"> pd.read_excel(inputfile)</span><span style="color: rgba(0, 0, 255, 1)">print</span><span style="color: rgba(0, 0, 0, 1)"> (data.head()) X</span>= data.drop(columns=<span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">违约</span><span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(0, 0, 0, 1)">) y</span>= data[<span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">违约</span><span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(0, 0, 0, 1)">]</span><span style="color: rgba(0, 0, 255, 1)">from</span> sklearn.model_selection<span style="color: rgba(0, 0, 255, 1)">import</span><span style="color: rgba(0, 0, 0, 1)"> train_test_split</span><span style="color: rgba(0, 0, 255, 1)">from</span> sklearn.linear_model<span style="color: rgba(0, 0, 255, 1)">import</span><span style="color: rgba(0, 0, 0, 1)"> LogisticRegression  X_train, X_test, y_train, y_test</span>= train_test_split(X, y, test_size=0.2, random_state=1<span style="color: rgba(0, 0, 0, 1)">)  model</span>=<span style="color: rgba(0, 0, 0, 1)"> LogisticRegression() model.fit(X_train, y_train) y_pred</span>=<span style="color: rgba(0, 0, 0, 1)"> model.predict(X_test)</span><span style="color: rgba(0, 0, 255, 1)">print</span><span style="color: rgba(0, 0, 0, 1)">(y_pred)</span><span style="color: rgba(0, 0, 255, 1)">from</span> sklearn.metrics<span style="color: rgba(0, 0, 255, 1)">import</span><span style="color: rgba(0, 0, 0, 1)"> accuracy_score score</span>=<span style="color: rgba(0, 0, 0, 1)"> accuracy_score(y_pred, y_test)</span><span style="color: rgba(0, 0, 255, 1)">print</span><span style="color: rgba(0, 0, 0, 1)">(score)</span><span style="color: rgba(0, 0, 255, 1)">def</span><span style="color: rgba(0, 0, 0, 1)"> cm_plot(y, y_pred):</span><span style="color: rgba(0, 0, 255, 1)">from</span> sklearn.metrics<span style="color: rgba(0, 0, 255, 1)">import</span> confusion_matrix<span style="color: rgba(0, 128, 0, 1)">#</span><span style="color: rgba(0, 128, 0, 1)">导入混淆矩阵函数</span>   cm = confusion_matrix(y, y_pred)<span style="color: rgba(0, 128, 0, 1)">#</span><span style="color: rgba(0, 128, 0, 1)">混淆矩阵</span><span style="color: rgba(0, 0, 255, 1)">import</span> matplotlib.pyplot as plt<span style="color: rgba(0, 128, 0, 1)">#</span><span style="color: rgba(0, 128, 0, 1)">导入作图库</span>   plt.matshow(cm, cmap=plt.cm.Greens)<span style="color: rgba(0, 128, 0, 1)">#</span><span style="color: rgba(0, 128, 0, 1)">画混淆矩阵图，配色风格使用cm.Greens，更多风格请参考官网。</span>   plt.colorbar()<span style="color: rgba(0, 128, 0, 1)">#</span><span style="color: rgba(0, 128, 0, 1)">颜色标签</span><span style="color: rgba(0, 0, 255, 1)">for</span> x<span style="color: rgba(0, 0, 255, 1)">in</span> range(len(cm)):<span style="color: rgba(0, 128, 0, 1)">#</span><span style="color: rgba(0, 128, 0, 1)">数据标签</span><span style="color: rgba(0, 0, 255, 1)">for</span> y<span style="color: rgba(0, 0, 255, 1)">in</span><span style="color: rgba(0, 0, 0, 1)"> range(len(cm)):       plt.annotate(cm[x,y], xy</span>=(x, y), horizontalalignment=<span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">center</span><span style="color: rgba(128, 0, 0, 1)">'</span>, verticalalignment=<span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">center</span><span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(0, 0, 0, 1)">)   plt.ylabel(</span><span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">True label</span><span style="color: rgba(128, 0, 0, 1)">'</span>)<span style="color: rgba(0, 128, 0, 1)">#</span><span style="color: rgba(0, 128, 0, 1)">坐标轴标签</span>   plt.xlabel(<span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">Predicted label</span><span style="color: rgba(128, 0, 0, 1)">'</span>)<span style="color: rgba(0, 128, 0, 1)">#</span><span style="color: rgba(0, 128, 0, 1)">坐标轴标签</span><span style="color: rgba(0, 0, 255, 1)">return</span><span style="color: rgba(0, 0, 0, 1)"> plt cm_plot(y_test, y_pred).show()</span></pre> </div> <p>结果如下：</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220510/7befab97c970c755f924a12872f8457b.jpg" alt="python数据分析与挖掘实战————银行分控模型（几种算法模型的比较）"></p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220510/b676777cd4710eab642c6002588faa12.jpg" alt="python数据分析与挖掘实战————银行分控模型（几种算法模型的比较）"></p> <p>&nbsp;综上所述得出，两种算法模型总体上跑出来的准确率还是不错的，但是神经网络准确性更高一点。</p> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-52200.htm">东北农业大学动物医院新地址在哪（东北农业大学动物医学学院电话）</a></p>
+                                        <p>下一个：<a href="/news/article-52728.htm">狗狗领养协议书怎么写范文（狗狗领养协议书怎么写范文模板）</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2024-12-27-linux-clash-nyanpasu.htm" title="「12月27日」最高速度22.7M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐">「12月27日」最高速度22.7M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-15-clash-nyanpasu.htm" title="「12月15日」最高速度21.5M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐">「12月15日」最高速度21.5M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-29-free-clash.htm" title="「1月29日」最高速度20.6M/S，2025年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐">「1月29日」最高速度20.6M/S，2025年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐</a></li>
+                        <li class="py-2"><a href="/news/article-31919.htm" title="动物疫苗管理员工作年度总结（动物疫苗管理员工作年度总结怎么写）">动物疫苗管理员工作年度总结（动物疫苗管理员工作年度总结怎么写）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-27-clash-nyanpasu-node.htm" title="「11月27日」最高速度18M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐">「11月27日」最高速度18M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-18-free-node-subscribe.htm" title="「1月18日」最高速度19.6M/S，2025年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐">「1月18日」最高速度19.6M/S，2025年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐</a></li>
+                        <li class="py-2"><a href="/news/article-24896.htm" title="在我所在的城市有一家宠物医院英文怎么写（我所在的城市里有一家宠物医院英文）">在我所在的城市有一家宠物医院英文怎么写（我所在的城市里有一家宠物医院英文）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-17-free-clash-subscribe.htm" title="「11月17日」最高速度19.8M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐">「11月17日」最高速度19.8M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-14-node-share-links.htm" title="「11月14日」最高速度19.1M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐">「11月14日」最高速度19.1M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐</a></li>
+                        <li class="py-2"><a href="/news/article-36706.htm" title="宠物领养规则最新（宠物领养规则最新版）">宠物领养规则最新（宠物领养规则最新版）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">21</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">92</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">93</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">30</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+        <!--====== FOOTER PART START ======-->
+    <section class="footer-area footer-dark">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="copyright text-center mt-35">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                        <p class="text">
+                            ClashNyanpasu官网节点站 版权所有 Powered by WordPress
+                        </p>
+                    </div> <!--  copyright -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+    <!--====== FOOTER PART ENDS ======-->
+    <!--====== BACK TOP TOP PART START ======-->
+    <a href="#" class="back-to-top"><i class="lni lni-chevron-up"></i></a>
+    <!--====== BACK TOP TOP PART ENDS ======-->
+    <!--====== Jquery js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/vendor/jquery-1.12.4.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/vendor/modernizr-3.7.1.min.js"></script>
+    <!--====== Bootstrap js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/popper.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/slick.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/jquery.magnific-popup.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/ajax-contact.js"></script>
+    <!--====== Isotope js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/imagesloaded.pkgd.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/isotope.pkgd.min.js"></script>
+    <!--====== Scrolling Nav js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/jquery.easing.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/scrolling-nav.js"></script>
+    <!--====== Main js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
