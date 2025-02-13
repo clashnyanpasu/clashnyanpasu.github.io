@@ -1,0 +1,247 @@
+<!doctype html>
+<html class="no-js" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashnyanpasu.github.io/news/article-54905.htm" />
+    <meta charset="utf-8">
+    <!--====== Title ======-->
+    <title>c++动态库与静态库</title>
+        <meta name="description" content="什么是库 库是写好的现有的，成熟的，可以复用的代码。现实中每个程序员都要依赖很多基础的底层库，不可能每个人的代码都从零开始，因此库的存在意义非同寻常。 本质上来说库是一种可执行代码的二进制形式，可以被" />
+        <link rel="icon" href="/assets/website/img/clashnyanpasu/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="ClashNyanpasu官网节点站">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://clashnyanpasu.github.io/news/article-54905.htm" />
+    <meta property="og:site_name" content="ClashNyanpasu官网节点站" />
+    <meta property="og:title" content="c++动态库与静态库" />
+    <meta property="og:image" content="https://clashnyanpasu.github.io/uploads/20240623/d8e5583232af8afc37397adae9b35fb9.webp" />
+        <meta property="og:release_date" content="2025-02-11T05:44:22" />
+    <meta property="og:updated_time" content="2025-02-11T05:44:22" />
+        <meta property="og:description" content="什么是库 库是写好的现有的，成熟的，可以复用的代码。现实中每个程序员都要依赖很多基础的底层库，不可能每个人的代码都从零开始，因此库的存在意义非同寻常。 本质上来说库是一种可执行代码的二进制形式，可以被" />
+        
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--====== Magnific Popup CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/magnific-popup.css">
+    <!--====== Slick CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/slick.css">
+    <!--====== Line Icons CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/LineIcons.css">
+    <!--====== Bootstrap CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/bootstrap.min.css">
+    <!--====== Default CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/default.css">
+    <!--====== Style CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/style.css">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="c++动态库与静态库">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7F56WL29Y8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7F56WL29Y8');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!--====== PRELOADER PART START ======-->
+    <div class="preloader">
+        <div class="loader">
+            <div class="ytp-spinner">
+                <div class="ytp-spinner-container">
+                    <div class="ytp-spinner-rotator">
+                        <div class="ytp-spinner-left">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                        <div class="ytp-spinner-right">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--====== PRELOADER PART ENDS ======-->
+    <!--====== NAVBAR TWO PART START ======-->
+    <section class="navbar-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <nav class="navbar navbar-expand-lg">
+                                                <a class="navbar-brand top" href="/">
+                            Clash Nyanpasu                        </a>
+                                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTwo" aria-controls="navbarTwo" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="toggler-icon"></span>
+                            <span class="toggler-icon"></span>
+                            <span class="toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse sub-menu-bar" id="navbarTwo">
+                            <ul class="navbar-nav m-auto">
+                                                                <li class="nav-item"><a href="/">首页</a></li>
+                                                                <li class="nav-item"><a href="/free-nodes/">免费节点</a></li>
+                                                                <li class="nav-item"><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                <li class="nav-item"><a href="/client.htm">客户端</a></li>
+                                                                <li class="nav-item"><a href="/news/">新闻资讯</a></li>
+                                                            </ul>
+                        </div>
+
+                    </nav> <!-- navbar -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+    <!--====== NAVBAR TWO PART ENDS ======-->
+    <!--====== SLIDER PART START ======-->
+    <section id="home" class="slider_area">
+        <div id="carouselThree" class="carousel slide sub-page" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="slider-content">
+                                    <h1 class="title">c++动态库与静态库</h1>
+                                    <p class="text">
+                                        <a href="/">首页</a> / 
+                                        <a href="/news/">新闻资讯</a> / 
+                                        <span>正文</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div> <!-- row -->
+                    </div> <!-- container -->
+                    <div class="slider-image-box d-none d-lg-flex align-items-end">
+                        <div class="slider-image">
+                            <img src="/assets/website/img/clashnyanpasu/slider/1.png" alt="Hero">
+                        </div> <!-- slider-imgae -->
+                    </div> <!-- slider-imgae box -->
+                </div> <!-- carousel-item -->
+            </div>
+        </div>
+    </section>
+    <!--====== SLIDER PART ENDS ======-->
+    <!--====== ABOUT PART START ======-->
+    <section id=about class=about-area>
+        <div class=container>
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="content_views" class="markdown_views prism-tomorrow-night"> <h2> <a id="_0" rel="nofollow"></a>什么是库</h2> <p>库是写好的现有的，成熟的，可以复用的代码。现实中每个程序员都要依赖很多基础的底层库，不可能每个人的代码都从零开始，因此库的存在意义非同寻常。</p> <p>本质上来说库是一种可执行代码的二进制形式，可以被操作系统载入内存执行。</p> <p>库有两种：静态库(.a，.lib)和动态库(.so，.all)。</p> <p><strong>所谓静态，动态是指链接。</strong></p> <p>回顾一下，将一整个程序编译成可执行程序的步骤：<br /> ![在这里插入图片描述](https://img-blog.csdnimg.cn/a693a678ff1e4a238f<img decoding="async" src="http://img.555519.xyz/uploads/20230223/d9c38c2a51e676168a9b870f8a65ba22.jpg" alt="c++动态库与静态库"></p> <h2> <a id="_13" rel="nofollow"></a>静态库</h2> <p>之所以称为静态库，是因为在链接阶段，会将汇编生成的目标文件.o与引用到的库一起链接打包到可执行文件中。因此对应的链接方式为静态链接。</p> <p>静态库与汇编生成的目标文件一起链接为可执行文件，那么静态库必定与.o文件格式相似。其实静态库可以简单看成是一组目标文件.o/.obj的集合。</p> <p>静态库特点总结：</p> <ul> <li>静态库对函数库的链接是放在编译时期完成的。</li> <li>程序在运行是与函数再无瓜葛，移植方便。</li> <li>浪费空间和资源，因为所有相关的目标文件与牵涉到的函数库被链接合成一个可执行文件。<br /> 创建静态库过程如下：<br /><img decoding="async" src="http://img.555519.xyz/uploads/20230223/cac57b56c3d4b2d72827b097814dd2ef.jpg" alt="c++动态库与静态库"><br /> VS工程下设置静态库的步骤：<br /><img decoding="async" src="http://img.555519.xyz/uploads/20230223/1afdff01dfa0f52d9895bc1dd26026c0.jpg" alt="c++动态库与静态库"> </li> </ul> <p>使用静态库的三种方法:</p> <p><strong>方法1</strong>：</p> <p>工程“属性面板”，“通用属性”， “框架和引用”，”添加引用”，将显示“添加引用”对话框。 “项目”选项卡列出了当前解决方案中的各个项目以及可以引用的所有库。<br /><img decoding="async" src="http://img.555519.xyz/uploads/20230223/f8167b554a4b712af30a17f8adf409b1.jpg" alt="c++动态库与静态库"><br /> 选择了某个库，必须修改包含目录路径。打开工程“属性面板”，”配置属性”， “C/C++，常规”，在“附加包含目录”属性值中，键入头文件所在目录的路径或浏览至该目录。<br /><img decoding="async" src="http://img.555519.xyz/uploads/20230223/80831a413fc27753a0e7491182680c64.jpg" alt="c++动态库与静态库"></p> <p>如果引用的静态库不是在同一解决方案下的子工程，而是使用第三方提供的静态库lib和头文件，上面的方法设置不了。还有2中方法设置都可行。</p> <p><strong>方法2</strong>：</p> <p>打开工程“属性面板”，”配置属性”， “链接器”，”命令行”，输入静态库的完整路径即可。<br /><img decoding="async" src="http://img.555519.xyz/uploads/20230223/344b916c42399b8ea0d92494bb315f6f.jpg" alt="c++动态库与静态库"><br /><strong>方法3：</strong></p> <ul> <li>“属性面板”，”配置属性”， “链接器”，”常规”，附加依赖库目录中输入，静态库所在目录；</li> <li>“属性面板”，”配置属性”，“链接器”，”输入”，附加依赖库中输入静态库名。<br /><img decoding="async" src="http://img.555519.xyz/uploads/20230223/c5a87964ad0831d01e75f0827040585a.jpg" alt="c++动态库与静态库"><img decoding="async" src="http://img.555519.xyz/uploads/20230223/f5ada0c4c45a31b53a5511e71b7efcb6.jpg" alt="c++动态库与静态库"> </li> </ul> <h2> <a id="_51" rel="nofollow"></a>动态库</h2> <p>通过上面的介绍发现静态库，容易使用和理解，也达到了代码复用的目的，那为什么还需要动态库呢？</p> <p>为什么需要动态库，其实也是静态库的特点导致。</p> <ul> <li> <p>空间浪费是静态库的一个问题。<br /><img decoding="async" src="http://img.555519.xyz/uploads/20230223/0cf55ec95c6cc858400e06f80628ce45.jpg" alt="c++动态库与静态库"></p> </li> <li> <p>另一个问题是静态库对程序的更新、部署和发布页会带来麻烦。如果静态库liba.lib更新了，所以使用它的应用程序都需要重新编译、发布给用户（对于玩家来说，可能是一个很小的改动，却导致整个程序重新下载，全量更新）。</p> </li> </ul> <p>动态库在程序编译时并不会被连接到目标代码中，而是在程序运行是才被载入。<strong>不同的应用程序如果调用相同的库，那么在内存里只需要有一份该共享库的实例，规避了空间浪费问题</strong>。动态库在程序运行是才被载入，也解决了静态库对程序的更新、部署和发布页会带来麻烦。用户只需要更新动态库即可，增量更新。<br /><img decoding="async" src="http://img.555519.xyz/uploads/20230223/eebdeac3cc122118f19f120de9450976.jpg" alt="c++动态库与静态库"></p> <p>动态库特点总结：</p> <ul> <li>动态库把对一些库函数的链接载入推迟到程序运行的时期。</li> <li>可以实现进程之间的资源共享。（因此动态库也称为共享库）</li> <li>将一些程序升级变得简单。 甚至可以真正做到链接载入完全由程序员在程序代码中控制（显示调用）。</li> </ul> <p><strong>动态库的设置与静态库的设置一样。</strong><br /><img decoding="async" src="http://img.555519.xyz/uploads/20230223/420cebaaa5b5bc17abe537abb697a8e1.jpg" alt="c++动态库与静态库"></p> <p>动态库的使用与静态库的使用基本相同。这里不再赘述。</p> <h2> <a id="_76" rel="nofollow"></a>总结</h2> <p><strong>二者的不同点在于代码被载入的时刻不同。</strong></p> <ul> <li>静态库在程序编译时会被连接到目标代码中，程序运行时将不再需要该静态库，因此体积较大。</li> <li>动态库在程序编译时并不会被连接到目标代码中，而是在程序运行是才被载入，因此在程序运行时还需要动态库存在，因此代码体积较小。</li> </ul> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-54358.htm">合肥宠物领养中心地址查询 合肥宠物领养中心地址查询电话</a></p>
+                                        <p>下一个：<a href="/news/article-54906.htm">新手适合开的店（新手开什么店最好）</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-50610.htm" title="[Redis] Redis实战">[Redis] Redis实战</a></li>
+                        <li class="py-2"><a href="/news/article-49062.htm" title="C ++中的虚拟基类">C ++中的虚拟基类</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-14-free-high-speed-nodes.htm" title="「1月14日」最高速度21.3M/S，2025年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐">「1月14日」最高速度21.3M/S，2025年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐</a></li>
+                        <li class="py-2"><a href="/news/article-40150.htm" title="动物防疫站是什么单位（动物防疫站工作怎么样）">动物防疫站是什么单位（动物防疫站工作怎么样）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-31-node-share-links.htm" title="「12月31日」最高速度18.6M/S，2025年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐">「12月31日」最高速度18.6M/S，2025年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-9-free-clash-nyanpasu.htm" title="「12月9日」最高速度19.5M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐">「12月9日」最高速度19.5M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐</a></li>
+                        <li class="py-2"><a href="/news/article-37196.htm" title="解决swagger文档接口404的问题">解决swagger文档接口404的问题</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-13-free-node-subscribe-links.htm" title="「12月13日」最高速度19.6M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐">「12月13日」最高速度19.6M/S，2024年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐</a></li>
+                        <li class="py-2"><a href="/news/article-52199.htm" title="宠物疫苗不冷藏多久失效（宠物疫苗不冷藏可以放多久）">宠物疫苗不冷藏多久失效（宠物疫苗不冷藏可以放多久）</a></li>
+                        <li class="py-2"><a href="/news/article-20300.htm" title="动物打疫苗过敏 动物打疫苗过敏怎么处理">动物打疫苗过敏 动物打疫苗过敏怎么处理</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">39</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">92</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">93</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">30</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+        <!--====== FOOTER PART START ======-->
+    <section class="footer-area footer-dark">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="copyright text-center mt-35">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                        <p class="text">
+                            ClashNyanpasu官网节点站 版权所有 Powered by WordPress
+                        </p>
+                    </div> <!--  copyright -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+    <!--====== FOOTER PART ENDS ======-->
+    <!--====== BACK TOP TOP PART START ======-->
+    <a href="#" class="back-to-top"><i class="lni lni-chevron-up"></i></a>
+    <!--====== BACK TOP TOP PART ENDS ======-->
+    <!--====== Jquery js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/vendor/jquery-1.12.4.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/vendor/modernizr-3.7.1.min.js"></script>
+    <!--====== Bootstrap js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/popper.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/slick.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/jquery.magnific-popup.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/ajax-contact.js"></script>
+    <!--====== Isotope js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/imagesloaded.pkgd.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/isotope.pkgd.min.js"></script>
+    <!--====== Scrolling Nav js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/jquery.easing.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/scrolling-nav.js"></script>
+    <!--====== Main js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
