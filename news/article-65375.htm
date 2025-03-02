@@ -1,0 +1,250 @@
+<!doctype html>
+<html class="no-js" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashnyanpasu.github.io/news/article-65375.htm" />
+    <meta charset="utf-8">
+    <!--====== Title ======-->
+    <title>企业应用架构研究系列十九：Docker开发环境</title>
+        <meta name="description" content="　　软件行业流行这样一个说法，由于Docker 技术的成熟和该技术被广大厂商的普遍应用，成就了微服务领域的快速成长，衍生了云原生技术和公有云的进一步推广。我个人认为Dockers 技术、微服务技术、云" />
+        <link rel="icon" href="/assets/website/img/clashnyanpasu/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="ClashNyanpasu官网节点站">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://clashnyanpasu.github.io/news/article-65375.htm" />
+    <meta property="og:site_name" content="ClashNyanpasu官网节点站" />
+    <meta property="og:title" content="企业应用架构研究系列十九：Docker开发环境" />
+    <meta property="og:image" content="https://clashnyanpasu.github.io/uploads/20240623/7bcb8be466e1b3d09fd2576cd9d484df.webp" />
+        <meta property="og:release_date" content="2025-03-01T07:00:03" />
+    <meta property="og:updated_time" content="2025-03-01T07:00:03" />
+        <meta property="og:description" content="　　软件行业流行这样一个说法，由于Docker 技术的成熟和该技术被广大厂商的普遍应用，成就了微服务领域的快速成长，衍生了云原生技术和公有云的进一步推广。我个人认为Dockers 技术、微服务技术、云" />
+        
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--====== Magnific Popup CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/magnific-popup.css">
+    <!--====== Slick CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/slick.css">
+    <!--====== Line Icons CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/LineIcons.css">
+    <!--====== Bootstrap CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/bootstrap.min.css">
+    <!--====== Default CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/default.css">
+    <!--====== Style CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/style.css">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="企业应用架构研究系列十九：Docker开发环境">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7F56WL29Y8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7F56WL29Y8');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!--====== PRELOADER PART START ======-->
+    <div class="preloader">
+        <div class="loader">
+            <div class="ytp-spinner">
+                <div class="ytp-spinner-container">
+                    <div class="ytp-spinner-rotator">
+                        <div class="ytp-spinner-left">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                        <div class="ytp-spinner-right">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--====== PRELOADER PART ENDS ======-->
+    <!--====== NAVBAR TWO PART START ======-->
+    <section class="navbar-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <nav class="navbar navbar-expand-lg">
+                                                <a class="navbar-brand top" href="/">
+                            Clash Nyanpasu                        </a>
+                                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTwo" aria-controls="navbarTwo" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="toggler-icon"></span>
+                            <span class="toggler-icon"></span>
+                            <span class="toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse sub-menu-bar" id="navbarTwo">
+                            <ul class="navbar-nav m-auto">
+                                                                <li class="nav-item"><a href="/">首页</a></li>
+                                                                <li class="nav-item"><a href="/free-nodes/">免费节点</a></li>
+                                                                <li class="nav-item"><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                <li class="nav-item"><a href="/client.htm">客户端</a></li>
+                                                                <li class="nav-item"><a href="/news/">新闻资讯</a></li>
+                                                            </ul>
+                        </div>
+
+                    </nav> <!-- navbar -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+    <!--====== NAVBAR TWO PART ENDS ======-->
+    <!--====== SLIDER PART START ======-->
+    <section id="home" class="slider_area">
+        <div id="carouselThree" class="carousel slide sub-page" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="slider-content">
+                                    <h1 class="title">企业应用架构研究系列十九：Docker开发环境</h1>
+                                    <p class="text">
+                                        <a href="/">首页</a> / 
+                                        <a href="/news/">新闻资讯</a> / 
+                                        <span>正文</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div> <!-- row -->
+                    </div> <!-- container -->
+                    <div class="slider-image-box d-none d-lg-flex align-items-end">
+                        <div class="slider-image">
+                            <img src="/assets/website/img/clashnyanpasu/slider/1.png" alt="Hero">
+                        </div> <!-- slider-imgae -->
+                    </div> <!-- slider-imgae box -->
+                </div> <!-- carousel-item -->
+            </div>
+        </div>
+    </section>
+    <!--====== SLIDER PART ENDS ======-->
+    <!--====== ABOUT PART START ======-->
+    <section id=about class=about-area>
+        <div class=container>
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<p>　　软件行业流行这样一个说法，由于Docker 技术的成熟和该技术被广大厂商的普遍应用，成就了微服务领域的快速成长，衍生了云原生技术和公有云的进一步推广。我个人认为Dockers 技术、微服务技术、云原生技术乃至领域模型概念其实是彼此相互相吸，互相依赖，组成了当今软件行业的一个新的生态链。作为软件行业从业者，虽然不能精通每一项新兴技术，但是我们要对主流技术应保持一颗积极探索的心。</p> <p>　　本章节开始对Dockers领域的技术探索之路开始总结，之前身处项目，没有太多精力对它进行全面总结，但是，软件开发人员对技术的研究和总结是应该保持的良好习惯。</p> <p><img fetchpriority="high" decoding="async" src="http://img.555519.xyz/uploads3/20220510/d72ed661bf3abdf1f95ed73c630e412a.jpg" alt="企业应用架构研究系列十九：Docker开发环境"></p> <p>&nbsp;　　闲话少说，开始Docker 探索的的一个步骤，Docker 环境的搭建。首先我们需要在本地开发环境安装Docker 的运行环境，我的开发环境是Windows 10 ，开发工具使用的是VS2022。</p> <p>　　第一步安装&nbsp;Docker Desktop for Windows, 可以从官网（https://www.docker.com/get-started）直接下载，Windows10 需要最新的企业版本或专业版本，安装的过程中需要安装WSL2(它支持适用于 Linux 的 Windows 子系统在 Windows 上运行 ELF64 Linux 二进制文件)。安装过程基本比较简单，都是One By One. 此处就省略了，特别强调一点，第一次启动的时候特别慢，不要担心，是Docker Desktop 进行更新和检查所需组件，并进行相关的自动配置。</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220510/0efdb983973499c987a1a5c775284a5a.jpg" alt="企业应用架构研究系列十九：Docker开发环境"></p> <p>　　安装完毕后，启动界面如上图，就可以在本地进行开心的玩耍Docker了。本篇文章不再对docker 的专业名词进行解释，可以自行进行度娘。如果你有Linux环境，最后使用Linux环境进行搭建，安装过程也是非常简单，此处不再描述了。Docker Desktop 工具有一个可视化的界面，左侧菜单分别为容器、镜像、卷标三大常规操作提供界面，适合初学者，但，不建议开发人员使用该界面，而是建议大家使用Powershell进行操作。由于安装了WSL2 和Docker 环境，Powershell 里面就可以使用Bush风格的命令了，其实就是Bush操作命令。在Powershell 运行&nbsp;docker run -d -p 80:80 docker/getting-started 命令就可以下载并允许了你的第一个Docker 容器了。</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220510/364113bf68fd7ca24ba3890b0f60c26b.jpg" alt="企业应用架构研究系列十九：Docker开发环境"></p> <p>　　开发环境正常运行起来了，我们后续就可以将自己的代码打包成Docker镜像，发布到本地的环境，我们也可以将开发好的镜像发布到DockerHub 上面或者Azure 上面的企业自己的容器注册表，可参考文档：https://docs.microsoft.com/zh-cn/azure/container-registry。</p> <p><img loading="lazy" decoding="async" src="http://img.555519.xyz/uploads3/20220510/d7afec5c5f0a39fdb33cfb0e337185e3.jpg" alt="企业应用架构研究系列十九：Docker开发环境"></p> <p>　　Docker Desktop 工具是对个人和小型企业免费的，我们也可以使用Docker Desktop 进行K8s 环境在本地搭建，后续文章我对K8s 的搭建和配置进行详细描述，本章节只先粗略的对本地dockers开发环境搭建进行了描述，希望能够帮助你开启dockers开心研究之旅。</p> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-65374.htm">我们如何在MySQL SELECT查询中将组函数与非组字段一起使用？</a></p>
+                                        <p>下一个：<a href="/news/article-65959.htm">C#实现文件Move和Copy操作_C#教程_</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2025-1-13-free-clash-subscribe.htm" title="「1月13日」最高速度19.2M/S，2025年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐">「1月13日」最高速度19.2M/S，2025年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐</a></li>
+                        <li class="py-2"><a href="/news/article-25833.htm" title="react项目配置postcss-px2rem-exclude">react项目配置postcss-px2rem-exclude</a></li>
+                        <li class="py-2"><a href="/news/article-30504.htm" title="动物打预防针多少钱（动物防疫***收费吗）">动物打预防针多少钱（动物防疫***收费吗）</a></li>
+                        <li class="py-2"><a href="/news/article-38671.htm" title="动物疫苗需要冷藏吗多少度保存好（动物疫苗使用时的注意事项有哪些）">动物疫苗需要冷藏吗多少度保存好（动物疫苗使用时的注意事项有哪些）</a></li>
+                        <li class="py-2"><a href="/news/article-42631.htm" title="动物注射疫苗后过敏反应的处理方法（动物打了疫苗的,伤了人怎么办）">动物注射疫苗后过敏反应的处理方法（动物打了疫苗的,伤了人怎么办）</a></li>
+                        <li class="py-2"><a href="/news/article-26300.htm" title="被宠物猫抓伤出一丝丝血要***吗多少钱一针（被宠物猫抓伤出一丝丝血要***吗多少钱一针）">被宠物猫抓伤出一丝丝血要***吗多少钱一针（被宠物猫抓伤出一丝丝血要***吗多少钱一针）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-16-free-clash-subscribe.htm" title="「2月16日」最高速度19.3M/S，2025年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐">「2月16日」最高速度19.3M/S，2025年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐</a></li>
+                        <li class="py-2"><a href="/news/article-57695.htm" title="并发编程基础底层原理学习_在线工具">并发编程基础底层原理学习_在线工具</a></li>
+                        <li class="py-2"><a href="/news/article-39175.htm" title="vue【退出登录功能】">vue【退出登录功能】</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-13-free-clash-nyanpasu.htm" title="「2月13日」最高速度21.7M/S，2025年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐">「2月13日」最高速度21.7M/S，2025年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">6</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">84</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">92</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">93</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">30</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+        <!--====== FOOTER PART START ======-->
+    <section class="footer-area footer-dark">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="copyright text-center mt-35">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                        <p class="text">
+                            ClashNyanpasu官网节点站 版权所有 Powered by WordPress
+                        </p>
+                    </div> <!--  copyright -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+    <!--====== FOOTER PART ENDS ======-->
+    <!--====== BACK TOP TOP PART START ======-->
+    <a href="#" class="back-to-top"><i class="lni lni-chevron-up"></i></a>
+    <!--====== BACK TOP TOP PART ENDS ======-->
+    <!--====== Jquery js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/vendor/jquery-1.12.4.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/vendor/modernizr-3.7.1.min.js"></script>
+    <!--====== Bootstrap js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/popper.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/slick.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/jquery.magnific-popup.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/ajax-contact.js"></script>
+    <!--====== Isotope js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/imagesloaded.pkgd.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/isotope.pkgd.min.js"></script>
+    <!--====== Scrolling Nav js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/jquery.easing.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/scrolling-nav.js"></script>
+    <!--====== Main js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
