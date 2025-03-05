@@ -1,0 +1,244 @@
+<!doctype html>
+<html class="no-js" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashnyanpasu.github.io/news/article-67253.htm" />
+    <meta charset="utf-8">
+    <!--====== Title ======-->
+    <title>模拟器 教你如何用python制作随机点名器</title>
+        <meta name="description" content="老师在上课的时候经常需要点名回答问题，但是遇到选择困难症，可以说非常尴尬。。。  因此，我开发了一款随机点名器，可以帮助点名：  &nbsp;首先我们展示一下效果，先在database.csv文件中存" />
+        <link rel="icon" href="/assets/website/img/clashnyanpasu/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="ClashNyanpasu官网节点站">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://clashnyanpasu.github.io/news/article-67253.htm" />
+    <meta property="og:site_name" content="ClashNyanpasu官网节点站" />
+    <meta property="og:title" content="模拟器 教你如何用python制作随机点名器" />
+    <meta property="og:image" content="https://clashnyanpasu.github.io/uploads/20240623/dd928850dc6292d0072f467f6a2a45e8.webp" />
+        <meta property="og:release_date" content="2025-03-04T10:15:20" />
+    <meta property="og:updated_time" content="2025-03-04T10:15:20" />
+        <meta property="og:description" content="老师在上课的时候经常需要点名回答问题，但是遇到选择困难症，可以说非常尴尬。。。  因此，我开发了一款随机点名器，可以帮助点名：  &nbsp;首先我们展示一下效果，先在database.csv文件中存" />
+        
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--====== Magnific Popup CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/magnific-popup.css">
+    <!--====== Slick CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/slick.css">
+    <!--====== Line Icons CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/LineIcons.css">
+    <!--====== Bootstrap CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/bootstrap.min.css">
+    <!--====== Default CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/default.css">
+    <!--====== Style CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/style.css">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="模拟器 教你如何用python制作随机点名器">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7F56WL29Y8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7F56WL29Y8');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!--====== PRELOADER PART START ======-->
+    <div class="preloader">
+        <div class="loader">
+            <div class="ytp-spinner">
+                <div class="ytp-spinner-container">
+                    <div class="ytp-spinner-rotator">
+                        <div class="ytp-spinner-left">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                        <div class="ytp-spinner-right">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--====== PRELOADER PART ENDS ======-->
+    <!--====== NAVBAR TWO PART START ======-->
+    <section class="navbar-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <nav class="navbar navbar-expand-lg">
+                                                <a class="navbar-brand top" href="/">
+                            Clash Nyanpasu                        </a>
+                                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTwo" aria-controls="navbarTwo" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="toggler-icon"></span>
+                            <span class="toggler-icon"></span>
+                            <span class="toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse sub-menu-bar" id="navbarTwo">
+                            <ul class="navbar-nav m-auto">
+                                                                <li class="nav-item"><a href="/">首页</a></li>
+                                                                <li class="nav-item"><a href="/free-nodes/">免费节点</a></li>
+                                                                <li class="nav-item"><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                <li class="nav-item"><a href="/client.htm">客户端</a></li>
+                                                                <li class="nav-item"><a href="/news/">新闻资讯</a></li>
+                                                            </ul>
+                        </div>
+
+                    </nav> <!-- navbar -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+    <!--====== NAVBAR TWO PART ENDS ======-->
+    <!--====== SLIDER PART START ======-->
+    <section id="home" class="slider_area">
+        <div id="carouselThree" class="carousel slide sub-page" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="slider-content">
+                                    <h1 class="title">模拟器 教你如何用python制作随机点名器</h1>
+                                    <p class="text">
+                                        <a href="/">首页</a> / 
+                                        <a href="/news/">新闻资讯</a> / 
+                                        <span>正文</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div> <!-- row -->
+                    </div> <!-- container -->
+                    <div class="slider-image-box d-none d-lg-flex align-items-end">
+                        <div class="slider-image">
+                            <img src="/assets/website/img/clashnyanpasu/slider/1.png" alt="Hero">
+                        </div> <!-- slider-imgae -->
+                    </div> <!-- slider-imgae box -->
+                </div> <!-- carousel-item -->
+            </div>
+        </div>
+    </section>
+    <!--====== SLIDER PART ENDS ======-->
+    <!--====== ABOUT PART START ======-->
+    <section id=about class=about-area>
+        <div class=container>
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="content_views" class="htmledit_views"> <p>老师在上课的时候经常需要点名回答问题，但是遇到选择困难症，可以说非常尴尬。。。</p> <p></p> <p>因此，我开发了一款随机点名器，可以帮助点名：</p> <p><img decoding="async" src="http://img.555519.xyz/uploads/20230207/3c0dcf7003007bf64f16c72428514ce3.jpg" alt="模拟器 教你如何用python制作随机点名器"></p> <p>&nbsp;首先我们展示一下效果，先在database.csv文件中存放一些人名信息：</p> <p style="text-align:center;"><img decoding="async" src="http://img.555519.xyz/uploads/20230207/eb0560bb8d117310ad213843d3af57cb.jpg" alt="模拟器 教你如何用python制作随机点名器"></p> <p>&nbsp;将该csv文件存放到和py文件一个目录的文件夹里：</p> <p><img decoding="async" src="http://img.555519.xyz/uploads/20230207/458feb1ebf38f1565d01ffb7eb5d4594.jpg" alt="模拟器 教你如何用python制作随机点名器"></p> <p>&nbsp;接下来展示效果：</p> <div class="csdn-video-box">  <iframe id="Zwa96Cxs-1642987944469" src="https://live.csdn.net/v/embed/184795" allowfullscreen="true" data-mediaembed="csdn"></iframe></p> <p>随机点名器</p> </div> <p>可以看到，每次可以随机选取一个人的名字，而且不会重复哦~~~</p> <p>那么这个软件是如何实现的呢？</p> <p>全局变量：</p> <pre><code class="language-python">MAINLIST=[] YYY=None</code></pre> <p>界面代码：</p> <pre><code class="language-python">class basedesk():#底板     def __init__(self, master):         global YYY         self.master = master         self.master.title("随机点名系统")         self.master.configure(bg='#B1FFF9')         self.master.geometry("1370x730")         YYY=mainwindow(self.master) class mainwindow():#主界面     def __init__(self, master):         self.master = master         data_name = os.path.join(os.path.dirname(__file__), 'database.csv')         with open(data_name) as f:             f_csv=csv.reader(f)             self.data=[]             for row in f_csv:                 self.data.append(row)         self.condition=0         self.i = 0         self.j=0         self.stop_check = False         self.master.name_label = tk.Label(self.master, text="姓名：", font=("Helvetic", 30, "bold"), relief="raised",cursor="heart").place(x=10,y=10)         self.master.picname_entry = tk.Entry(self.master,font=("Calibri",80),justify='center')         self.master.picname_entry.place(x=150, y=10, width=900, height=450)         self.master.picname_entry.insert(0,"准备点名")         self.master.submit_btn = tk.Button(self.master, text="开始", font=("Helvetic", 30, "bold"), bg='lightgreen',command=self.transformer)         self.master.submit_btn.place(x=50, y=600)         self.master.stop_btn = tk.Button(self.master, text="退出", font=("Helvetic", 30, "bold"), bg='red',command=self.stop)         self.master.stop_btn.place(x=200, y=600)         self.master.developername_label=tk.Label(self.master,text='',font=("Helvetic",20, "bold"),bg='#B1FFF9').place(x=900,y=600)         self.master.already_label=tk.Label(self.master,text='已点姓名：',font=("Helvetic",20, "bold"),bg='#B1FFF9').place(x=1100,y=10)         self.window3 = tk.Frame(self.master, bg='#63F034')         self.window3.place(x=1100, y=60, width=200, height=470)         self.window3.xscrollbar = Scrollbar(self.window3, orient=HORIZONTAL)         self.window3.yscrollbar = Scrollbar(self.window3)         self.window3.submitted_listbox = tk.Listbox(self.window3)         self.window3.xscrollbar.pack(side=BOTTOM, fill=X)         self.window3.yscrollbar.pack(side=RIGHT, fill=Y)         self.window3.submitted_listbox.place(x=0, y=0, width=182, height=452)         self.window3.xscrollbar.config(command=self.window3.submitted_listbox.xview)         self.window3.yscrollbar.config(command=self.window3.submitted_listbox.yview)         self.window3.submitted_listbox.config(xscrollcommand=self.window3.xscrollbar.set, yscrollcommand=self.window3.yscrollbar.set)</code></pre> <p>&nbsp;退出键功能逻辑：</p> <pre><code class="language-python">    def stop(self):         root.destroy()</code></pre> <p>&nbsp;选取姓名功能逻辑群</p> <pre><code class="language-python">    def different(self,):         self.master.picname_entry.delete(0, END)         self.master.picname_entry.insert(0, random.choice(self.data))     def factory1(self):         self.different()         self.i += 1         self.j += 1         if self.i == len(self.data):             self.i = 0         if self.stop_check==True :             self.factory2()             self.stop_check = False         else:             t = Timer(0.05, self.factory1)             t.start()     def factory2(self):         self.master.picname_entry.delete(0, END)         while True:             choosed=random.choice(self.data)             if choosed not in MAINLIST:                 break         MAINLIST.append(choosed)         self.window3.submitted_listbox.delete(0,END)         for i in MAINLIST:             self.window3.submitted_listbox.insert(END,i)         self.master.picname_entry.insert(0, i)         self.master.stopper_btn.destroy()         self.master.submit_btn = tk.Button(self.master, text="开始", font=("Helvetic", 30, "bold"), bg='lightgreen', command=self.transformer)         self.master.submit_btn.place(x=50, y=600)     def stopper(self):         self.stop_check=True     def refresher(self):         self.window3.submitted_listbox.delete(0, END)         for i in MAINLIST:             self.window3.submitted_listbox.insert(END, self.data[i])     def transformer(self):         if len(self.data)==len(MAINLIST):             messagebox.showerror('错误', '已经点完啦~')             return         self.master.submit_btn.destroy()         self.master.stopper_btn = tk.Button(self.master, text="停止", font=("Helvetic", 30, "bold"), bg='yellow',command=self.stopper)         self.master.stopper_btn.place(x=50, y=600)         self.condition =1         self.j=0         self.factory1()</code></pre> <p>&nbsp;最后展示完整代码：</p> <pre><code class="language-python"># encoding:gbk from tkinter import * from tkinter import messagebox from mttkinter import mtTkinter as tk import os,csv,random from threading import Timer MAINLIST=[] YYY=None class basedesk():#底板     def __init__(self, master):         global YYY         self.master = master         self.master.title("随机点名系统")         self.master.configure(bg='#B1FFF9')         self.master.geometry("1370x730")         YYY=mainwindow(self.master) class mainwindow():#主界面     def __init__(self, master):         self.master = master         data_name = os.path.join(os.path.dirname(__file__), 'database.csv')         with open(data_name) as f:             f_csv=csv.reader(f)             self.data=[]             for row in f_csv:                 self.data.append(row)         self.condition=0         self.i = 0         self.j=0         self.stop_check = False         self.master.name_label = tk.Label(self.master, text="姓名：", font=("Helvetic", 30, "bold"), relief="raised",cursor="heart").place(x=10,y=10)         self.master.picname_entry = tk.Entry(self.master,font=("Calibri",80),justify='center')         self.master.picname_entry.place(x=150, y=10, width=900, height=450)         self.master.picname_entry.insert(0,"准备点名")         self.master.submit_btn = tk.Button(self.master, text="开始", font=("Helvetic", 30, "bold"), bg='lightgreen',command=self.transformer)         self.master.submit_btn.place(x=50, y=600)         self.master.stop_btn = tk.Button(self.master, text="退出", font=("Helvetic", 30, "bold"), bg='red',command=self.stop)         self.master.stop_btn.place(x=200, y=600)         self.master.developername_label=tk.Label(self.master,text='',font=("Helvetic",20, "bold"),bg='#B1FFF9').place(x=900,y=600)         self.master.already_label=tk.Label(self.master,text='已点姓名：',font=("Helvetic",20, "bold"),bg='#B1FFF9').place(x=1100,y=10)         self.window3 = tk.Frame(self.master, bg='#63F034')         self.window3.place(x=1100, y=60, width=200, height=470)         self.window3.xscrollbar = Scrollbar(self.window3, orient=HORIZONTAL)         self.window3.yscrollbar = Scrollbar(self.window3)         self.window3.submitted_listbox = tk.Listbox(self.window3)         self.window3.xscrollbar.pack(side=BOTTOM, fill=X)         self.window3.yscrollbar.pack(side=RIGHT, fill=Y)         self.window3.submitted_listbox.place(x=0, y=0, width=182, height=452)         self.window3.xscrollbar.config(command=self.window3.submitted_listbox.xview)         self.window3.yscrollbar.config(command=self.window3.submitted_listbox.yview)         self.window3.submitted_listbox.config(xscrollcommand=self.window3.xscrollbar.set, yscrollcommand=self.window3.yscrollbar.set)     def stop(self):         root.destroy()     def different(self,):         self.master.picname_entry.delete(0, END)         self.master.picname_entry.insert(0, random.choice(self.data))     def factory1(self):         self.different()         self.i += 1         self.j += 1         if self.i == len(self.data):             self.i = 0         if self.stop_check==True :             self.factory2()             self.stop_check = False         else:             t = Timer(0.05, self.factory1)             t.start()     def factory2(self):         self.master.picname_entry.delete(0, END)         while True:             choosed=random.choice(self.data)             if choosed not in MAINLIST:                 break         MAINLIST.append(choosed)         self.window3.submitted_listbox.delete(0,END)         for i in MAINLIST:             self.window3.submitted_listbox.insert(END,i)         self.master.picname_entry.insert(0, i)         self.master.stopper_btn.destroy()         self.master.submit_btn = tk.Button(self.master, text="开始", font=("Helvetic", 30, "bold"), bg='lightgreen', command=self.transformer)         self.master.submit_btn.place(x=50, y=600)     def stopper(self):         self.stop_check=True     def refresher(self):         self.window3.submitted_listbox.delete(0, END)         for i in MAINLIST:             self.window3.submitted_listbox.insert(END, self.data[i])     def transformer(self):         if len(self.data)==len(MAINLIST):             messagebox.showerror('错误', '已经点完啦~')             return         self.master.submit_btn.destroy()         self.master.stopper_btn = tk.Button(self.master, text="停止", font=("Helvetic", 30, "bold"), bg='yellow',command=self.stopper)         self.master.stopper_btn.place(x=50, y=600)         self.condition =1         self.j=0         self.factory1() if __name__ == '__main__':#主函数     root = tk.Tk()     root.resizable(False, False)     basedesk(root)     root.mainloop()</code></pre> <p>&nbsp;值得注意的是，最上面的# encoding:gbk是必须的哦~否则可能会出现乱码。。。</p> <p>&nbsp;</p> </p></div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-66613.htm">动物疫苗存在的问题及解决措施（动物疫苗接种失败的原因）</a></p>
+                                        <p>下一个：<a href="/news/article-67255.htm">springboot数据库插入时间datetime类型的字段不对</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2025-2-22-node-share-links.htm" title="「2月22日」最高速度19.8M/S，2025年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐">「2月22日」最高速度19.8M/S，2025年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐</a></li>
+                        <li class="py-2"><a href="/news/article-51108.htm" title="动物疫苗生产厂家排名前十名有哪些（动物疫苗企业名单）">动物疫苗生产厂家排名前十名有哪些（动物疫苗企业名单）</a></li>
+                        <li class="py-2"><a href="/news/article-51661.htm" title="企业微信 嵌H5页面 用户权限获取匹配">企业微信 嵌H5页面 用户权限获取匹配</a></li>
+                        <li class="py-2"><a href="/news/article-61736.htm" title="宠物领养app设计 宠物领养APP设计思路">宠物领养app设计 宠物领养APP设计思路</a></li>
+                        <li class="py-2"><a href="/news/article-66613.htm" title="动物疫苗存在的问题及解决措施（动物疫苗接种失败的原因）">动物疫苗存在的问题及解决措施（动物疫苗接种失败的原因）</a></li>
+                        <li class="py-2"><a href="/news/article-46112.htm" title="iOS全埋点解决方案-应用退出和启动">iOS全埋点解决方案-应用退出和启动</a></li>
+                        <li class="py-2"><a href="/news/article-56572.htm" title="宠物体外驱虫多久做一次（宠物体外驱虫价格）">宠物体外驱虫多久做一次（宠物体外驱虫价格）</a></li>
+                        <li class="py-2"><a href="/news/article-57695.htm" title="并发编程基础底层原理学习_在线工具">并发编程基础底层原理学习_在线工具</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-13-free-clash-subscribe.htm" title="「1月13日」最高速度19.2M/S，2025年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐">「1月13日」最高速度19.2M/S，2025年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐</a></li>
+                        <li class="py-2"><a href="/news/article-63533.htm" title="宠物领养手续协议（宠物领养手续协议书）">宠物领养手续协议（宠物领养手续协议书）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">15</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">84</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">83</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+        <!--====== FOOTER PART START ======-->
+    <section class="footer-area footer-dark">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="copyright text-center mt-35">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                        <p class="text">
+                            ClashNyanpasu官网节点站 版权所有 Powered by WordPress
+                        </p>
+                    </div> <!--  copyright -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+    <!--====== FOOTER PART ENDS ======-->
+    <!--====== BACK TOP TOP PART START ======-->
+    <a href="#" class="back-to-top"><i class="lni lni-chevron-up"></i></a>
+    <!--====== BACK TOP TOP PART ENDS ======-->
+    <!--====== Jquery js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/vendor/jquery-1.12.4.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/vendor/modernizr-3.7.1.min.js"></script>
+    <!--====== Bootstrap js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/popper.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/slick.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/jquery.magnific-popup.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/ajax-contact.js"></script>
+    <!--====== Isotope js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/imagesloaded.pkgd.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/isotope.pkgd.min.js"></script>
+    <!--====== Scrolling Nav js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/jquery.easing.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/scrolling-nav.js"></script>
+    <!--====== Main js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
