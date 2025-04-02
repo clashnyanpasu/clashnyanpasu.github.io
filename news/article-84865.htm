@@ -1,0 +1,241 @@
+<!doctype html>
+<html class="no-js" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashnyanpasu.github.io/news/article-84865.htm" />
+    <meta charset="utf-8">
+    <!--====== Title ======-->
+    <title>python+pytest接口自动化(13)-token关联登录</title>
+        <meta name="description" content="在PC端登录公司的后台管理系统或在手机上登录某个APP时，经常会发现登录成功后，返回参数中会包含token，它的值为一段较长的字符串，而后续去请求的请求头中都需要带上这个token作为参数，否则就提示" />
+        <link rel="icon" href="/assets/website/img/clashnyanpasu/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="ClashNyanpasu官网节点站">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://clashnyanpasu.github.io/news/article-84865.htm" />
+    <meta property="og:site_name" content="ClashNyanpasu官网节点站" />
+    <meta property="og:title" content="python+pytest接口自动化(13)-token关联登录" />
+    <meta property="og:image" content="https://clashnyanpasu.github.io/uploads/20240623/908aef3339b0c2254fb9af37ada1da68.webp" />
+        <meta property="og:release_date" content="2025-03-30T09:36:13" />
+    <meta property="og:updated_time" content="2025-03-30T09:36:13" />
+        <meta property="og:description" content="在PC端登录公司的后台管理系统或在手机上登录某个APP时，经常会发现登录成功后，返回参数中会包含token，它的值为一段较长的字符串，而后续去请求的请求头中都需要带上这个token作为参数，否则就提示" />
+        
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--====== Magnific Popup CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/magnific-popup.css">
+    <!--====== Slick CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/slick.css">
+    <!--====== Line Icons CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/LineIcons.css">
+    <!--====== Bootstrap CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/bootstrap.min.css">
+    <!--====== Default CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/default.css">
+    <!--====== Style CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/style.css">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="python+pytest接口自动化(13)-token关联登录">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7F56WL29Y8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7F56WL29Y8');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!--====== PRELOADER PART START ======-->
+    <div class="preloader">
+        <div class="loader">
+            <div class="ytp-spinner">
+                <div class="ytp-spinner-container">
+                    <div class="ytp-spinner-rotator">
+                        <div class="ytp-spinner-left">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                        <div class="ytp-spinner-right">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--====== PRELOADER PART ENDS ======-->
+    <!--====== NAVBAR TWO PART START ======-->
+    <section class="navbar-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <nav class="navbar navbar-expand-lg">
+                                                <a class="navbar-brand top" href="/">
+                            Clash Nyanpasu                        </a>
+                                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTwo" aria-controls="navbarTwo" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="toggler-icon"></span>
+                            <span class="toggler-icon"></span>
+                            <span class="toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse sub-menu-bar" id="navbarTwo">
+                            <ul class="navbar-nav m-auto">
+                                                                <li class="nav-item"><a href="/">首页</a></li>
+                                                                <li class="nav-item"><a href="/free-nodes/">免费节点</a></li>
+                                                                <li class="nav-item"><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                <li class="nav-item"><a href="/client.htm">客户端</a></li>
+                                                                <li class="nav-item"><a href="/news/">新闻资讯</a></li>
+                                                            </ul>
+                        </div>
+
+                    </nav> <!-- navbar -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+    <!--====== NAVBAR TWO PART ENDS ======-->
+    <!--====== SLIDER PART START ======-->
+    <section id="home" class="slider_area">
+        <div id="carouselThree" class="carousel slide sub-page" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="slider-content">
+                                    <h1 class="title">python+pytest接口自动化(13)-token关联登录</h1>
+                                    <p class="text">
+                                        <a href="/">首页</a> / 
+                                        <a href="/news/">新闻资讯</a> / 
+                                        <span>正文</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div> <!-- row -->
+                    </div> <!-- container -->
+                    <div class="slider-image-box d-none d-lg-flex align-items-end">
+                        <div class="slider-image">
+                            <img src="/assets/website/img/clashnyanpasu/slider/1.png" alt="Hero">
+                        </div> <!-- slider-imgae -->
+                    </div> <!-- slider-imgae box -->
+                </div> <!-- carousel-item -->
+            </div>
+        </div>
+    </section>
+    <!--====== SLIDER PART ENDS ======-->
+    <!--====== ABOUT PART START ======-->
+    <section id=about class=about-area>
+        <div class=container>
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<p>在PC端登录公司的后台管理系统或在手机上登录某个APP时，经常会发现登录成功后，返回参数中会包含token，它的值为一段较长的字符串，而后续去请求的请求头中都需要带上这个token作为参数，否则就提示需要先登录。</p> <p>这其实就是状态或会话保持的第三种方式<code>token</code>。</p> <h2 id="一-什么是token">一. 什么是token</h2> <p>token 由服务端产生，是客户端用于请求的身份令牌。第一次登录成功时，服务端会生成一个包含用户信息的加密字符串token，返回给客户端并保存在本地，后续客户端只需要带上token进行请求即可，无需带上用户名密码。</p> <p>token原理简单概括如下：</p> <ol> <li> <p>用户首次登录成功后，服务端会生成一个token值，服务端会将它保存保存在数据库中，同时也会将它返回给客户端；</p> </li> <li> <p>客户端拿到token值后，保存在本地；</p> </li> <li> <p>后续客户端再次发送除登录外的其他请求时，会把保存在本地的token值作为参数一起发送给服务端；</p> </li> <li> <p>服务端收到客户端的请求后，会拿发送过来的token值与保存在数据库中的token值进行比较；</p> </li> <li> <p>如果两个token值相同， 则说明当前用户处于登录状态；</p> </li> <li> <p>如果数据库中没有这个token值或者token值已经生效，则需用户重新登录。</p> </li> </ol> <h2 id="二-token场景处理">二. token场景处理</h2> <p>公司某管理后台系统，登录后返回token，接着去请求其他接口时请求头中都需要加上这个token，否则提示请先登录。</p> <p>请求该系统的登录接口如下：</p> <pre><code class="language-python"># @author: 给你一页白纸 # 微信公众号：测试上分之路  import requests import json  headers = {"Content-Type": "application/json;charset=utf8"} url = "http://127.0.0.1:5000/login" _data = {     "username": "刘德华",     "password": "123456" } res = requests.post(url=url, headers=headers, json=_data).text print(res)</code></pre> <p>结果如下：</p> <pre><code class="language-json">{   "code": 1000,    "msg": "登录成功！",    "token": "sh34ljjl08s32730djsh34ljjl08s32730djsh34ljjl08s32730djsh34ljjl08s32730djsh34ljjl08s32730djsh34ljjl08s32730dj" }</code></pre> <p>在对扎样的项目做接口自动化测试时，需要先请求登录接口拿到token，再去请求别的接口。每次请求其他接口时先请求一次登录接口，这样做虽然可行，但这样不仅会降低自动化的执行效率，而且每次都请求登录也会对服务器资源造成浪费。</p> <p>这里介绍如下两种处理思路。</p> <h3 id="1-思路一">1. 思路一</h3> <p>在执行用例之前，先请求登录接口，并将返回的token值存储在文件中(如yaml文件)，后续请求需要用到token值则从该文件。</p> <p>python中yaml文件的读写请参考我之前的文章<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://www.cnblogs.com/lfr0123/p/13652243.html"  target="_blank" rel="nofollow">Python读写yaml文件（使用PyYAML库）</a>。</p> <p>1，运行接口自动化测试框架，初始化时先请求登录接口，获取token值，并写入指定的yaml文件中。</p> <pre><code class="language-python"># @author: 给你一页白纸 # 微信公众号：测试上分之路  import requests import json import yaml  def get_token():     '''     请求登录接口，获取token     :return:     '''     headers = {"Content-Type": "application/json;charset=utf8"}     url = "http://127.0.0.1:5000/login"     _data = {         "username": "刘德华",         "password": "123456"     }     res = requests.post(url=url, headers=headers, json=_data).text     res = json.loads(res)     token = res["token"]     return token   def write_yaml(token):     '''     写入yaml文件     :return:     '''     t_data = {         "token": token     }     with open("yaml文件路径", "w", encoding="utf-8") as f:         yaml.dump(data=t_data,  stream=f, allow_unicode=True)   if __name__ == '__main__':     token = get_token() # 获取token     write_yaml(token)   # 将token值写入yaml文件</code></pre> <p>2，执行测试用例时先读取yaml文件中token值，并将token加入headers中(也有些是将token放在请求参数中，视被测试项目具体情况而定)，再发送请求。</p> <pre><code class="language-python"># @author: 给你一页白纸 # 微信公众号：测试上分之路  import requests import yaml import pytest import json  def read_yaml():     '''     读yaml文件     :return:     '''     with open('yaml文件路径', 'r', encoding='utf-8') as f:         result = yaml.load(f.read(), Loader=yaml.FullLoader)     token = result["token"]     return token   def test_check_user():     '''     查询个人信息（需要先登录系统）     :return:     '''     # 先从yaml文件中读取token     token = read_yaml()     # 再将token添加到请求头中     headers = {         "Content-Type": "application/json;charset=utf8",         "token": token     }      url = "http://127.0.0.1:5000/users/3"     res = requests.get(url=url, headers=headers).text     # 返回结果为json格式，转换为字典     res = json.loads(res)     # 断言code是否为1000     assert res["code"] == 1000   if __name__ == '__main__':     pytest.main()</code></pre> <p>这里仅仅只是举例说明，而在实际的框架中，我们需要把这些诸如yaml文件的读写这样的函数单独封装在某个模块中，供其他模块调用，这样会代码会更加清晰简洁。</p> <h3 id="2-思路二">2. 思路二</h3> <p>利用pytest中的Fixture函数，作用域设置为session，并返回token值，后续测试方法/函数调用该Fixture函数。</p> <p>pytest中Fixture的使用请参考我之前的文章<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://www.cnblogs.com/lfr0123/p/15894978.html"  target="_blank" rel="nofollow">pytest(6)-Fixture(固件)</a>。</p> <p>1，首先，在conftest中定义一个作用域为session的Fixture函数，用于请求登录接口返回token。</p> <pre><code class="language-python"># @author: 给你一页白纸 # 微信公众号：测试上分之路  import pytest import requests import json  @pytest.fixture(scope="session") def get_token_fixture():     '''     作用域为session的fixture函数，返回token     :return:     '''     headers = {"Content-Type": "application/json;charset=utf8"}     url = "http://127.0.0.1:5000/login"     _data = {         "username": "刘德华",         "password": "123456"     }     res = requests.post(url=url, headers=headers, json=_data).text     res = json.loads(res)     token = res["token"]     return token</code></pre> <p>2，接着，测试用例调用该Fixture。</p> <pre><code class="language-python">def test_check_user(get_token_fixture):     '''     查询个人信息（需要先登录系统）     :return:     '''     # 通过Fixture函数g获取et_token_fixture值，即token，再将token添加到请求头中     headers = {         "Content-Type": "application/json;charset=utf8",         "token": get_token_fixture     }      url = "http://127.0.0.1:5000/users/3"     res = requests.get(url=url, headers=headers).text     res = json.loads(res)     print(res)     print(headers)     assert res["code"] == 1000   if __name__ == '__main__':     pytest.main()</code></pre> <p>执行测试用例结果如下：</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220510/8efdc6a246a9a0a9c7c8cf766bd6bf02.jpg" alt="python+pytest接口自动化(13)-token关联登录"></p> <p>说明思路二也是可行的，当然这里只执行了一条测试用例，如果执行很多的用例，效果会是怎样还没去验证，大家可以试试看。</p> <h2 id="三-总结">三. 总结</h2> <ol> <li>相对于Session/Cookies来说，请求量较大或者涉及第三方接口的系统，使用token更适合。</li> <li>有些项目token是放在请求头中发送的，而有一些项目则是放在请求参数里发送的，做接口自动化时要明确是哪种方式。</li> <li>接口自动化处理token时这两种思路可任选一种，如果使用pytest框架的话建议尝试思路二。</li> </ol> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-84864.htm">设计模式学习笔记原型模式以及深浅拷贝的区别</a></p>
+                                        <p>下一个：<a href="/news/article-85560.htm">宠物粮食在哪里进货好（宠物粮食批发进货渠道）</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2025-3-17-node-share.htm" title="「3月17日」最高速度21.7M/S，2025年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐">「3月17日」最高速度21.7M/S，2025年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐</a></li>
+                        <li class="py-2"><a href="/news/article-83425.htm" title="全价宠物食品犬粮（全价宠物食品犬粮国标）">全价宠物食品犬粮（全价宠物食品犬粮国标）</a></li>
+                        <li class="py-2"><a href="/news/article-67253.htm" title="模拟器 教你如何用python制作随机点名器">模拟器 教你如何用python制作随机点名器</a></li>
+                        <li class="py-2"><a href="/news/article-65960.htm" title="动物疫苗的使用方法视频教程大全集（动物疫苗制作流程）">动物疫苗的使用方法视频教程大全集（动物疫苗制作流程）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-12-free-clash-subscribe.htm" title="「3月12日」最高速度18.4M/S，2025年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐">「3月12日」最高速度18.4M/S，2025年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐</a></li>
+                        <li class="py-2"><a href="/news/article-71788.htm" title="动物疫苗价格表图片及价格大全图（动物疫苗多少钱一支）">动物疫苗价格表图片及价格大全图（动物疫苗多少钱一支）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-21-node-share.htm" title="「3月21日」最高速度22.3M/S，2025年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐">「3月21日」最高速度22.3M/S，2025年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐</a></li>
+                        <li class="py-2"><a href="/news/article-74473.htm" title="宠物狗粮图片（宠物狗粮价格大全）">宠物狗粮图片（宠物狗粮价格大全）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-28-free-node-subscribe.htm" title="「3月28日」最高速度22.6M/S，2025年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐">「3月28日」最高速度22.6M/S，2025年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐</a></li>
+                        <li class="py-2"><a href="/news/article-69165.htm" title="成都宠物托运公司哪家比较好一点（成都宠物物流公司）">成都宠物托运公司哪家比较好一点（成都宠物物流公司）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">6</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">90</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+        <!--====== FOOTER PART START ======-->
+    <section class="footer-area footer-dark">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="copyright text-center mt-35">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                        <p class="text">
+                            ClashNyanpasu官网节点站 版权所有 Powered by WordPress
+                        </p>
+                    </div> <!--  copyright -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+    <!--====== FOOTER PART ENDS ======-->
+    <!--====== BACK TOP TOP PART START ======-->
+    <a href="#" class="back-to-top"><i class="lni lni-chevron-up"></i></a>
+    <!--====== BACK TOP TOP PART ENDS ======-->
+    <!--====== Jquery js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/vendor/jquery-1.12.4.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/vendor/modernizr-3.7.1.min.js"></script>
+    <!--====== Bootstrap js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/popper.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/slick.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/jquery.magnific-popup.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/ajax-contact.js"></script>
+    <!--====== Isotope js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/imagesloaded.pkgd.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/isotope.pkgd.min.js"></script>
+    <!--====== Scrolling Nav js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/jquery.easing.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/scrolling-nav.js"></script>
+    <!--====== Main js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
