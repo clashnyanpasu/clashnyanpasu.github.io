@@ -1,0 +1,243 @@
+<!doctype html>
+<html class="no-js" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashnyanpasu.github.io/news/article-89148.htm" />
+    <meta charset="utf-8">
+    <!--====== Title ======-->
+    <title>iOS全埋点解决方案手势采集</title>
+        <meta name="description" content="前言 	随着科技以及业务的发展，手势的应用也越来越普及，因此对于数据采集，我们要考虑如果通过全埋点来实现手势的采集。 一、手势识别器 	苹果为了降低开发者在手势事件处理方面的开发难度，定义了一个抽象类" />
+        <link rel="icon" href="/assets/website/img/clashnyanpasu/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="ClashNyanpasu官网节点站">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://clashnyanpasu.github.io/news/article-89148.htm" />
+    <meta property="og:site_name" content="ClashNyanpasu官网节点站" />
+    <meta property="og:title" content="iOS全埋点解决方案手势采集" />
+    <meta property="og:image" content="https://clashnyanpasu.github.io/uploads/20240623/201999bbdc73370eb20bfaf746049578.webp" />
+        <meta property="og:release_date" content="2025-04-05T08:20:30" />
+    <meta property="og:updated_time" content="2025-04-05T08:20:30" />
+        <meta property="og:description" content="前言 	随着科技以及业务的发展，手势的应用也越来越普及，因此对于数据采集，我们要考虑如果通过全埋点来实现手势的采集。 一、手势识别器 	苹果为了降低开发者在手势事件处理方面的开发难度，定义了一个抽象类" />
+        
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--====== Magnific Popup CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/magnific-popup.css">
+    <!--====== Slick CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/slick.css">
+    <!--====== Line Icons CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/LineIcons.css">
+    <!--====== Bootstrap CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/bootstrap.min.css">
+    <!--====== Default CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/default.css">
+    <!--====== Style CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/style.css">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="iOS全埋点解决方案手势采集">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7F56WL29Y8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7F56WL29Y8');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!--====== PRELOADER PART START ======-->
+    <div class="preloader">
+        <div class="loader">
+            <div class="ytp-spinner">
+                <div class="ytp-spinner-container">
+                    <div class="ytp-spinner-rotator">
+                        <div class="ytp-spinner-left">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                        <div class="ytp-spinner-right">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--====== PRELOADER PART ENDS ======-->
+    <!--====== NAVBAR TWO PART START ======-->
+    <section class="navbar-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <nav class="navbar navbar-expand-lg">
+                                                <a class="navbar-brand top" href="/">
+                            Clash Nyanpasu                        </a>
+                                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTwo" aria-controls="navbarTwo" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="toggler-icon"></span>
+                            <span class="toggler-icon"></span>
+                            <span class="toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse sub-menu-bar" id="navbarTwo">
+                            <ul class="navbar-nav m-auto">
+                                                                <li class="nav-item"><a href="/">首页</a></li>
+                                                                <li class="nav-item"><a href="/free-nodes/">免费节点</a></li>
+                                                                <li class="nav-item"><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                <li class="nav-item"><a href="/client.htm">客户端</a></li>
+                                                                <li class="nav-item"><a href="/news/">新闻资讯</a></li>
+                                                            </ul>
+                        </div>
+
+                    </nav> <!-- navbar -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+    <!--====== NAVBAR TWO PART ENDS ======-->
+    <!--====== SLIDER PART START ======-->
+    <section id="home" class="slider_area">
+        <div id="carouselThree" class="carousel slide sub-page" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="slider-content">
+                                    <h1 class="title">iOS全埋点解决方案手势采集</h1>
+                                    <p class="text">
+                                        <a href="/">首页</a> / 
+                                        <a href="/news/">新闻资讯</a> / 
+                                        <span>正文</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div> <!-- row -->
+                    </div> <!-- container -->
+                    <div class="slider-image-box d-none d-lg-flex align-items-end">
+                        <div class="slider-image">
+                            <img src="/assets/website/img/clashnyanpasu/slider/1.png" alt="Hero">
+                        </div> <!-- slider-imgae -->
+                    </div> <!-- slider-imgae box -->
+                </div> <!-- carousel-item -->
+            </div>
+        </div>
+    </section>
+    <!--====== SLIDER PART ENDS ======-->
+    <!--====== ABOUT PART START ======-->
+    <section id=about class=about-area>
+        <div class=container>
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<h3 id="前言">前言</h3> <p>	随着科技以及业务的发展，手势的应用也越来越普及，因此对于数据采集，我们要考虑如果通过全埋点来实现手势的采集。</p> <h3 id="一手势识别器">一、手势识别器</h3> <p>	苹果为了降低开发者在手势事件处理方面的开发难度，定义了一个抽象类 UIGestureRecognizer 来协助开发者。UIGestureRecognizer 是具体手势识别器的抽象基类，它定义了一组可以为所有具体手势识别器配置的常见行为。它还可以通过设置委托（即实现了 UIGestureRecognizerDelegate 协议的对象），来支持对某些行为进行更细粒度的定制。</p> <p>	手势识别器必须被添加在一个特定的视图上（比如 UILabel、UIImageView 等控件），即需要通过调用 UIView 类中的 - addGestureRecognizer: 方法进行添加。手势识别器也是用了 Target-Action 设计模式。当我们为一个手势识别器添加一个或者多个 Target-Action 后，在视图上进行触摸操作时，一旦系统识别了该手势，就会向所有的 Target 对象发送消息，并执行 Action 方法。虽然手势识别器和 UIControl 类一样，都是使用了 Target-Action 设计模式，但是手势识别器并不会将消息交由 UIApplication 对象来进行发送。因此，我们无法使用与 UIControl 控件相同的处理方式，即通过响应者链的方式来实现对手势操作的全埋点。</p> <p>	由于 UIGestureRecognizer 是一个抽象基类，所以它并不会处理具体的手势。因此，对于轻拍（UITapGestureRecognizer）、长按（UILongPressGestureRecognizer）等具体的手势触摸事件，需要使用相应的子类即具体的手势识别器进行处理。</p> <p>常见的具体手势识别器有：</p> <ul> <li>UITapGestureRecognizer：轻拍手势</li> <li>UILongPressGestureRecognizer：长按手势</li> <li>UIPinchGestureRecognizer：捏合（缩放）手势</li> <li>UIRotationGestureRecognizer：旋转手势</li> <li>UISwipeGestureRecognizer：轻扫手势</li> <li>UIPanGestureRecognizer：平移手势</li> <li>UIScreenEdgePanGestureRecognizer：屏幕边缘平移手势</li> </ul> <p>	给上面所有的具体手势识别器添加 Target-Action 的方法都是相同的，常见的主要是通过以下的两个方法进行添加。</p> <ul> <li> <p>initWithTarget:target action:</p> </li> <li> <p>addTarget:action:</p> <p>详细的定义参考如下：</p> <pre><code>/** 指定初始化方法  通过添加一个 Target-Action 进行初始化， 当初始化的手势识别器对象，识别到触摸手势时，会向 Target 对象发送消息，即调用 Action 方法  @param target 需要发送消息的 Target 对象 @param action 向 Target 对象发送的消息，即方法名 @return 初始化的对象 */ - (instancetype)initWithTarget:(nullable id)target action:(nullable SEL)action NS_DESIGNATED_INITIALIZER;  /** 向一个手势识别器添加一个 Target-Action  可以多次调用此方法，给一个手势识别器对象添加多个 Target-Action 。 如果已经添加了一个 Target-Action，再次添加相同的 Target-Action 时，会被忽略。  @param target 需要发送消息的 Target 对象 @param action 向 Target 对象发送的消息，即方法名 */ - (void)addTarget:(id)target action:(SEL)action;</code></pre> </li> </ul> <p>    在实际的开发过程中，使用比较多的是 UITapGestureRecognizer 和 UILongPressGestureRecognizer 两个手势识别器，这两个手势识别器分别是处理轻拍手势和长按手势。</p> <h3 id="二手势全埋点">二、手势全埋点</h3> <p>	在数据采集中，一般只需要采集常见控件（UILabel、UIImageView）的轻拍和长按手势。<br /> 所以，我们分别介绍如何实现控件轻拍和长按手势的全埋点。</p> <h4 id="21-uitapgesturerecognizer-全埋点">2.1 UITapGestureRecognizer 全埋点</h4> <p>	为了采集控件的轻拍手势，我们可以通过 Method Swizzling 交换 UITapGestureRecognizer 类的添加 Target-Action 的方法，从而可以添加一个新的 Target-Action，并在新添加的 Action 方法中触发 $AppClick 事件，从而就可以达到采集控件轻拍手势全埋点的效果。</p> <p>在 UITapGestureRecognizer 类中，用于添加 Target-Action 方法有两个：</p> <p>• - initWithTarget:action:</p> <p>• - addTarget:action:</p> <p>因此，我们需要对这两个方法分别进行交换。</p> <p>第一步：创建 UITapGestureRecognizer 分类 UIGestureRecognizer+SensorsData，并实现 +load 类方法，在 + load方法中，进行 - initWithTarget:action: 和 - addTarget:action: 的方法交换。</p> <pre><code>#import "UIGestureRecognizer+SensorsData.h" #import "NSObject+SASwizzler.h" #import "SensorsAnalyticsSDK+Track.h"  @implementation UITapGestureRecognizer (SensorsData)  + (void)load {     [UITapGestureRecognizer sensorsdata_swizzleMethod:@selector(sensorsdata_initWithTarget:action:) withMethod:@selector(initWithTarget:action:)];     [UITapGestureRecognizer sensorsdata_swizzleMethod:@selector(addTarget:action:) withMethod:@selector(sensorsdata_addTarget:action:)]; }  - (instancetype)sensorsdata_initWithTarget:(id)target action:(SEL)action {     [self sensorsdata_initWithTarget:target action:action];     [self addTarget:target action:action];     return self; }  - (void)sensorsdata_addTarget:(id)target action:(SEL)action {     [self sensorsdata_addTarget:target action:action];          // 新增 Target-Action, 用于触发 $AppClick 事件     [self sensorsdata_addTarget:self action:@selector(sensorsdata_trackTapGestureAction:)]; }  - (void)sensorsdata_trackTapGestureAction:(UITapGestureRecognizer *)sender {     [[SensorsAnalyticsSDK sharedInstance] trackAppClickWithView:view properties:nil]; }</code></pre> <p>第二步：在 - sensorsdata_trackTapGestureAction: 方法中判断要采集的控件</p> <pre><code>- (void)sensorsdata_trackTapGestureAction:(UITapGestureRecognizer *)sender {     UIView *view = sender.view;     // 暂定只采集 UILabel 和 UIImageView     BOOL isTrackClass = [view isKindOfClass:UILabel.class] || [view isKindOfClass:UIImageView.class];     if (!isTrackClass) {         return;     }     [[SensorsAnalyticsSDK sharedInstance] trackAppClickWithView:view properties:nil]; }</code></pre> <p>第三步：测试验证</p> <pre><code>{   "event" : "$AppClick",   "time" : 1648892963385,   "propeerties" : {     "$model" : "x86_64",     "$manufacturer" : "Apple",     "$element_type" : "UIImageView",     "$lib_version" : "1.0.0",     "$os" : "iOS",     "$app_version" : "1.0",     "$screen_name" : "ViewController",     "$os_version" : "15.2",     "$lib" : "iOS"   } }</code></pre> <h4 id="22-uilongpressgesturerecognizer-全埋点">2.2 UILongPressGestureRecognizer 全埋点</h4> <p>	对于 UILongPressGestureRecognizer 来说，其实现逻辑与 UITapGestureRecognizer 基本上是相同的。</p> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-88435.htm">养猫得病吗（养猫咪会得什么病）</a></p>
+                                        <p>下一个：<a href="/news/article-89149.htm">哪个牌子的狗粮好一些（哪种品牌的狗粮好）</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-71127.htm" title="小孩被猫爪子划破出血需要***吗（小孩被猫爪子划破出血需要***吗大概多少钱）">小孩被猫爪子划破出血需要***吗（小孩被猫爪子划破出血需要***吗大概多少钱）</a></li>
+                        <li class="py-2"><a href="/news/article-80576.htm" title="宠物粮在哪里买便宜又安全的（宠物粮在哪个网站买）">宠物粮在哪里买便宜又安全的（宠物粮在哪个网站买）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-27-free-clash.htm" title="「3月27日」最高速度22.5M/S，2025年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐">「3月27日」最高速度22.5M/S，2025年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐</a></li>
+                        <li class="py-2"><a href="/news/article-89149.htm" title="哪个牌子的狗粮好一些（哪种品牌的狗粮好）">哪个牌子的狗粮好一些（哪种品牌的狗粮好）</a></li>
+                        <li class="py-2"><a href="/news/article-78543.htm" title="HCNP Routing&amp;Switching之端口隔离">HCNP Routing&amp;Switching之端口隔离</a></li>
+                        <li class="py-2"><a href="/news/article-79234.htm" title="美联众合动物医院可以加盟吗 美联众合动物医院是加盟吗">美联众合动物医院可以加盟吗 美联众合动物医院是加盟吗</a></li>
+                        <li class="py-2"><a href="/news/article-80575.htm" title="动物疫苗接种方法介绍（动物疫苗接种方法介绍视频）">动物疫苗接种方法介绍（动物疫苗接种方法介绍视频）</a></li>
+                        <li class="py-2"><a href="/news/article-77167.htm" title="python多线程编程_2小时玩转python多线程编程">python多线程编程_2小时玩转python多线程编程</a></li>
+                        <li class="py-2"><a href="/news/article-73784.htm" title="10个不能养狗的理由（10个不能养狗的理由）">10个不能养狗的理由（10个不能养狗的理由）</a></li>
+                        <li class="py-2"><a href="/news/article-87722.htm" title="什么生肖适宜养猫旺财的动物（什么生肖可以养狗猫）">什么生肖适宜养猫旺财的动物（什么生肖可以养狗猫）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">18</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">90</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+        <!--====== FOOTER PART START ======-->
+    <section class="footer-area footer-dark">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="copyright text-center mt-35">
+                                            <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                        <p class="text">
+                            ClashNyanpasu官网节点站 版权所有 Powered by WordPress
+                        </p>
+                    </div> <!--  copyright -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+    <!--====== FOOTER PART ENDS ======-->
+    <!--====== BACK TOP TOP PART START ======-->
+    <a href="#" class="back-to-top"><i class="lni lni-chevron-up"></i></a>
+    <!--====== BACK TOP TOP PART ENDS ======-->
+    <!--====== Jquery js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/vendor/jquery-1.12.4.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/vendor/modernizr-3.7.1.min.js"></script>
+    <!--====== Bootstrap js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/popper.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/slick.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/jquery.magnific-popup.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/ajax-contact.js"></script>
+    <!--====== Isotope js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/imagesloaded.pkgd.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/isotope.pkgd.min.js"></script>
+    <!--====== Scrolling Nav js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/jquery.easing.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/scrolling-nav.js"></script>
+    <!--====== Main js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
