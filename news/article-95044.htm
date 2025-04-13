@@ -1,0 +1,243 @@
+<!doctype html>
+<html class="no-js" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashnyanpasu.github.io/news/article-95044.htm" />
+    <meta charset="utf-8">
+    <!--====== Title ======-->
+    <title>typescript环境搭建及编译运行</title>
+        <meta name="description" content="1.安装node，安装成功后&nbsp; node -v查看node版本 npm -v&nbsp; 查看npm版本。 2.安装typescript包&nbsp; npm install typescr" />
+        <link rel="icon" href="/assets/website/img/clashnyanpasu/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="ClashNyanpasu官网节点站">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://clashnyanpasu.github.io/news/article-95044.htm" />
+    <meta property="og:site_name" content="ClashNyanpasu官网节点站" />
+    <meta property="og:title" content="typescript环境搭建及编译运行" />
+    <meta property="og:image" content="https://clashnyanpasu.github.io/uploads/20240623/99c5ae045749f50a87b89296f4f4b921.webp" />
+        <meta property="og:release_date" content="2025-04-13T07:19:24" />
+    <meta property="og:updated_time" content="2025-04-13T07:19:24" />
+        <meta property="og:description" content="1.安装node，安装成功后&nbsp; node -v查看node版本 npm -v&nbsp; 查看npm版本。 2.安装typescript包&nbsp; npm install typescr" />
+        
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--====== Magnific Popup CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/magnific-popup.css">
+    <!--====== Slick CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/slick.css">
+    <!--====== Line Icons CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/LineIcons.css">
+    <!--====== Bootstrap CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/bootstrap.min.css">
+    <!--====== Default CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/default.css">
+    <!--====== Style CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/style.css">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="typescript环境搭建及编译运行">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7F56WL29Y8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7F56WL29Y8');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!--====== PRELOADER PART START ======-->
+    <div class="preloader">
+        <div class="loader">
+            <div class="ytp-spinner">
+                <div class="ytp-spinner-container">
+                    <div class="ytp-spinner-rotator">
+                        <div class="ytp-spinner-left">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                        <div class="ytp-spinner-right">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--====== PRELOADER PART ENDS ======-->
+    <!--====== NAVBAR TWO PART START ======-->
+    <section class="navbar-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <nav class="navbar navbar-expand-lg">
+                                                <a class="navbar-brand top" href="/">
+                            Clash Nyanpasu                        </a>
+                                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTwo" aria-controls="navbarTwo" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="toggler-icon"></span>
+                            <span class="toggler-icon"></span>
+                            <span class="toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse sub-menu-bar" id="navbarTwo">
+                            <ul class="navbar-nav m-auto">
+                                                                <li class="nav-item"><a href="/">首页</a></li>
+                                                                <li class="nav-item"><a href="/free-nodes/">免费节点</a></li>
+                                                                <li class="nav-item"><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                <li class="nav-item"><a href="/client.htm">客户端</a></li>
+                                                                <li class="nav-item"><a href="/news/">新闻资讯</a></li>
+                                                            </ul>
+                        </div>
+
+                    </nav> <!-- navbar -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+    <!--====== NAVBAR TWO PART ENDS ======-->
+    <!--====== SLIDER PART START ======-->
+    <section id="home" class="slider_area">
+        <div id="carouselThree" class="carousel slide sub-page" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="slider-content">
+                                    <h1 class="title">typescript环境搭建及编译运行</h1>
+                                    <p class="text">
+                                        <a href="/">首页</a> / 
+                                        <a href="/news/">新闻资讯</a> / 
+                                        <span>正文</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div> <!-- row -->
+                    </div> <!-- container -->
+                    <div class="slider-image-box d-none d-lg-flex align-items-end">
+                        <div class="slider-image">
+                            <img src="/assets/website/img/clashnyanpasu/slider/1.png" alt="Hero">
+                        </div> <!-- slider-imgae -->
+                    </div> <!-- slider-imgae box -->
+                </div> <!-- carousel-item -->
+            </div>
+        </div>
+    </section>
+    <!--====== SLIDER PART ENDS ======-->
+    <!--====== ABOUT PART START ======-->
+    <section id=about class=about-area>
+        <div class=container>
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="content_views" class="htmledit_views"> <p>1.安装node，安装成功后&nbsp; node -v查看node版本 npm -v&nbsp; 查看npm版本。</p> <p>2.安装typescript包&nbsp; npm install typescript -g&nbsp; &nbsp; &nbsp; &nbsp;查看ts版本&nbsp; &nbsp;tsc --version</p> <p>3.新建一个文件夹，用于存放tsc代码。</p> <p>&nbsp; &nbsp; 通过ctrl+r输入cmd打开dos命令行，打开存放tsc文件的目录，npm init -y生成package.json。</p> <p>&nbsp; &nbsp; 通过&nbsp; tsc --init 生成tsconfig.json，用于生产tyscript的项目配置文件。</p> <p>4.安装types/node，npm install @types/node --dev-save&nbsp; 这个主要是解决模块的声明文件问题。</p> <p>5.编写HelloWorld.ts文件</p> <pre class="has"><code>var a:string = "Helloworld"; console.log(a);</code></pre> <p>6.在vscode中 可以使用打开运行生成任务，然后选择tsc：构建-tsconfig.json，这时候就会生成一个<code>helloWorld.js</code>文件（如果使用sublime&nbsp; 可以在dos命令行中输入 tcs&nbsp; HelloWorld构建helloworld.js文件）。</p> <p>7.运行node&nbsp; helloworld.js 输出“HelloWorld”，至此，typescript运行环境搭建完成</p> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-94035.htm">EasyExcel完成excel文件的导入导出</a></p>
+                                        <p>下一个：<a href="/news/article-95045.htm">上海宠物医院收费价目表查询官网（上海宠物医院价格表）</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-84864.htm" title="设计模式学习笔记原型模式以及深浅拷贝的区别">设计模式学习笔记原型模式以及深浅拷贝的区别</a></li>
+                        <li class="py-2"><a href="/news/article-94035.htm" title="EasyExcel完成excel文件的导入导出">EasyExcel完成excel文件的导入导出</a></li>
+                        <li class="py-2"><a href="/news/article-73115.htm" title="自从养了猫运气就一直不好（养猫最忌讳的一个生肖）">自从养了猫运气就一直不好（养猫最忌讳的一个生肖）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-27-free-clash.htm" title="「3月27日」最高速度22.5M/S，2025年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐">「3月27日」最高速度22.5M/S，2025年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐</a></li>
+                        <li class="py-2"><a href="/news/article-69817.htm" title="宠物领养协议书怎么写有效的 宠物领养协议书怎么写有效的模板">宠物领养协议书怎么写有效的 宠物领养协议书怎么写有效的模板</a></li>
+                        <li class="py-2"><a href="/news/article-79233.htm" title="让猫挠了出血有事吗,猫***了有事吗（让猫挠了出血了用***吗）">让猫挠了出血有事吗,猫***了有事吗（让猫挠了出血了用***吗）</a></li>
+                        <li class="py-2"><a href="/news/article-69166.htm" title="宠物医院大众优质好评怎么写啊（宠物医院的优质好评）">宠物医院大众优质好评怎么写啊（宠物医院的优质好评）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-3-free-subscribe-node.htm" title="「3月3日」最高速度18.5M/S，2025年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐">「3月3日」最高速度18.5M/S，2025年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐</a></li>
+                        <li class="py-2"><a href="/news/article-72465.htm" title="猫驱虫药多少钱一次啊（猫驱虫药一般多少钱）">猫驱虫药多少钱一次啊（猫驱虫药一般多少钱）</a></li>
+                        <li class="py-2"><a href="/news/article-80575.htm" title="动物疫苗接种方法介绍（动物疫苗接种方法介绍视频）">动物疫苗接种方法介绍（动物疫苗接种方法介绍视频）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">39</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">90</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+        <!--====== FOOTER PART START ======-->
+    <section class="footer-area footer-dark">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="copyright text-center mt-35">
+                                            <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                        <p class="text">
+                            ClashNyanpasu官网节点站 版权所有 Powered by WordPress
+                        </p>
+                    </div> <!--  copyright -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+    <!--====== FOOTER PART ENDS ======-->
+    <!--====== BACK TOP TOP PART START ======-->
+    <a href="#" class="back-to-top"><i class="lni lni-chevron-up"></i></a>
+    <!--====== BACK TOP TOP PART ENDS ======-->
+    <!--====== Jquery js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/vendor/jquery-1.12.4.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/vendor/modernizr-3.7.1.min.js"></script>
+    <!--====== Bootstrap js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/popper.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/slick.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/jquery.magnific-popup.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/ajax-contact.js"></script>
+    <!--====== Isotope js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/imagesloaded.pkgd.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/isotope.pkgd.min.js"></script>
+    <!--====== Scrolling Nav js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/jquery.easing.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/scrolling-nav.js"></script>
+    <!--====== Main js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>

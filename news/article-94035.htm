@@ -1,0 +1,243 @@
+<!doctype html>
+<html class="no-js" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashnyanpasu.github.io/news/article-94035.htm" />
+    <meta charset="utf-8">
+    <!--====== Title ======-->
+    <title>EasyExcel完成excel文件的导入导出</title>
+        <meta name="description" content="　常见的Excel分析框架有Apache poi 和EasyExcel， poi在另一篇已经介绍过了，详情可以看[https://www.cnblogs.com/jasmine-e/p/1606451" />
+        <link rel="icon" href="/assets/website/img/clashnyanpasu/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="ClashNyanpasu官网节点站">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://clashnyanpasu.github.io/news/article-94035.htm" />
+    <meta property="og:site_name" content="ClashNyanpasu官网节点站" />
+    <meta property="og:title" content="EasyExcel完成excel文件的导入导出" />
+    <meta property="og:image" content="https://clashnyanpasu.github.io/uploads/20240623/bb09feeeb9330c67eb206c4c78186c85.webp" />
+        <meta property="og:release_date" content="2025-04-12T08:54:06" />
+    <meta property="og:updated_time" content="2025-04-12T08:54:06" />
+        <meta property="og:description" content="　常见的Excel分析框架有Apache poi 和EasyExcel， poi在另一篇已经介绍过了，详情可以看[https://www.cnblogs.com/jasmine-e/p/1606451" />
+        
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--====== Magnific Popup CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/magnific-popup.css">
+    <!--====== Slick CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/slick.css">
+    <!--====== Line Icons CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/LineIcons.css">
+    <!--====== Bootstrap CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/bootstrap.min.css">
+    <!--====== Default CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/default.css">
+    <!--====== Style CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/style.css">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="EasyExcel完成excel文件的导入导出">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7F56WL29Y8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7F56WL29Y8');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!--====== PRELOADER PART START ======-->
+    <div class="preloader">
+        <div class="loader">
+            <div class="ytp-spinner">
+                <div class="ytp-spinner-container">
+                    <div class="ytp-spinner-rotator">
+                        <div class="ytp-spinner-left">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                        <div class="ytp-spinner-right">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--====== PRELOADER PART ENDS ======-->
+    <!--====== NAVBAR TWO PART START ======-->
+    <section class="navbar-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <nav class="navbar navbar-expand-lg">
+                                                <a class="navbar-brand top" href="/">
+                            Clash Nyanpasu                        </a>
+                                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTwo" aria-controls="navbarTwo" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="toggler-icon"></span>
+                            <span class="toggler-icon"></span>
+                            <span class="toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse sub-menu-bar" id="navbarTwo">
+                            <ul class="navbar-nav m-auto">
+                                                                <li class="nav-item"><a href="/">首页</a></li>
+                                                                <li class="nav-item"><a href="/free-nodes/">免费节点</a></li>
+                                                                <li class="nav-item"><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                <li class="nav-item"><a href="/client.htm">客户端</a></li>
+                                                                <li class="nav-item"><a href="/news/">新闻资讯</a></li>
+                                                            </ul>
+                        </div>
+
+                    </nav> <!-- navbar -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+    <!--====== NAVBAR TWO PART ENDS ======-->
+    <!--====== SLIDER PART START ======-->
+    <section id="home" class="slider_area">
+        <div id="carouselThree" class="carousel slide sub-page" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="slider-content">
+                                    <h1 class="title">EasyExcel完成excel文件的导入导出</h1>
+                                    <p class="text">
+                                        <a href="/">首页</a> / 
+                                        <a href="/news/">新闻资讯</a> / 
+                                        <span>正文</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div> <!-- row -->
+                    </div> <!-- container -->
+                    <div class="slider-image-box d-none d-lg-flex align-items-end">
+                        <div class="slider-image">
+                            <img src="/assets/website/img/clashnyanpasu/slider/1.png" alt="Hero">
+                        </div> <!-- slider-imgae -->
+                    </div> <!-- slider-imgae box -->
+                </div> <!-- carousel-item -->
+            </div>
+        </div>
+    </section>
+    <!--====== SLIDER PART ENDS ======-->
+    <!--====== ABOUT PART START ======-->
+    <section id=about class=about-area>
+        <div class=container>
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				</h1> <p>　常见的Excel分析框架有Apache poi 和EasyExcel， poi在另一篇已经介绍过了，详情可以看[<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://www.cnblogs.com/jasmine-e/p/16064518.html"  target="_blank" rel="nofollow">https://www.cnblogs.com/jasmine-e/p/16064518.html</a>]。<br /> 这篇主要针对EasyExcel，它是阿里巴巴开源的一个excel处理框架，使用简单，节省内存。解析Excel时没有将文件数据一次性全部加载到内存中，而是从磁盘上一行行读取数据，逐个解析，因此大大减少占用内存。官网：[<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://github.com/alibaba/easyexcel"  target="_blank" rel="nofollow">https://github.com/alibaba/easyexcel</a>]。</p> </h1> <h2 id="一导入pom依赖">一、导入pom依赖</h2> <pre><code class="language-xml">&lt;dependencies&gt;      &lt;dependency&gt;         &lt;groupId&gt;com.alibaba&lt;/groupId&gt;         &lt;artifactId&gt;easyexcel&lt;/artifactId&gt;         &lt;version&gt;2.1.7&lt;/version&gt;     &lt;/dependency&gt;      &lt;dependency&gt;         &lt;groupId&gt;org.slf4j&lt;/groupId&gt;         &lt;artifactId&gt;slf4j-simple&lt;/artifactId&gt;         &lt;version&gt;1.7.5&lt;/version&gt;     &lt;/dependency&gt;      &lt;dependency&gt;         &lt;groupId&gt;org.apache.xmlbeans&lt;/groupId&gt;         &lt;artifactId&gt;xmlbeans&lt;/artifactId&gt;         &lt;version&gt;3.1.0&lt;/version&gt;     &lt;/dependency&gt;      &lt;dependency&gt;         &lt;groupId&gt;org.projectlombok&lt;/groupId&gt;         &lt;artifactId&gt;lombok&lt;/artifactId&gt;         &lt;version&gt;1.18.12&lt;/version&gt;     &lt;/dependency&gt;      &lt;dependency&gt;         &lt;groupId&gt;junit&lt;/groupId&gt;         &lt;artifactId&gt;junit&lt;/artifactId&gt;         &lt;version&gt;4.12&lt;/version&gt;     &lt;/dependency&gt;  &lt;/dependencies&gt;</code></pre> <h2 id="二创建实体类">二、创建实体类</h2> <pre><code class="language-java\">@Data public class ExcelStudentDTO {      @ExcelProperty("姓名")     private String name;      @ExcelProperty("生日")     private Date birthday;      @ExcelProperty("薪资")     private Double salary; }</code></pre> <h2 id=">三、导出excel</h2> <pre><code class="language-java">public class ExcelWriteTest {     @Test     public void simpleWriteXlsx() {         String fileName = "d:/excel/simpleWrite.xlsx"; //需要提前新建目录         // 这里 需要指定写用哪个class去写，然后写到第一个sheet，名字为模板 然后文件流会自动关闭         EasyExcel.write(fileName, ExcelStudentDTO.class).sheet("模板").doWrite(data());     }          //辅助方法     private List&lt;ExcelStudentDTO&gt; data(){         List&lt;ExcelStudentDTO&gt; list = new ArrayList&lt;&gt;();          //算上标题，做多可写65536行         //超出：java.lang.IllegalArgumentException: Invalid row number (65536) outside allowable range (0..65535)         for (int i = 0; i &lt; 65535; i++) {             ExcelStudentDTO data = new ExcelStudentDTO();             data.setName("Helen" + i);             data.setBirthday(new Date());             data.setSalary(123456.1234);             list.add(data);         }          return list;     } }</code></pre> <h2 id="四读取excel">四、读取Excel</h2> <h3 id="--创建监听器">- 创建监听器</h3> <pre><code class="language-java">@Slf4j public class ExcelStudentDTOListener extends AnalysisEventListener&lt;ExcelStudentDTO&gt; {          /**      * 这个每一条数据解析都会来调用      */     @Override     public void invoke(ExcelStudentDTO data, AnalysisContext context) {         log.info("解析到一条数据:{}", data);      }      /**      * 所有数据解析完成了 都会来调用      */     @Override     public void doAfterAllAnalysed(AnalysisContext context) {         log.info("所有数据解析完成！");     } }</code></pre> <h3 id="--读取数据">- 读取数据</h3> <pre><code class="language-java">public class ExcelReadTest {      /**      * 最简单的读      */     @Test     public void simpleReadXlsx() {          String fileName = "d:/excel/simpleWrite.xlsx";         // 这里默认读取第一个sheet         EasyExcel.read(fileName, ExcelStudentDTO.class, new ExcelStudentDTOListener()).sheet().doRead();     }      @Test     public void simpleReadXls() {          String fileName = "d:/excel/simpleWrite.xls";         EasyExcel.read(fileName, ExcelStudentDTO.class, new ExcelStudentDTOListener()).excelType(ExcelTypeEnum.XLS).sheet().doRead();     } }</code></pre> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-94034.htm">elasticsearch 之时间类型</a></p>
+                                        <p>下一个：<a href="/news/article-95044.htm">typescript环境搭建及编译运行</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-89148.htm" title="iOS全埋点解决方案手势采集">iOS全埋点解决方案手势采集</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-8-free-node-subscribe.htm" title="「3月8日」最高速度18.4M/S，2025年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐">「3月8日」最高速度18.4M/S，2025年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐</a></li>
+                        <li class="py-2"><a href="/news/article-93623.htm" title="动物诊所经营范围有哪些内容（动物诊所营业执照经营范围）">动物诊所经营范围有哪些内容（动物诊所营业执照经营范围）</a></li>
+                        <li class="py-2"><a href="/news/article-68495.htm" title="Numpy 高效的运算工具">Numpy 高效的运算工具</a></li>
+                        <li class="py-2"><a href="/news/article-91273.htm" title="动物疫苗的生产原料有哪些呢图片（动物疫苗的生产过程）">动物疫苗的生产原料有哪些呢图片（动物疫苗的生产过程）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-25-free-node-subscribe-links.htm" title="「3月25日」最高速度20.9M/S，2025年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐">「3月25日」最高速度20.9M/S，2025年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐</a></li>
+                        <li class="py-2"><a href="/news/article-86994.htm" title="宠物粮食在哪里进货好呢知乎文章（宠物粮在哪里批发）">宠物粮食在哪里进货好呢知乎文章（宠物粮在哪里批发）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-18-free-high-speed-nodes.htm" title="「3月18日」最高速度21.1M/S，2025年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐">「3月18日」最高速度21.1M/S，2025年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐</a></li>
+                        <li class="py-2"><a href="/news/article-93620.htm" title="面向对象的7种设计原则(2)-接口隔离原则">面向对象的7种设计原则(2)-接口隔离原则</a></li>
+                        <li class="py-2"><a href="/news/article-88435.htm" title="养猫得病吗（养猫咪会得什么病）">养猫得病吗（养猫咪会得什么病）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">39</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">90</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+        <!--====== FOOTER PART START ======-->
+    <section class="footer-area footer-dark">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="copyright text-center mt-35">
+                                            <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                        <p class="text">
+                            ClashNyanpasu官网节点站 版权所有 Powered by WordPress
+                        </p>
+                    </div> <!--  copyright -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+    <!--====== FOOTER PART ENDS ======-->
+    <!--====== BACK TOP TOP PART START ======-->
+    <a href="#" class="back-to-top"><i class="lni lni-chevron-up"></i></a>
+    <!--====== BACK TOP TOP PART ENDS ======-->
+    <!--====== Jquery js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/vendor/jquery-1.12.4.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/vendor/modernizr-3.7.1.min.js"></script>
+    <!--====== Bootstrap js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/popper.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/slick.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/jquery.magnific-popup.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/ajax-contact.js"></script>
+    <!--====== Isotope js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/imagesloaded.pkgd.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/isotope.pkgd.min.js"></script>
+    <!--====== Scrolling Nav js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/jquery.easing.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/scrolling-nav.js"></script>
+    <!--====== Main js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
