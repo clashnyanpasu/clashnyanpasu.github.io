@@ -1,0 +1,243 @@
+<!doctype html>
+<html class="no-js" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashnyanpasu.github.io/news/article-95869.htm" />
+    <meta charset="utf-8">
+    <!--====== Title ======-->
+    <title>阿里云IoT流转到postgresql数据库方案_在线工具</title>
+        <meta name="description" content="之前写过一篇如使用阿里云上部署.NET 3.1自定义运行时的文章，吐槽一下，虽然现在已经2022年了，但是阿里云函数计算的支持依然停留在.NET Core 2.1，更新缓慢，由于程序解包大小的限制，也" />
+        <link rel="icon" href="/assets/website/img/clashnyanpasu/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="ClashNyanpasu官网节点站">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://clashnyanpasu.github.io/news/article-95869.htm" />
+    <meta property="og:site_name" content="ClashNyanpasu官网节点站" />
+    <meta property="og:title" content="阿里云IoT流转到postgresql数据库方案_在线工具" />
+    <meta property="og:image" content="https://clashnyanpasu.github.io/uploads/20240623/6fa84fb99e631101238d4b85056f726d.webp" />
+        <meta property="og:release_date" content="2025-04-14T08:03:52" />
+    <meta property="og:updated_time" content="2025-04-14T08:03:52" />
+        <meta property="og:description" content="之前写过一篇如使用阿里云上部署.NET 3.1自定义运行时的文章，吐槽一下，虽然现在已经2022年了，但是阿里云函数计算的支持依然停留在.NET Core 2.1，更新缓慢，由于程序解包大小的限制，也" />
+        
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--====== Magnific Popup CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/magnific-popup.css">
+    <!--====== Slick CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/slick.css">
+    <!--====== Line Icons CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/LineIcons.css">
+    <!--====== Bootstrap CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/bootstrap.min.css">
+    <!--====== Default CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/default.css">
+    <!--====== Style CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/style.css">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="阿里云IoT流转到postgresql数据库方案_在线工具">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7F56WL29Y8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7F56WL29Y8');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!--====== PRELOADER PART START ======-->
+    <div class="preloader">
+        <div class="loader">
+            <div class="ytp-spinner">
+                <div class="ytp-spinner-container">
+                    <div class="ytp-spinner-rotator">
+                        <div class="ytp-spinner-left">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                        <div class="ytp-spinner-right">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--====== PRELOADER PART ENDS ======-->
+    <!--====== NAVBAR TWO PART START ======-->
+    <section class="navbar-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <nav class="navbar navbar-expand-lg">
+                                                <a class="navbar-brand top" href="/">
+                            Clash Nyanpasu                        </a>
+                                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTwo" aria-controls="navbarTwo" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="toggler-icon"></span>
+                            <span class="toggler-icon"></span>
+                            <span class="toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse sub-menu-bar" id="navbarTwo">
+                            <ul class="navbar-nav m-auto">
+                                                                <li class="nav-item"><a href="/">首页</a></li>
+                                                                <li class="nav-item"><a href="/free-nodes/">免费节点</a></li>
+                                                                <li class="nav-item"><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                <li class="nav-item"><a href="/client.htm">客户端</a></li>
+                                                                <li class="nav-item"><a href="/news/">新闻资讯</a></li>
+                                                            </ul>
+                        </div>
+
+                    </nav> <!-- navbar -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+    <!--====== NAVBAR TWO PART ENDS ======-->
+    <!--====== SLIDER PART START ======-->
+    <section id="home" class="slider_area">
+        <div id="carouselThree" class="carousel slide sub-page" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="slider-content">
+                                    <h1 class="title">阿里云IoT流转到postgresql数据库方案_在线工具</h1>
+                                    <p class="text">
+                                        <a href="/">首页</a> / 
+                                        <a href="/news/">新闻资讯</a> / 
+                                        <span>正文</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div> <!-- row -->
+                    </div> <!-- container -->
+                    <div class="slider-image-box d-none d-lg-flex align-items-end">
+                        <div class="slider-image">
+                            <img src="/assets/website/img/clashnyanpasu/slider/1.png" alt="Hero">
+                        </div> <!-- slider-imgae -->
+                    </div> <!-- slider-imgae box -->
+                </div> <!-- carousel-item -->
+            </div>
+        </div>
+    </section>
+    <!--====== SLIDER PART ENDS ======-->
+    <!--====== ABOUT PART START ======-->
+    <section id=about class=about-area>
+        <div class=container>
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<p>之前写过一篇如使用阿里云上部署.NET 3.1自定义运行时的<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://www.cnblogs.com/podolski/p/12847037.html"  target="_blank"  rel="nofollow">文章</a>，吐槽一下，虽然现在已经2022年了，但是阿里云函数计算的支持依然停留在.NET Core 2.1，更新缓慢，由于程序解包大小的限制，也不能放太复杂的东西的上去，虽然现在.NET 6裁剪包能挺好地解决这个问题，但是心里还是不爽。</p> <h2 id="需求">需求</h2> <p>言归正传，有这么一个情景：发送数据想接入阿里云的IoT平台，然后直接插入postgresQL数据库中。正常来说，只要数据发送到了IoT平台，然后定义转发到RDS就可以了，不过阿里云有几个限制：</p> <ol> <li>数据流转到RDS数据库，只能支持<code>mysql</code>与<code>sql server</code> </li> <li>数据流转只支持<code>json</code>形式的数据流转，如果发送的是透传的数据，那么发送不了（更新：现在新版的数据流转已经支持了。）</li> </ol> <p>思前想后，可能只能掏出阿里云的函数计算服务了，运用函数计算作为中转，将透传的数据流转给函数计算，然后在函数计算中执行sql语句。</p> <h2 id="iot平台接收设置">IoT平台接收设置</h2> <p>阿里云的物联网平台，设置了基本的产品和设备之后，如果是物模型的话，那么自行设置好对应的物模型。对于透传就比较简单了，支持MQTT的设备方只需要定义：</p> <ul> <li>透传的消息发送到/{productKey}/{deviceName}/user/update</li> <li>订阅阿里云的/{productKey}/{deviceName}/user/get</li> <li>设置阿里云的Mqtt IoT实例终端节点:（{YourProductKey}.iot-as-mqtt.{YourRegionId}.aliyuncs.com:1883</li> <li>设置设备的ProductKey和ProductSecret</li> </ul> <p>设置好之后，即可传输数据到阿里云IoT端，数据传输过来，看下日志，如果能看到：</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220501/400c095eb30379942af14a6cefa6aa36.jpg" alt="阿里云IoT流转到postgresql数据库方案_在线工具"></p> <p>那说明就已经发送OK了，接收到的是普通的字符串（不是json），需要进行进一步解析。</p> <h2 id="iot流转设置">IoT流转设置</h2> <p>在<strong>云产品流转</strong>中，新建解析器，设置好数据源，数据目的选择函数计算：<br /><img decoding="async" src="http://img.555519.xyz/uploads3/20220501/57cbea6d330bb0414933e4dc37a819fa.jpg" alt="阿里云IoT流转到postgresql数据库方案_在线工具"><br /> 解析器脚本比较简单：</p> <pre><code>var data = payload();  writeFc(1000, data);   </code></pre> <p>注意，payload函数<code>payload</code>(textEncoding)是內建的函数：</p> <ul> <li>不传入参数：默认按照UTF-8编码转换为字符串，即payload()等价于payload('utf-8')。</li> <li>'json'：将payload数据转换成Map格式变量。如果payload不是JSON格式，则返回异常。</li> <li>'binary'：将payload数据转换成二进制变量进行透传。<br /> 这里我使用文本透传的形式，将数据转成UTF8文本传输。writeFc指将转换的内容传递给1000编号的目标函数。详情见<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://help.aliyun.com/document_detail/286549.htm"  target="_blank"  rel="nofollow">文档</a>。</li> </ul> <blockquote> <p>当然还可以使用更为复杂的<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://help.aliyun.com/document_detail/270937.html"  target="_blank"  rel="nofollow">脚本</a>，实现对脚本数据的初步处理，由于我这里后面还有函数计算，我就直接将数据转到下一个节点。</p> </blockquote> <h2 id="函数计算配置">函数计算配置</h2> <p>按照官方文档新建函数，请注意<strong>不需要</strong>新建触发器！我们这里的函数使用python语言，通过<code>psycopg2</code>实现数据插入到postgres数据库中。</p> <p>由于函数计算中，默认并没有该包，需要手动添加引用，官方建议使用<code>Serverless Devs</code>工具安装部署，这个玩意非常不好用，嗯，我不接受他的建议。推荐大家使用<strong>vscode</strong>，安装阿里云serverless的插件，这样其实更加方便。</p> <p>按照插件的文档，自己建立好服务与函数，默认会给一个函数入口：</p> <pre><code class="language-python"># To enable the initializer feature (https://help.aliyun.com/document_detail/158208.html) # please implement the initializer function as below： # def initializer(context): #   logger = logging.getLogger() #   logger.info('initializing')  def handler(event, context):   logger = logging.getLogger()   logger.info(event)   return 'hello world' </code></pre> <p>我们首先在函数上右键，然后选择<code>Install Package</code>，选择pip安装<code>psycopg2</code>，依赖就自动被安装上了，这个非常方便。</p> <p>请注意，通过IOT流转过来的字符串，是<code>b'data'</code>这样的形式的形式，需要先decode一下，然后在处理，修改函数为：</p> <pre><code class="language-python"># -*- coding: utf-8 -*- import logging import psycopg2 import uuid import time  def insert_database(device_id,data):     timest = int(time.time()*1000)     guid = str(uuid.uuid1())     conn = psycopg2.connect(database="", user="", password="", host="", port="")     cur = conn.cursor()     sql = 'INSERT INTO "data"("Id","DeviceId","Timestamp", "DataArray") VALUES (\'{id}\', \'{deviceid}\', \'{timestamp}\', array{data})'     sql = sql.format(id= guid, deviceid= device_id, timestamp= timest, data= data)     cur.execute(sql)     conn.commit()     print(" Records inserted successfully")     conn.close()       def extract_string_array(data: bytes):     arr = data.decode().strip().split(' ')     # 写自己的逻辑     return deviceid, resu     def handler(event, context):   logger = logging.getLogger()   logger.info(event)   device_id, result = extract_string_array(event)   insert_database(device_id, result)   return 'OK' </code></pre> <p>保存，然后在vscode中deploy即可。</p> <blockquote> <p>提示：vscode中也可以进行本地的debug，还是比较方便的，不过这些功能依赖docker，所以还是提前装好比较好。</p> </blockquote> <p>弄完了之后，应该是能看见这样的画面：</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220501/39ea5e0996a90fc6fdc25c6306461473.jpg" alt="阿里云IoT流转到postgresql数据库方案_在线工具"></p> <p>至此，数据就正常流转成功。</p> <h2 id="要点">要点</h2> <ol> <li>不要设置触发器，当时为了配置这个触发器弄了非常长的时间</li> <li>函数计算与数据库的VPC应该相同，并且赋予权限，否则无法访问。</li> <li>函数计算默认无法保持状态，如果有这个需求，最好试试别的方案，或者看下函数计算的预留实例（常驻实例）</li> <li>提前在本地安装好Docker，要不会有各种各样的问题出现。</li> <li>Postgresql插入数组格式的数据，需要注意格式，可以参考这篇<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://www.cnblogs.com/Anidot/articles/9451540.html"  target="_blank"  rel="nofollow">文档</a> </li> <li>如果长时间不用docker，导致docker无法启动，可以参考这篇<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://blog.csdn.net/qq_42348424/article/details/119999131"  target="_blank"  rel="nofollow">文章</a> </li> </ol> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-95867.htm">优雅高效的Mac环境配置教程：从零开始八步走</a></p>
+                                        <p>下一个：<a href="/news/article-96620.htm">C# 11 对 ref 和 struct 的改进</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-68496.htm" title="网店卖宠物用品赚钱吗现在怎么样（开网店卖宠物用品在哪里进货）">网店卖宠物用品赚钱吗现在怎么样（开网店卖宠物用品在哪里进货）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-18-free-high-speed-nodes.htm" title="「3月18日」最高速度21.1M/S，2025年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐">「3月18日」最高速度21.1M/S，2025年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐</a></li>
+                        <li class="py-2"><a href="/news/article-74472.htm" title="springboot 定义统一返回结果">springboot 定义统一返回结果</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-17-node-share.htm" title="「3月17日」最高速度21.7M/S，2025年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐">「3月17日」最高速度21.7M/S，2025年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐</a></li>
+                        <li class="py-2"><a href="/news/article-81980.htm" title="Spring JDBC-NamedParameterJdbcTemplate模板类">Spring JDBC-NamedParameterJdbcTemplate模板类</a></li>
+                        <li class="py-2"><a href="/news/article-76497.htm" title="宠物粮品牌排行榜前十名有哪些（宠物粮品牌排行榜前十名有哪些名字）">宠物粮品牌排行榜前十名有哪些（宠物粮品牌排行榜前十名有哪些名字）</a></li>
+                        <li class="py-2"><a href="/news/article-93620.htm" title="面向对象的7种设计原则(2)-接口隔离原则">面向对象的7种设计原则(2)-接口隔离原则</a></li>
+                        <li class="py-2"><a href="/news/article-72466.htm" title="动物疫苗审批需要多长时间 动物疫苗审批需要多长时间完成">动物疫苗审批需要多长时间 动物疫苗审批需要多长时间完成</a></li>
+                        <li class="py-2"><a href="/news/article-67898.htm" title="动物疫苗法律法规有哪些内容呢（动物疫苗管理制度）">动物疫苗法律法规有哪些内容呢（动物疫苗管理制度）</a></li>
+                        <li class="py-2"><a href="/news/article-84117.htm" title="广州有没有领养宠物狗的（广州有没有宠物领养机构）">广州有没有领养宠物狗的（广州有没有宠物领养机构）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">45</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">90</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+        <!--====== FOOTER PART START ======-->
+    <section class="footer-area footer-dark">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="copyright text-center mt-35">
+                                            <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                        <p class="text">
+                            ClashNyanpasu官网节点站 版权所有 Powered by WordPress
+                        </p>
+                    </div> <!--  copyright -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+    <!--====== FOOTER PART ENDS ======-->
+    <!--====== BACK TOP TOP PART START ======-->
+    <a href="#" class="back-to-top"><i class="lni lni-chevron-up"></i></a>
+    <!--====== BACK TOP TOP PART ENDS ======-->
+    <!--====== Jquery js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/vendor/jquery-1.12.4.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/vendor/modernizr-3.7.1.min.js"></script>
+    <!--====== Bootstrap js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/popper.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/slick.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/jquery.magnific-popup.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/ajax-contact.js"></script>
+    <!--====== Isotope js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/imagesloaded.pkgd.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/isotope.pkgd.min.js"></script>
+    <!--====== Scrolling Nav js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/jquery.easing.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/scrolling-nav.js"></script>
+    <!--====== Main js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>

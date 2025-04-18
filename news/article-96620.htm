@@ -1,0 +1,243 @@
+<!doctype html>
+<html class="no-js" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashnyanpasu.github.io/news/article-96620.htm" />
+    <meta charset="utf-8">
+    <!--====== Title ======-->
+    <title>C# 11 对 ref 和 struct 的改进</title>
+        <meta name="description" content="前言 C# 11 中即将到来一个可以让重视性能的开发者狂喜的重量级特性，这个特性主要是围绕着一个重要底层性能设施ref 和struct 的一系列改进。 但是这部分的改进涉及的内容较多，不一定能在 .N" />
+        <link rel="icon" href="/assets/website/img/clashnyanpasu/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="ClashNyanpasu官网节点站">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://clashnyanpasu.github.io/news/article-96620.htm" />
+    <meta property="og:site_name" content="ClashNyanpasu官网节点站" />
+    <meta property="og:title" content="C# 11 对 ref 和 struct 的改进" />
+    <meta property="og:image" content="https://clashnyanpasu.github.io/uploads/20240623/bb09feeeb9330c67eb206c4c78186c85.webp" />
+        <meta property="og:release_date" content="2025-04-15T06:01:52" />
+    <meta property="og:updated_time" content="2025-04-15T06:01:52" />
+        <meta property="og:description" content="前言 C# 11 中即将到来一个可以让重视性能的开发者狂喜的重量级特性，这个特性主要是围绕着一个重要底层性能设施ref 和struct 的一系列改进。 但是这部分的改进涉及的内容较多，不一定能在 .N" />
+        
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--====== Magnific Popup CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/magnific-popup.css">
+    <!--====== Slick CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/slick.css">
+    <!--====== Line Icons CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/LineIcons.css">
+    <!--====== Bootstrap CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/bootstrap.min.css">
+    <!--====== Default CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/default.css">
+    <!--====== Style CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/style.css">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="C# 11 对 ref 和 struct 的改进">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7F56WL29Y8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7F56WL29Y8');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!--====== PRELOADER PART START ======-->
+    <div class="preloader">
+        <div class="loader">
+            <div class="ytp-spinner">
+                <div class="ytp-spinner-container">
+                    <div class="ytp-spinner-rotator">
+                        <div class="ytp-spinner-left">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                        <div class="ytp-spinner-right">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--====== PRELOADER PART ENDS ======-->
+    <!--====== NAVBAR TWO PART START ======-->
+    <section class="navbar-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <nav class="navbar navbar-expand-lg">
+                                                <a class="navbar-brand top" href="/">
+                            Clash Nyanpasu                        </a>
+                                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTwo" aria-controls="navbarTwo" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="toggler-icon"></span>
+                            <span class="toggler-icon"></span>
+                            <span class="toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse sub-menu-bar" id="navbarTwo">
+                            <ul class="navbar-nav m-auto">
+                                                                <li class="nav-item"><a href="/">首页</a></li>
+                                                                <li class="nav-item"><a href="/free-nodes/">免费节点</a></li>
+                                                                <li class="nav-item"><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                <li class="nav-item"><a href="/client.htm">客户端</a></li>
+                                                                <li class="nav-item"><a href="/news/">新闻资讯</a></li>
+                                                            </ul>
+                        </div>
+
+                    </nav> <!-- navbar -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+    <!--====== NAVBAR TWO PART ENDS ======-->
+    <!--====== SLIDER PART START ======-->
+    <section id="home" class="slider_area">
+        <div id="carouselThree" class="carousel slide sub-page" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="slider-content">
+                                    <h1 class="title">C# 11 对 ref 和 struct 的改进</h1>
+                                    <p class="text">
+                                        <a href="/">首页</a> / 
+                                        <a href="/news/">新闻资讯</a> / 
+                                        <span>正文</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div> <!-- row -->
+                    </div> <!-- container -->
+                    <div class="slider-image-box d-none d-lg-flex align-items-end">
+                        <div class="slider-image">
+                            <img src="/assets/website/img/clashnyanpasu/slider/1.png" alt="Hero">
+                        </div> <!-- slider-imgae -->
+                    </div> <!-- slider-imgae box -->
+                </div> <!-- carousel-item -->
+            </div>
+        </div>
+    </section>
+    <!--====== SLIDER PART ENDS ======-->
+    <!--====== ABOUT PART START ======-->
+    <section id=about class=about-area>
+        <div class=container>
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<h2 id="前言">前言</h2> <p>C# 11 中即将到来一个可以让重视性能的开发者狂喜的重量级特性，这个特性主要是围绕着一个重要底层性能设施<code>ref</code> 和<code>struct</code> 的一系列改进。</p> <p>但是这部分的改进涉及的内容较多，不一定能在 .NET 7（C# 11）做完，因此部分内容推迟到 C# 12 也是有可能的。当然，还是很有希望能在 C# 11 的时间点就看到完全体的。</p> <p>本文仅仅就这一个特性进行介绍，因为 C# 11 除了本特性之外，还有很多其他的改进，一篇文章根本说不完，其他那些我们就等到 .NET 7 快正式发布的时候再说吧。</p> <h2 id="背景">背景</h2> <p>C# 自 7.0 版本引入了新的<code>ref struct</code> 用来表示不可被装箱的栈上对象，但是当时局限性很大，甚至无法被用于泛型约束，也无法作为<code>struct</code> 的字段。在 C# 11 中，由于特性<code>ref</code> 字段的推动，需要允许类型持有其它值类型的引用，这方面的东西终于有了大幅度进展。</p> <p>这些设施旨在允许开发者使用安全的代码编写高性能代码，而无需面对不安全的指针。接下来我就来对 C# 11 甚至 12 在此方面的即将到来的改进进行介绍。</p> <h2 id="ref-字段">ref 字段</h2> <p>C# 以前是不能在类型中持有对其它值类型的引用的，但是在 C# 11 中，这将变得可能。从 C# 11 开始，将允许<code>ref struct</code> 定义<code>ref</code> 字段。</p> <pre><code class="language-csharp">readonly ref struct Span&lt;T&gt; {     private readonly ref T _field;     private readonly int _length;     public Span(ref T value)     {         _field = ref value;         _length = 1;     } }</code></pre> <p>直观来看，这样的特性将允许我们写出上面的代码，这段代码中构造了一个<code>Span&lt;T&gt;</code>，它持有了对其他<code>T</code> 对象的引用。</p> <p>当然，<code>ref struct</code> 也是可以被<code>default</code> 来初始化的：</p> <pre><code class="language-csharp">Span&lt;int&gt; span = default;</code></pre> <p>但这样<code>_field</code> 就会是个空引用，不过我们可以通过<code>Unsafe.IsNullRef</code> 方法来进行检查：</p> <pre><code class="language-csharp">if (Unsafe.IsNullRef(ref _field)) {     throw new NullReferenceException(...); }</code></pre> <p>另外，<code>ref</code>字段的可修改性也是一个非常重要的事情，因此引入了：</p> <ul> <li><code>readonly ref</code>：一个对对象的只读引用，这个引用本身不能在构造方法或<code>init</code> 方法之外被修改</li> <li><code>ref readonly</code>：一个对只读对象的引用，这个引用指向的对象不能在构造方法或 init 方法之外被修改</li> <li><code>readonly ref readonly</code>：一个对只读对象的只读引用，是上述两种的组合</li> </ul> <p>例如：</p> <pre><code class="language-csharp">ref struct Foo {     ref readonly int f1;     readonly ref int f2;     readonly ref readonly int f3;      void Bar(int[] array)     {         f1 = ref array[0];  // 没问题         f1 = array[0];      // 错误，因为 f1 引用的值不能被修改         f2 = ref array[0];  // 错误，因为 f2 本身不能被修改         f2 = array[0];      // 没问题         f3 = ref array[0];  // 错误：因为 f3 本身不能被修改         f3 = array[0];      // 错误：因为 f3 引用的值不能被修改     } }</code></pre> <h2 id="生命周期">生命周期</h2> <p>这一切看上去都很美好，但是真的没有任何问题吗？</p> <p>假设我们有下面的代码来使用上面的东西：</p> <pre><code class="language-csharp">Span&lt;int&gt; Foo() {     int v = 42;     return new Span&lt;int&gt;(ref v); }</code></pre> <p><code>v</code> 是一个局部变量，在函数返回之后其生命周期就会结束，那么上面这段代码就会导致<code>Span&lt;int&gt;</code> 持有的<code>v</code> 的引用变成无效的。顺带一提，上面这段代码是完全合法的，因为 C# 之前不支持<code>ref</code> 字段，因此上面的代码是不可能出现逃逸问题的。但是 C# 11 加入了<code>ref</code> 字段，栈上的对象就有可能通过<code>ref</code> 字段而发生引用逃逸，于是代码变得不安全。</p> <p>如果我们有一个<code>CreateSpan</code> 方法用来创建一个引用的<code>Span</code> ：</p> <pre><code class="language-csharp">Span&lt;int&gt; CreateSpan(ref int v) {      // ... }</code></pre> <p>这就衍生出了一系列在以前的 C# 中没问题（因为<code>ref</code> 的生命周期为当前方法），但是在 C# 11 中由于可能存在<code>ref</code> 字段而导致用安全的方式写出的非安全代码：</p> <pre><code class="language-csharp">Span&lt;int&gt; Foo(int v) {     // 1     return CreateSpan(ref v);      // 2     int local = 42;     return CreateSpan(ref local);      // 3     Span&lt;int&gt; span = stackalloc int[42];     return CreateSpan(ref span[0]); }</code></pre> <p>因此，在 C# 11 中则不得不引入破坏性更改，不允许上述代码通过编译。但这并没有完全解决问题。</p> <p>为了解决逃逸问题， C# 11 制定了引用逃逸安全规则。对于一个在<code>e</code> 中的字段<code>f</code>：</p> <ul> <li>如果<code>f</code> 是个<code>ref</code> 字段，并且<code>e</code>是<code>this</code>，则<code>f</code> 在它被包围的方法中是引用逃逸安全的</li> <li>否则如果<code>f</code> 是个<code>ref</code> 字段，则<code>f</code> 的引用逃逸安全范围和<code>e</code> 的逃逸安全范围相同</li> <li>否则如果<code>e</code> 是一个引用类型，则<code>f</code> 的引用逃逸安全范围是调用它的方法</li> <li>否则<code>f</code> 的引用逃逸安全范围和<code>e</code> 相同</li> </ul> <p>由于 C# 中的方法是可以返回引用的，因此根据上面的规则，一个<code>ref struct</code> 中的方法将不能返回一个对非<code>ref</code> 字段的引用：</p> <pre><code class="language-csharp">ref struct Foo {     private ref int _f1;     private int f2;      public ref int P1 =&gt; ref _f1; // 没问题     public ref int P2 =&gt; ref _f2; // 错误，因为违反了第四条规则 }</code></pre> <p>除了引用逃逸安全规则之外，同样还有对<code>ref</code> 赋值的规则：</p> <ul> <li>对于<code>x.e1 = ref e2</code>， 其中<code>x</code> 是在调用方法中逃逸安全的，那么<code>e2</code> 必须在调用方法中是引用逃逸安全的</li> <li>对于<code>e1 = ref e2</code>，其中<code>e1</code> 是个局部变量，那么<code>e2</code> 的引用逃逸安全范围必须至少和<code>e1</code> 的引用逃逸安全范围一样大</li> </ul> <p>于是， 根据上述规则，下面的代码是没问题的：</p> <pre><code class="language-csharp">readonly ref struct Span&lt;T&gt; {     readonly ref T _field;     readonly int _length;      public Span(ref T value)     {         // 没问题，因为 x 是 this，this 的逃逸安全范围和 value 的引用逃逸安全范围都是调用方法，满足规则 1         _field = ref value;         _length = 1;     } }</code></pre> <p>于是很自然的，就需要在字段和参数上对生命周期进行标注，帮助编译器确定对象的逃逸范围。</p> <p>而我们在写代码的时候，并不需要记住以上这么多的规则，因为有了生命周期标注之后一切都变得显式和直观了。</p> <h3 id="scoped">scoped</h3> <p>在 C# 11 中，引入了<code>scoped</code> 关键字用来限制逃逸安全范围：</p> <table> <thead> <tr> <th>局部变量 s</th> <th>引用逃逸安全范围</th> <th>逃逸安全范围</th> </tr> </thead> <tbody> <tr> <td><code>Span&lt;int&gt; s</code></td> <td>当前方法</td> <td>调用方法</td> </tr> <tr> <td><code>scoped Span&lt;int&gt; s</code></td> <td>当前方法</td> <td>当前方法</td> </tr> <tr> <td><code>ref Span&lt;int&gt; s</code></td> <td>调用方法</td> <td>调用方法</td> </tr> <tr> <td><code>scoped ref Span&lt;int&gt; s</code></td> <td>当前方法</td> <td>调用方法</td> </tr> <tr> <td><code>ref scoped Span&lt;int&gt; s</code></td> <td>当前方法</td> <td>当前方法</td> </tr> <tr> <td><code>scoped ref scoped Span&lt;int&gt; s</code></td> <td>当前方法</td> <td>当前方法</td> </tr> </tbody> </table> <p>其中，<code>scoped ref scoped</code> 是多余的，因为它可以被<code>ref scoped</code> 隐含。而我们只需要知道<code>scoped</code> 是用来把逃逸范围限制到当前方法的即可，是不是非常简单？</p> <p>如此一来，我们就可以对参数进行逃逸范围（生命周期）的标注：</p> <pre><code class="language-csharp">Span&lt;int&gt; CreateSpan(scoped ref int v) {     // ... }</code></pre> <p>然后，之前的代码就变得没问题了，因为都是<code>scoped ref</code>：</p> <pre><code class="language-csharp">Span&lt;int&gt; Foo(int v) {     // 1     return CreateSpan(ref v);      // 2     int local = 42;     return CreateSpan(ref local);      // 3     Span&lt;int&gt; span = stackalloc int[42];     return CreateSpan(ref span[0]); }</code></pre> <p><code>scoped</code> 同样可以被用在局部变量上：</p> <pre><code class="language-csharp">Span&lt;int&gt; Foo() {     // 错误，因为 span 不能逃逸当前方法     scoped Span&lt;int&gt; span1 = default;     return span1;      // 没问题，因为初始化器的逃逸安全范围是调用方法，因为 span2 可以逃逸到调用方法     Span&lt;int&gt; span2 = default;     return span2;      // span3 和 span4 是一样的，因为初始化器的逃逸安全范围是当前方法，加不加 scoped 都没区别     Span&lt;int&gt; span3 = stackalloc int[42];     scoped Span&lt;int&gt; span4 = stackalloc int[42]; }</code></pre> <p>另外，<code>struct</code> 的<code>this</code> 也加上了<code>scoped ref</code> 的逃逸范围，即引用逃逸安全范围为当前方法，而逃逸安全范围为调用方法。</p> <p>剩下的就是和<code>out</code>、<code>in</code> 参数的配合，在 C# 11 中，<code>out</code> 参数将会默认为<code>scoped ref</code>，而<code>in</code> 参数仍然保持默认为<code>ref</code>：</p> <pre><code class="language-csharp">ref int Foo(out int r) {     r = 42;     return ref r; // 错误，因为 r 的引用逃逸安全范围是当前方法 }</code></pre> <p>这非常有用，例如比如下面这个常见的情况：</p> <pre><code class="language-csharp">Span&lt;byte&gt; Read(Span&lt;byte&gt; buffer, out int read) {     // ..  }  Span&lt;int&gt; Use() {     var buffer = new byte[256];      // 如果不修改 out 的引用逃逸安全范围，则这会报错，因为编译器需要考虑 read 是可以被作为 ref 字段返回的情况     // 如果修改 out 的引用逃逸安全范围，则就没有问题了，因为编译器不需要考虑 read 是可以被作为 ref 字段返回的情况     int read;     return Read(buffer, out read); }</code></pre> <p>下面给出一些更多的例子：</p> <pre><code class="language-csharp">Span&lt;int&gt; CreateWithoutCapture(scoped ref int value) {     // 错误，因为 value 的引用逃逸安全范围是当前方法     return new Span&lt;int&gt;(ref value); }  Span&lt;int&gt; CreateAndCapture(ref int value) {     // 没问题，因为 value 的逃逸安全范围被限制为 value 的引用逃逸安全范围，这个范围是调用方法     return new Span&lt;int&gt;(ref value) }  Span&lt;int&gt; ComplexScopedRefExample(scoped ref Span&lt;int&gt; span) {     // 没问题，因为 span 的逃逸安全范围是调用方法     return span;      // 没问题，因为 refLocal 的引用逃逸安全范围是当前方法、逃逸安全范围是调用方法     // 在 ComplexScopedRefExample 的调用中它被传递给了一个 scoped ref 参数，     // 意味着编译器在计算生命周期时不需要考虑引用逃逸安全范围，只需要考虑逃逸安全范围     // 因此它返回的值的安全逃逸范围为调用方法     Span&lt;int&gt; local = default;     ref Span&lt;int&gt; refLocal = ref local;     return ComplexScopedRefExample(ref refLocal);      // 错误，因为 stackLocal 的引用逃逸安全范围、逃逸安全范围都是当前方法     // 在 ComplexScopedRefExample 的调用中它被传递给了一个 scoped ref 参数，     // 意味着编译器在计算生命周期时不需要考虑引用逃逸安全范围，只需要考虑逃逸安全范围     // 因此它返回的值的安全逃逸范围为当前方法     Span&lt;int&gt; stackLocal = stackalloc int[42];     return ComplexScopedRefExample(ref stackLocal); }</code></pre> <h3 id="unscoped">unscoped</h3> <p>上述的设计中，仍然有个问题没有被解决：</p> <pre><code class="language-csharp">struct S {     int _field;      // 错误，因为 this 的引用逃逸安全范围是当前方法     public ref int Prop =&gt; ref _field; }</code></pre> <p>因此引入一个<code>unscoped</code>，允许扩展逃逸范围到调用方法上，于是，上面的方法可以改写为：</p> <pre><code class="language-csharp">struct S {     private int _field;      // 没问题，引用逃逸安全范围被扩展到了调用方法     public unscoped ref int Prop =&gt; ref _field; }</code></pre> <p>这个<code>unscoped</code> 也可以直接放到<code>struct</code> 上：</p> <pre><code class="language-csharp">unscoped struct S {     private int _field;     public unscoped ref int Prop =&gt; ref _field; }</code></pre> <p>同理，嵌套的<code>struct</code> 也没有问题：</p> <pre><code class="language-csharp">unscoped struct Child {     int _value;     public ref int Value =&gt; ref _value; }  unscoped struct Container {     Child _child;     public ref int Value =&gt; ref _child.Value; }</code></pre> <p>此外，如果需要恢复以前的<code>out</code> 逃逸范围的话，也可以在<code>out</code> 参数上指定<code>unscoped</code>：</p> <pre><code class="language-csharp">ref int Foo(unscoped out int r) {     r = 42;     return ref r; }</code></pre> <p>不过有关<code>unscoped</code> 的设计还属于初步阶段，不会在 C# 11 中就提供。</p> <h2 id="ref-struct-约束">ref struct 约束</h2> <p>从 C# 11 开始，<code>ref struct</code> 可以作为泛型约束了，因此可以编写如下方法了：</p> <pre><code>void Foo&lt;T&gt;(T v) where T : ref struct {     // ... }</code></pre> <p>因此，<code>Span&lt;T&gt;</code> 的功能也被扩展，可以声明<code>Span&lt;Span&lt;T&gt;&gt;</code> 了，比如用在<code>byte</code> 或者<code>char</code> 上，就可以用来做高性能的字符串处理了。</p> <h2 id="反射">反射</h2> <p>有了上面那么多东西，反射自然也是要支持的。因此，反射 API 也加入了<code>ref struct</code> 相关的支持。</p> <h2 id="实际用例">实际用例</h2> <p>有了以上基础设施之后，我们就可以使用安全代码来造一些高性能轮子了。</p> <h3 id="栈上定长列表">栈上定长列表</h3> <pre><code class="language-csharp">struct FrugalList&lt;T&gt; {     private T _item0;     private T _item1;     private T _item2;      public readonly int Count = 3;      public unscoped ref T this[int index] =&gt; index switch     {         0 =&gt; ref _item1,         1 =&gt; ref _item2,         2 =&gt; ref _item3,         _ =&gt; throw new OutOfRangeException("Out of range.")     }; }</code></pre> <h3 id="栈上链表">栈上链表</h3> <pre><code class="language-csharp">ref struct StackLinkedListNode&lt;T&gt; {     private T _value;     private ref StackLinkedListNode&lt;T&gt; _next;      public T Value =&gt; _value;     public bool HasNext =&gt; !Unsafe.IsNullRef(ref _next);     public ref StackLinkedListNode&lt;T&gt; Next =&gt; HasNext ? ref _next : throw new InvalidOperationException("No next node.");      public StackLinkedListNode(T value)     {         this = default;         _value = value;     }      public StackLinkedListNode(T value, ref StackLinkedListNode&lt;T&gt; next)     {         _value = value;         _next = ref next;     } }</code></pre> <p>除了这两个例子之外，其他的比如解析器和序列化器等等，例如<code>Utf8JsonReader</code>、<code>Utf8JsonWriter</code> 都可以用到这些东西。</p> <h2 id="未来计划">未来计划</h2> <h3 id="高级生命周期">高级生命周期</h3> <p>上面的生命周期设计虽然能满足绝大多数使用，但是还是不够灵活，因此未来有可能在此基础上扩展，引入高级生命周期标注。例如：</p> <pre><code class="language-csharp">void M(scoped&lt;'a&gt; ref MyStruct s, scoped&lt;'b&gt; Span&lt;int&gt; span) where 'b &gt;= 'a {     s.Span = span; }</code></pre> <p>上面的方法给参数<code>s</code> 和<code>span</code> 分别声明了两个生命周期<code>'a</code> 和<code>'b</code>，并约束<code>'b</code> 的生命周期不小于<code>'a</code>，因此在这个方法里，<code>span</code> 可以安全地被赋值给<code>s.Span</code>。</p> <p>这个虽然不会被包含在 C# 11 中，但是如果以后开发者对相关的需求增长，是有可能被后续加入到 C# 中的。</p> <h2 id="总结">总结</h2> <p>以上就是 C# 11（或之后）对<code>ref</code> 和<code>struct</code> 的改进了。有了这些基础设施，开发者们将能轻松使用安全的方式来编写没有任何堆内存开销的高性能代码。尽管这些改进只能直接让小部分非常关注性能的开发者收益，但是这些改进带来的将是后续基础库代码质量和性能的整体提升。</p> <p>如果你担心这会让语言的复杂度上升，那也大可不必，因为这些东西大多数人并不会用到，只会影响到小部分的开发者。因此对于大多数人而言，只需要写着原样的代码，享受其他基础库作者利用上述设施编写好的东西即可。</p> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-95869.htm">阿里云IoT流转到postgresql数据库方案_在线工具</a></p>
+                                        <p>下一个：<a href="/news/article-96624.htm">宠物医院前台年终总结（宠物医院前台工作计划）</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-86994.htm" title="宠物粮食在哪里进货好呢知乎文章（宠物粮在哪里批发）">宠物粮食在哪里进货好呢知乎文章（宠物粮在哪里批发）</a></li>
+                        <li class="py-2"><a href="/news/article-75124.htm" title="南京狗狗免费领养中心（南京免费领养狗狗在哪）">南京狗狗免费领养中心（南京免费领养狗狗在哪）</a></li>
+                        <li class="py-2"><a href="/news/article-90637.htm" title="动物疫苗价格查询表图片高清大全（动物疫苗价格查询表图片高清大全及价格）">动物疫苗价格查询表图片高清大全（动物疫苗价格查询表图片高清大全及价格）</a></li>
+                        <li class="py-2"><a href="/news/article-79234.htm" title="美联众合动物医院可以加盟吗 美联众合动物医院是加盟吗">美联众合动物医院可以加盟吗 美联众合动物医院是加盟吗</a></li>
+                        <li class="py-2"><a href="/news/article-76497.htm" title="宠物粮品牌排行榜前十名有哪些（宠物粮品牌排行榜前十名有哪些名字）">宠物粮品牌排行榜前十名有哪些（宠物粮品牌排行榜前十名有哪些名字）</a></li>
+                        <li class="py-2"><a href="/news/article-78543.htm" title="HCNP Routing&amp;Switching之端口隔离">HCNP Routing&amp;Switching之端口隔离</a></li>
+                        <li class="py-2"><a href="/news/article-68495.htm" title="Numpy 高效的运算工具">Numpy 高效的运算工具</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-9-clash-nyanpasu-node.htm" title="「3月9日」最高速度18.2M/S，2025年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐">「3月9日」最高速度18.2M/S，2025年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐</a></li>
+                        <li class="py-2"><a href="/news/article-84865.htm" title="python+pytest接口自动化(13)-token关联登录">python+pytest接口自动化(13)-token关联登录</a></li>
+                        <li class="py-2"><a href="/news/article-87724.htm" title="国内宠物粮食十大厂家有哪些 国内宠物粮食十大厂家有哪些品牌">国内宠物粮食十大厂家有哪些 国内宠物粮食十大厂家有哪些品牌</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">45</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">90</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+        <!--====== FOOTER PART START ======-->
+    <section class="footer-area footer-dark">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="copyright text-center mt-35">
+                                            <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                        <p class="text">
+                            ClashNyanpasu官网节点站 版权所有 Powered by WordPress
+                        </p>
+                    </div> <!--  copyright -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+    <!--====== FOOTER PART ENDS ======-->
+    <!--====== BACK TOP TOP PART START ======-->
+    <a href="#" class="back-to-top"><i class="lni lni-chevron-up"></i></a>
+    <!--====== BACK TOP TOP PART ENDS ======-->
+    <!--====== Jquery js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/vendor/jquery-1.12.4.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/vendor/modernizr-3.7.1.min.js"></script>
+    <!--====== Bootstrap js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/popper.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/slick.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/jquery.magnific-popup.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/ajax-contact.js"></script>
+    <!--====== Isotope js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/imagesloaded.pkgd.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/isotope.pkgd.min.js"></script>
+    <!--====== Scrolling Nav js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/jquery.easing.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/scrolling-nav.js"></script>
+    <!--====== Main js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
