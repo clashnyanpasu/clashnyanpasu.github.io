@@ -1,0 +1,246 @@
+<!doctype html>
+<html class="no-js" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashnyanpasu.github.io/news/article-103255.htm" />
+    <meta charset="utf-8">
+    <!--====== Title ======-->
+    <title>Java-GUI编程之事件处理</title>
+        <meta name="description" content="前面介绍了如何放置各种组件，从而得到了丰富多彩的图形界面，但这些界面还不能响应用户的任何操作。比如单击前面所有窗口右上角的“X”按钮，但窗口依然不会关闭。因为在 AWT 编程中 ，所有用户的操作，都必" />
+        <link rel="icon" href="/assets/website/img/clashnyanpasu/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="ClashNyanpasu官网节点站">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://clashnyanpasu.github.io/news/article-103255.htm" />
+    <meta property="og:site_name" content="ClashNyanpasu官网节点站" />
+    <meta property="og:title" content="Java-GUI编程之事件处理" />
+    <meta property="og:image" content="https://clashnyanpasu.github.io/uploads/20240623/573b6457d2cb7160ddc04bfe81b14ef2.webp" />
+        <meta property="og:release_date" content="2025-04-24T09:17:41" />
+    <meta property="og:updated_time" content="2025-04-24T09:17:41" />
+        <meta property="og:description" content="前面介绍了如何放置各种组件，从而得到了丰富多彩的图形界面，但这些界面还不能响应用户的任何操作。比如单击前面所有窗口右上角的“X”按钮，但窗口依然不会关闭。因为在 AWT 编程中 ，所有用户的操作，都必" />
+        
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--====== Magnific Popup CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/magnific-popup.css">
+    <!--====== Slick CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/slick.css">
+    <!--====== Line Icons CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/LineIcons.css">
+    <!--====== Bootstrap CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/bootstrap.min.css">
+    <!--====== Default CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/default.css">
+    <!--====== Style CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/style.css">
+    <link rel="stylesheet" href="/assets/website/css/G.css" />
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Java-GUI编程之事件处理">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7F56WL29Y8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7F56WL29Y8');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!--====== PRELOADER PART START ======-->
+    <div class="preloader">
+        <div class="loader">
+            <div class="ytp-spinner">
+                <div class="ytp-spinner-container">
+                    <div class="ytp-spinner-rotator">
+                        <div class="ytp-spinner-left">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                        <div class="ytp-spinner-right">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--====== PRELOADER PART ENDS ======-->
+    <!--====== NAVBAR TWO PART START ======-->
+    <section class="navbar-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <nav class="navbar navbar-expand-lg">
+                                                <a class="navbar-brand top" href="/">
+                            Clash Nyanpasu                        </a>
+                                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTwo" aria-controls="navbarTwo" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="toggler-icon"></span>
+                            <span class="toggler-icon"></span>
+                            <span class="toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse sub-menu-bar" id="navbarTwo">
+                            <ul class="navbar-nav m-auto">
+                                                                <li class="nav-item"><a href="/">首页</a></li>
+                                                                <li class="nav-item"><a href="/free-nodes/">免费节点</a></li>
+                                                                <li class="nav-item"><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                <li class="nav-item"><a href="/client.htm">客户端</a></li>
+                                                                <li class="nav-item"><a href="/news/">新闻资讯</a></li>
+                                                            </ul>
+                        </div>
+
+                    </nav> <!-- navbar -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+    <!--====== NAVBAR TWO PART ENDS ======-->
+    <!--====== SLIDER PART START ======-->
+    <section id="home" class="slider_area">
+        <div id="carouselThree" class="carousel slide sub-page" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="slider-content">
+                                    <h1 class="title">Java-GUI编程之事件处理</h1>
+                                    <p class="text">
+                                        <a href="/">首页</a> / 
+                                        <a href="/news/">新闻资讯</a> / 
+                                        <span>正文</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div> <!-- row -->
+                    </div> <!-- container -->
+                    <div class="slider-image-box d-none d-lg-flex align-items-end">
+                        <div class="slider-image">
+                            <img src="/assets/website/img/clashnyanpasu/slider/1.png" alt="Hero">
+                        </div> <!-- slider-imgae -->
+                    </div> <!-- slider-imgae box -->
+                </div> <!-- carousel-item -->
+            </div>
+        </div>
+    </section>
+    <!--====== SLIDER PART ENDS ======-->
+    <!--====== ABOUT PART START ======-->
+    <section id=about class=about-area>
+        <div class=container>
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="" data-url="">
+                <div class="xcblog-blog-detail xcblog-blog-detail-defined">
+                      				  				  				</h1> <p>前面介绍了如何放置各种组件，从而得到了丰富多彩的图形界面，但这些界面还不能响应用户的任何操作。比如单击前面所有窗口右上角的“X”按钮，但窗口依然不会关闭。因为在 AWT 编程中 ，所有用户的操作，都必须都需要经过一套事件处理机制来完成，而 Frame 和组件本身并没有事件处理能力 。</p> <h2 id="gui事件处理机制">GUI事件处理机制</h2> <p><strong>定义：</strong></p> <p>	当在某个组件上发生某些操作的时候，会自动的触发一段代码的执行。</p> <p>在GUI事件处理机制中涉及到4个重要的概念需要理解：</p> <p><strong>事件源(Event Source)</strong> ：操作发生的场所，通常指某个组件，例如按钮、窗口等；<br /><strong>事件（Event）</strong>：在事件源上发生的操作可以叫做事件，GUI会把事件都封装到一个Event对象中，如果需要知道该事件的详细信息，就可以通过Event对象来获取。<br /><strong>事件监听器(Event Listener)</strong>:当在某个事件源上发生了某个事件，事件监听器就可以对这个事件进行处理。</p> <p><strong>注册监听</strong>：把某个事件监听器(A)通过某个事件(B)绑定到某个事件源(C)上，当在事件源C上发生了事件B之后，那么事件监听器A的代码就会自动执行。</p> <p><center><img decoding="async" src="https://pic.imgdb.cn/item/624cde5a239250f7c5ca9fe3.png" alt="Java-GUI编程之事件处理"/></center></p> <p><strong>使用步骤：</strong></p> <p>1.创建事件源组件对象；</p> <p>2.自定义类，实现XxxListener接口，重写方法；</p> <p>3.创建事件监听器对象(自定义类对象)</p> <p>4.调用事件源组件对象的addXxxListener方法完成注册监听</p> <p><strong>案例：</strong></p> <p>	完成下图效果，点击确定按钮，在单行文本域内显示 hello world:</p> <p><center><img decoding="async" src="https://pic.imgdb.cn/item/624cdf13239250f7c5cb7593.jpg" alt="Java-GUI编程之事件处理"/></center></p> <pre><code class="language-java">import java.awt.*; import java.awt.event.ActionListener; import java.awt.event.ActionEvent;  public class EventDemo1 {     Frame  frame = new Frame("这里测试事件处理");      //事件源     Button button = new Button("确定");      TextField tf = new TextField(30);     public void init(){         //注册监听         button.addActionListener(new MyActionListener());          //添加组件到frame中         frame.add(tf);         frame.add(button,BorderLayout.SOUTH);          //设置frame最佳大小并可见         frame.pack();         frame.setVisible(true);     }      //自定义事件监听器类     private  class MyActionListener implements ActionListener{          @Override         public void actionPerformed(ActionEvent e) {              System.out.println("用户点击了确定按钮");             tf.setText("hello world");         }     }          public static void main(String[] args) {         new EventDemo1().init();     } }</code></pre> <h2 id="gui中常见事件和事件监听器">GUI中常见事件和事件监听器</h2> <p>事件监听器必须实现事件监听器接口， AWT 提供了大量的事件监听器接口用于实现不同类型的事件监听器，用于监听不同类型的事件 。 AWT 中提供了丰富的事件类，用于封装不同组件上所发生的特定操作， AWT 的事件类都是 AWTEvent 类的子类 ， AWTEvent是 EventObject 的子类。</p> <h3 id="事件">事件</h3> <p>AWT把事件分为了两大类：</p> <p>	1.低级事件：这类事件是基于某个特定动作的事件。比如进入、点击、拖放等动作的鼠标事件，再比如得到焦点和失去焦点等焦点事件。</p> <table> <thead> <tr> <th>事件</th> <th>触发时机</th> </tr> </thead> <tbody> <tr> <td>ComponentEvent</td> <td>组件事件 ， 当 组件尺寸发生变化、位置发生移动、显示/隐藏状态发生改变时触发该事件。</td> </tr> <tr> <td>ContainerEvent</td> <td>容器事件 ， 当容器里发生添加组件、删除组件时触发该事件 。</td> </tr> <tr> <td>WindowEvent</td> <td>窗口事件， 当窗 口状态发生改变 ( 如打开、关闭、最大化、最 小化)时触发该事件 。</td> </tr> <tr> <td>FocusEvent</td> <td>焦点事件 ， 当组件得到焦点或失去焦点 时触发该事件 。</td> </tr> <tr> <td>KeyEvent</td> <td>键盘事件 ， 当按键被按下、松开、单击时触发该事件。</td> </tr> <tr> <td>MouseEvent</td> <td>鼠标事件，当进行单击、按下、松开、移动鼠标等动作 时触发该事件。</td> </tr> <tr> <td>PaintEvent</td> <td>组件绘制事件 ， 该事件是一个特殊的事件类型 ， 当 GUI 组件调 用 update/paint 方法 来呈现自身时触发该事件，该事件并非专用于事件处理模型 。</td> </tr> </tbody> </table> <p>	2.高级事件：这类事件并不会基于某个特定动作，而是根据功能含义定义的事件。</p> <table> <thead> <tr> <th>事件</th> <th>触发时机</th> </tr> </thead> <tbody> <tr> <td>ActionEvent</td> <td>动作事件 ，当按钮、菜单项被单击，在 TextField 中按 Enter 键时触发</td> </tr> <tr> <td>AjustmentEvent</td> <td>调节事件，在滑动条上移动滑块以调节数值时触发该事件。</td> </tr> <tr> <td>ltemEvent</td> <td>选项事件，当用户选中某项， 或取消选中某项时触发该事件 。</td> </tr> <tr> <td>TextEvent</td> <td>文本事件， 当文本框、文本域里的文本发生改变时触发该事件。</td> </tr> </tbody> </table> <h2 id="事件监听器">事件监听器</h2> <p>不同的事件需要使用不同的监听器监听，不同的监听器需要实现不同的监听器接口， 当指定事件发生后 ， 事件监听器就会调用所包含的事件处理器(实例方法)来处理事件 。</p> <table> <thead> <tr> <th>事件类别</th> <th>描述信息</th> <th>监听器接口名</th> </tr> </thead> <tbody> <tr> <td>ActionEvent</td> <td>激活组件</td> <td>ActionListener</td> </tr> <tr> <td>ItemEvent</td> <td>选择了某些项目</td> <td>ItemListener</td> </tr> <tr> <td>MouseEvent</td> <td>鼠标移动</td> <td>MouseMotionListener</td> </tr> <tr> <td>MouseEvent</td> <td>鼠标点击等</td> <td>MouseListener</td> </tr> <tr> <td>KeyEvent</td> <td>键盘输入</td> <td>KeyListener</td> </tr> <tr> <td>FocusEvent</td> <td>组件收到或失去焦点</td> <td>FocusListener</td> </tr> <tr> <td>AdjustmentEvent</td> <td>移动了滚动条等组件</td> <td>AdjustmentListener</td> </tr> <tr> <td>ComponentEvent</td> <td>对象移动缩放显示隐藏等</td> <td>ComponentListener</td> </tr> <tr> <td>WindowEvent</td> <td>窗口收到窗口级事件</td> <td>WindowListener</td> </tr> <tr> <td>ContainerEvent</td> <td>容器中增加删除了组件</td> <td>ContainerListener</td> </tr> <tr> <td>TextEvent</td> <td>文本字段或文本区发生改变</td> <td>TextListener</td> </tr> </tbody> </table> <h2 id="案例">案例</h2> <p><strong>案例一：</strong></p> <p>	通过ContainerListener监听Frame容器添加组件；</p> <p>	通过TextListener监听TextFiled内容变化；</p> <p>	通过ItemListener监听Choice条目选中状态变化；</p> <p><center><img decoding="async" src="https://pic.imgdb.cn/item/624ce0d3239250f7c5cd7df3.jpg" alt="Java-GUI编程之事件处理"/></center></p> <pre><code class="language-java">import javax.swing.*; import java.awt.*; import java.awt.event.*;  public class ListenerDemo1 {     public static void main(String[] args) {         Frame frame = new Frame("这里测试监听器");          // 创建组件（事件源）         TextField tf = new TextField(30);         Choice names = new Choice();         names.add("柳岩");         names.add("舒淇");         names.add("闫妮");          // 给文本域添加TextListener，监听内容的变化         tf.addTextListener(new TextListener() {             @Override             public void textValueChanged(TextEvent e) {                 String text = tf.getText();                 System.out.println("当前文本框中的内容为：" + text);             }         });          // 给下拉选择框添加ItemListener，监听条目选项的变化         names.addItemListener(new ItemListener() {             @Override             public void itemStateChanged(ItemEvent e) {                 Object item = e.getItem();                 System.out.println("当前选中的条目为：" + item);             }         });          // 给frame注册ContainerListener监听器，监听容器中组件的添加         frame.addContainerListener(new ContainerListener() {             @Override             public void componentAdded(ContainerEvent e) {                 Component child = e.getChild();                 System.out.println("frame中添加了：" + child);             }              @Override             public void componentRemoved(ContainerEvent e) {              }         });          // 添加到frame中         Box hBox = Box.createHorizontalBox();         hBox.add(names);         hBox.add(tf);         frame.add(hBox);          // 设置frame最佳大小并可见         frame.pack();         frame.setVisible(true);     } }</code></pre> <p><strong>案例2：</strong></p> <p>	给Frame设置WindowListner，监听用户点击 X 的动作，如果用户点击X，则关闭当前窗口</p> <p><strong>演示代码2：</strong></p> <pre><code class="language-java">import java.awt.*; import java.awt.event.WindowAdapter; import java.awt.event.WindowEvent;  public class ListenerDemo2 {      public static void main(String[] args) {          Frame frame = new Frame("这里测试WindowListener");          frame.addWindowListener(new WindowAdapter() {             public void windowClosing(WindowEvent e) {                 System.exit(0);             }         });          frame.setBounds(200,200,500,300);          frame.setVisible(true);     } }</code></pre> <p></p> 			                </div>
+                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-102425.htm">成都宠物疫苗批发 成都宠物疫苗批发市场</a></p>
+                                        <p>下一个：<a href="/news/article-103256.htm">宠物粮公司排名（宠物粮厂家）</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-83426.htm" title="上海宠物美容师多少钱一个月啊（上海宠物美容师工资一般多少）">上海宠物美容师多少钱一个月啊（上海宠物美容师工资一般多少）</a></li>
+                        <li class="py-2"><a href="/news/article-98774.htm" title="郑州哪里有卖狗粮的地方（郑州宠物粮批发市场）">郑州哪里有卖狗粮的地方（郑州宠物粮批发市场）</a></li>
+                        <li class="py-2"><a href="/news/article-82714.htm" title="怎样去除猫咪身上的跳蚤最有效（怎么样去除猫咪身上的跳蚤）">怎样去除猫咪身上的跳蚤最有效（怎么样去除猫咪身上的跳蚤）</a></li>
+                        <li class="py-2"><a href="/news/article-92073.htm" title="宠物上门回收狗狗（宠物上门回收狗狗多少钱）">宠物上门回收狗狗（宠物上门回收狗狗多少钱）</a></li>
+                        <li class="py-2"><a href="/news/article-95045.htm" title="上海宠物医院收费价目表查询官网（上海宠物医院价格表）">上海宠物医院收费价目表查询官网（上海宠物医院价格表）</a></li>
+                        <li class="py-2"><a href="/news/article-84864.htm" title="设计模式学习笔记原型模式以及深浅拷贝的区别">设计模式学习笔记原型模式以及深浅拷贝的区别</a></li>
+                        <li class="py-2"><a href="/news/article-95867.htm" title="优雅高效的Mac环境配置教程：从零开始八步走">优雅高效的Mac环境配置教程：从零开始八步走</a></li>
+                        <li class="py-2"><a href="/news/article-68496.htm" title="网店卖宠物用品赚钱吗现在怎么样（开网店卖宠物用品在哪里进货）">网店卖宠物用品赚钱吗现在怎么样（开网店卖宠物用品在哪里进货）</a></li>
+                        <li class="py-2"><a href="/news/article-89895.htm" title="宠物托运检疫证明去哪里办宁波（宠物托运检疫证明去哪里办）">宠物托运检疫证明去哪里办宁波（宠物托运检疫证明去哪里办）</a></li>
+                        <li class="py-2"><a href="/news/article-90638.htm" title="动物疫苗多长时间内打一次合适（动物疫苗接种间隔）">动物疫苗多长时间内打一次合适（动物疫苗接种间隔）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">78</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">90</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+        <!--====== FOOTER PART START ======-->
+    <section class="footer-area footer-dark">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="copyright text-center mt-35">
+                                            <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                        <p class="text">
+                            ClashNyanpasu官网节点站 版权所有 Powered by WordPress
+                        </p>
+                    </div> <!--  copyright -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+    <!--====== FOOTER PART ENDS ======-->
+    <!--====== BACK TOP TOP PART START ======-->
+    <a href="#" class="back-to-top"><i class="lni lni-chevron-up"></i></a>
+    <!--====== BACK TOP TOP PART ENDS ======-->
+    <!--====== Jquery js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/vendor/jquery-1.12.4.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/vendor/modernizr-3.7.1.min.js"></script>
+    <!--====== Bootstrap js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/popper.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/slick.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/jquery.magnific-popup.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/ajax-contact.js"></script>
+    <!--====== Isotope js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/imagesloaded.pkgd.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/isotope.pkgd.min.js"></script>
+    <!--====== Scrolling Nav js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/jquery.easing.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/scrolling-nav.js"></script>
+    <!--====== Main js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
