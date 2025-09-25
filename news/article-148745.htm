@@ -88,7 +88,7 @@
                 <div class="col-lg-12">
                     <nav class="navbar navbar-expand-lg">
                                                 <a class="navbar-brand top" href="/">
-                            Clash Nyanpasu                        </a>
+                            Clash Nyanpasu 节点                        </a>
                                                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTwo" aria-controls="navbarTwo" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="toggler-icon"></span>
                             <span class="toggler-icon"></span>
@@ -144,7 +144,7 @@
         <div class=container>
             <div class="row">
                 <div class="col-md-9">
-                                    <input type="hidden" id="share-website-info" data-name="Clash Node官网订阅站" data-url="https://clashnode.github.io">
+                                    <input type="hidden" id="share-website-info" data-name="Clash Node免费节点站" data-url="https://clashnode.github.io">
                 <div class="xcblog-blog-detail xcblog-blog-detail-defined">
                       <p>在当前日益复杂的网络环境中，手机用户普遍面临着访问限制、网速缓慢、区域屏蔽等问题。无论是为了流畅观看视频、高效获取资讯，还是保障数据传输安全，一款优秀的网络代理工具已成为数字生活的刚需。在众多解决方案中，Clash凭借其开源特性、强大功能与高度可定制性脱颖而出，尤其受到技术爱好者和进阶用户的青睐。本文将为您提供一份详尽的Clash安卓中文使用指南，从基础概念到高阶技巧，帮助您彻底掌握这一工具。</p>  <h2>一、Clash是什么？为什么选择它？</h2>  <p>Clash是一款用Go语言编写的、跨平台的开源网络代理工具，支持多种协议，并具备规则分流等高级功能。与传统的VPN工具不同，Clash并不直接提供节点，而是通过用户自行导入节点配置来实现代理功能。这种设计既保障了灵活性，也提高了隐私可控性。</p>  <p>其主要优势包括：</p>  <ul> <li>多协议支持：可兼容Shadowsocks、VMess、Trojan等常见代理协议；</li> <li>智能分流：用户可自定义规则，实现国内外流量分别处理，提升访问效率；</li> <li>图形化界面：尤其在中文本地化方面做得较为友好，降低了使用门槛；</li> <li>社区活跃：作为开源项目，Clash拥有大量用户贡献的配置资源和问题解决方案。</li> </ul>  <p>正因为这些特点，Clash成为许多人在安卓设备上实现科学上网的首选工具。</p>  <h2>二、Clash安卓客户端的下载与安装</h2>  <h3>1. 准备工作</h3>  <p>在安装之前，请先确认您的设备符合以下条件：</p>  <ul> <li>系统版本为 Android 6.0 或以上；</li> <li>已开启“未知来源应用”安装权限（通常在设置→安全中启用）。</li> </ul>  <h3>2. 下载渠道推荐</h3>  <p>由于Google Play商店并未提供Clash客户端，用户需通过其他途径获取安装包。推荐以下几种方式：</p>  <ul> <li><strong>GitHub官方发布页</strong>：这是最安全、最及时的下载来源。搜索“Clash for Android”即可找到项目页，在Release中下载最新APK；</li> <li>第三方应用商店：如Coolapk、APKPure等，但需注意验证文件完整性；</li> <li>网盘或社区分享：部分论坛或Telegram频道会提供转载，建议优先选择带有数字签名的版本。</li> </ul>  <h3>3. 安装步骤</h3>  <p>下载APK文件后，点击并按照提示完成安装。过程中可能会要求授予VPN连接权限、存储访问权限等，请全部允许，否则会影响软件正常运行。</p>  <h2>三、Clash安卓中文详细配置教程</h2>  <h3>1. 获取节点配置信息</h3>  <p>Clash本身不提供节点，用户需要自行从服务商处获取。通常节点信息包括：</p>  <ul> <li>服务器地址、端口、加密方式、密码（Shadowsocks系列）；</li> <li>UUID、alterId（VMess协议）；</li> <li>以及订阅链接（URL形式），这是最常见的方式。</li> </ul>  <p>很多服务商会直接提供Clash格式的订阅链接，极大简化了配置流程。</p>  <h3>2. 导入配置</h3>  <p>打开Clash安卓客户端后，您会看到简洁的标签页界面：</p>  <ul> <li>进入「配置」页面，点击右上角“+”号；</li> <li>选择「从URL导入」，粘贴您的订阅链接；</li> <li>自定义名称（如“我的配置”）后保存。</li> </ul>  <p>如果服务商未提供订阅链接，也可以手动编辑或导入YAML配置文件，但这需要一定的技术背景。</p>  <h3>3. 代理模式选择与启动</h3>  <p>回到主界面，在「代理」页面中，您会看到导入的节点列表。点击右上角开关即可启动代理。Clash提供三种常用模式：</p>  <ul> <li><strong>全局模式</strong>：所有流量均通过代理转发，简单但可能速度较慢；</li> <li><strong>规则模式</strong>：根据预置规则自动分流（如国内直连、国外代理），推荐日常使用；</li> <li><strong>直连模式</strong>：完全绕过代理，用于临时恢复原始网络。</li> </ul>  <p>通常用户选择“规则模式”即可实现智能分流。</p>  <h2>四、高阶使用技巧与优化建议</h2>  <h3>1. 自定义规则</h3>  <p>Clash允许用户深度定制路由规则。例如，您可以：</p>  <ul> <li>为Netflix、YouTube等平台单独指定节点；</li> <li>将公司内网或本地服务设置为直连；</li> <li>屏蔽广告域名或恶意网站。</li> </ul>  <p>这些操作需要通过编辑配置文件（YAML格式）实现，建议先备份原始配置再修改。</p>  <h3>2. 节点筛选与测速</h3>  <p>如果订阅包含多个节点，可以利用Clash内置的延迟测试功能，筛选出速度最快的节点。长按节点名称可选择“测速”或“设置为首选”。</p>  <h3>3. 省电与后台管理</h3>  <p>为避免系统休眠导致代理中断，建议在电池优化设置中，将Clash设为“不受优化”。另外，开启“开机启动”选项可以确保Clash随时待命。</p>  <h2>五、常见问题与解决方法</h2>  <ol> <li><p><strong>连接失败怎么办？</strong><br /> 首先检查网络是否正常，然后尝试更换节点。如果问题依旧，可能是订阅失效或配置错误，需重新导入。</p></li> <li><p><strong>部分应用无法代理？</strong><br /> 在「设置」→「网络」中，检查是否遗漏了目标应用。Clash支持按应用选择代理范围。</p></li> <li><p><strong>如何减少耗电？</strong><br /> 避免长时间开启全局模式，合理使用分流规则可显著降低电量消耗。</p></li> <li><p><strong>通知栏太多提醒？</strong><br /> 在系统设置中找到Clash的通知管理，关闭非必要提醒即可。</p></li> </ol>  <h2>六、总结与点评</h2>  <p>Clash安卓中文版无疑是一款强大而灵活的网络工具，它成功打破了网络访问的壁垒，让用户真正掌握自己的数据流向。无论是流畅观看4K视频、安全访问办公资源，还是保护个人隐私，Clash都能提供专业级的解决方案。</p>  <p>它的优势不仅在于技术实现，更在于开源社区带来的透明与信任。相比于某些商业VPN，Clash没有隐藏日志、没有突然限速，所有行为均由用户控制。当然，这也要求使用者具备一定的学习能力——从节点获取到配置调整，每一步都需要主动探索。</p>  <p>最终，我们期待Clash在未来继续完善用户体验，降低操作门槛，让更多人享受到自由、开放、安全的互联网。正如一位资深用户所说：“Clash不是万能药，但它是当前环境下最接近完美的选择。”</p>  <hr />  <p><strong>精彩点评</strong>：<br /> Clash安卓中文版不仅仅是一个工具，更是一种网络自由的象征。它用技术的力量撕开了地域限制的茧房，让信息真正流动起来。本文从下载到高阶技巧，系统性地拆解了使用流程，宛如一位耐心而专业的向导。在数字化生存日益重要的今天，掌握Clash这样的工具，已不再是极客的专利，而是每一个追求效率和自由用户的必备技能。值得一提的是，中文界面的友好设计大大降低了使用门槛，使得更多普通用户也能轻松上手。拥抱Clash，不仅是解锁网络，更是解锁一种更广阔的生活方式。</p>                 </div>
                 <div class="clearfix"></div>
@@ -160,16 +160,16 @@
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/news/article-148745.htm" title="完全指南：Clash安卓中文版——从零开始掌握高效网络代理">完全指南：Clash安卓中文版——从零开始掌握高效网络代理</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-8-8-node-share-links.htm" title="「8月8日」最高速度20.5M/S，2025年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐">「8月8日」最高速度20.5M/S，2025年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-9-2-free-node-subscribe.htm" title="Clash Nyanpasu - 9月2日19.5M/S|免费V2ray/Shadowrocket/Clash/SSR节点推荐，V2ray梯子购买推荐">Clash Nyanpasu - 9月2日19.5M/S|免费V2ray/Shadowrocket/Clash/SSR节点推荐，V2ray梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-8-30-clash-verge-rev-nodes.htm" title="Clash Nyanpasu - 8月30日22.3M/S|免费V2ray/Shadowrocket/SSR/Clash节点推荐，V2ray梯子购买推荐">Clash Nyanpasu - 8月30日22.3M/S|免费V2ray/Shadowrocket/SSR/Clash节点推荐，V2ray梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-8-13-node-share-links.htm" title="「8月13日」最高速度22.7M/S，2025年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐">「8月13日」最高速度22.7M/S，2025年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-8-27-clash-verge-rev-nodes.htm" title="Clash Nyanpasu - 8月27日20.3M/S|免费V2ray/Shadowrocket/Clash/SSR节点推荐，V2ray梯子购买推荐">Clash Nyanpasu - 8月27日20.3M/S|免费V2ray/Shadowrocket/Clash/SSR节点推荐，V2ray梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-8-14-linux-clash-nyanpasu.htm" title="「8月14日」最高速度19.2M/S，2025年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐">「8月14日」最高速度19.2M/S，2025年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-8-28-clash-node-github.htm" title="Clash Nyanpasu - 8月28日22.8M/S|免费Shadowrocket节点/SSR/V2ray节点/Clash节点推荐，V2ray梯子购买推荐">Clash Nyanpasu - 8月28日22.8M/S|免费Shadowrocket节点/SSR/V2ray节点/Clash节点推荐，V2ray梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-8-21-free-subscribe-node.htm" title="「8月21日」最高速度20.9M/S，2025年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐">「8月21日」最高速度20.9M/S，2025年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐</a></li>
+                        <li class="py-2"><a href="/news/article-148211.htm" title="掌握华为设备高效管理：全方位解析华为cLash安装与配置指南">掌握华为设备高效管理：全方位解析华为cLash安装与配置指南</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-9-18-clash-meta-github.htm" title="Clash Nyanpasu - 9月18日22.2M/S|免费Clash节点/SSR/V2ray节点/Shadowrocket节点推荐，V2ray梯子购买推荐">Clash Nyanpasu - 9月18日22.2M/S|免费Clash节点/SSR/V2ray节点/Shadowrocket节点推荐，V2ray梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-8-9-clash-nyanpasu-node.htm" title="「8月9日」最高速度23M/S，2025年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐">「8月9日」最高速度23M/S，2025年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-8-10-free-clash-subscribe.htm" title="「8月10日」最高速度22.6M/S，2025年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐">「8月10日」最高速度22.6M/S，2025年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐</a></li>
                         <li class="py-2"><a href="/free-nodes/2025-8-7-clash-nyanpasu-node.htm" title="「8月7日」最高速度23M/S，2025年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐">「8月7日」最高速度23M/S，2025年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-8-20-clash-nyanpasu-node.htm" title="「8月20日」最高速度20.1M/S，2025年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐">「8月20日」最高速度20.1M/S，2025年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-8-28-clash-node-github.htm" title="Clash Nyanpasu - 8月28日22.8M/S|免费Shadowrocket/SSR/V2ray/Clash节点推荐，V2ray梯子购买推荐">Clash Nyanpasu - 8月28日22.8M/S|免费Shadowrocket/SSR/V2ray/Clash节点推荐，V2ray梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-8-12-clash-node-daily-updates.htm" title="「8月12日」最高速度19.1M/S，2025年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐">「8月12日」最高速度19.1M/S，2025年Clash Nyanpasu每天更新免费节点订阅链接，高速机场推荐</a></li>
+                        <li class="py-2"><a href="/news/article-148745.htm" title="完全指南：Clash安卓中文版——从零开始掌握高效网络代理">完全指南：Clash安卓中文版——从零开始掌握高效网络代理</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-9-7-clash-verge-rev-windows.htm" title="Clash Nyanpasu - 9月7日20.3M/S|免费Shadowrocket节点/Clash节点/V2ray节点/SSR节点推荐，V2ray梯子购买推荐">Clash Nyanpasu - 9月7日20.3M/S|免费Shadowrocket节点/Clash节点/V2ray节点/SSR节点推荐，V2ray梯子购买推荐</a></li>
                     </ul>
     </div>
 </div>
@@ -181,7 +181,7 @@
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">3</span> <a href="/date/2025-09/" title="2025-09 归档">2025-09</a></h4>
+                <h4><span class="badge" style="float: right;">23</span> <a href="/date/2025-09/" title="2025-09 归档">2025-09</a></h4>
             </li>
                         <li class="py-2">
                 <h4><span class="badge" style="float: right;">26</span> <a href="/date/2025-08/" title="2025-08 归档">2025-08</a></h4>
@@ -200,7 +200,8 @@
             <div class="row justify-content-center">
                 <div class="col-lg-6">
                     <div class="copyright text-center mt-35">
-                                            <p>
+                                            <p>本站内容仅供学习与技术研究用途，无意传播或倡导任何违反法律法规的行为。在此声明：用户须自行了解所在地法律法规，合法合规使用；因使用不当产生的法律责任，与本站及作者无关；请在使用前仔细阅读本声明，继续使用即视为同意以上条款。</p>
+                    <p>
                                                 <a href="/">首页</a> |
                                                 <a href="/free-nodes/">免费节点</a> |
                                                 <a href="/paid-subscribe/">推荐机场</a> |
@@ -211,7 +212,7 @@
                         <a href="/privacy.htm">隐私申明</a> |
                         <a href="/sitemap.xml">网站地图</a>
                     </p>
-                        <p class="text">
+                                            <p class="text">
                             ClashNyanpasu官网节点站 版权所有 Powered by WordPress
                         </p>
                     </div> <!--  copyright -->
