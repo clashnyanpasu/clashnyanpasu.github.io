@@ -1,4 +1,4 @@
-# Clash Nyanpasu - 12月18日18.3M/S|免费Clash节点/Singbox节点/Shadowrocket节点/SSR节点/V2ray节点节点推荐，V2ray梯子购买推荐  更新时间 2025-12-18 10:13:07
+# Clash Nyanpasu - 12月25日19.1M/S|免费SSR节点/Clash节点/Shadowrocket节点/V2ray节点/Singbox节点节点推荐，V2ray梯子购买推荐  更新时间 2025-12-25 10:31:00
 所有免费clash节点都爬取自网络，请勿用于非法用途 。节点地址：<a href="https://clashnyanpasu.github.io" target="_blank">点击跳转</a>
 
 ## clash使用教程：
@@ -9,23 +9,23 @@
 
 ### 免费Clash节点订阅链接
 
-- https://clashnyanpasu.github.io/uploads/2025/12/0-20251218.yaml
-- https://clashnyanpasu.github.io/uploads/2025/12/1-20251218.yaml
-- https://clashnyanpasu.github.io/uploads/2025/12/2-20251218.yaml
-- https://clashnyanpasu.github.io/uploads/2025/12/3-20251218.yaml
-- https://clashnyanpasu.github.io/uploads/2025/12/4-20251218.yaml
+- https://clashnyanpasu.github.io/uploads/2025/12/0-20251225.yaml
+- https://clashnyanpasu.github.io/uploads/2025/12/1-20251225.yaml
+- https://clashnyanpasu.github.io/uploads/2025/12/2-20251225.yaml
+- https://clashnyanpasu.github.io/uploads/2025/12/3-20251225.yaml
+- https://clashnyanpasu.github.io/uploads/2025/12/4-20251225.yaml
 
 ### 免费V2ray节点订阅链接
 
-- https://clashnyanpasu.github.io/uploads/2025/12/0-20251218.txt
-- https://clashnyanpasu.github.io/uploads/2025/12/1-20251218.txt
-- https://clashnyanpasu.github.io/uploads/2025/12/2-20251218.txt
-- https://clashnyanpasu.github.io/uploads/2025/12/3-20251218.txt
-- https://clashnyanpasu.github.io/uploads/2025/12/4-20251218.txt
+- https://clashnyanpasu.github.io/uploads/2025/12/0-20251225.txt
+- https://clashnyanpasu.github.io/uploads/2025/12/1-20251225.txt
+- https://clashnyanpasu.github.io/uploads/2025/12/2-20251225.txt
+- https://clashnyanpasu.github.io/uploads/2025/12/3-20251225.txt
+- https://clashnyanpasu.github.io/uploads/2025/12/4-20251225.txt
 
 ### 免费Sing-box节点订阅链接
 
-- https://clashnyanpasu.github.io/uploads/2025/12/20251218.json
+- https://clashnyanpasu.github.io/uploads/2025/12/20251225.json
 
 ## 更多Clash节点订阅 ：
 
