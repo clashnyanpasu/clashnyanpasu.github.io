@@ -334,6 +334,16 @@ V2Ray协议中，许多握手和认证机制都依赖于时间戳。一旦设备
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
+    <div class="panel-heading"><h5>SSR 协议混淆如何增强安全性？</h5></div>
+    <div class="panel-body">
+        SSR 可通过选择混淆方式和协议组合隐藏真实流量特征，降低被 DPI 检测和封锁风险。合理配置可提高节点隐蔽性和长期可用性，保证科学上网体验稳定可靠。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Nekoray 与 Nekobox 有什么不同？</h5></div>
+    <div class="panel-body">
+        Nekoray 是一款基于 Qt 的跨平台代理前端，而 Nekobox 更偏向移动端简化使用。两者均支持 V2Ray/VLESS/Trojan 协议，但 Nekobox 提供了更轻量的界面和更快的连接启动速度。<hr />    </div>
+</div>
+<div class="panel panel-default">
     <div class="panel-heading"><h5>Nekobox 是否支持多客户端节点管理？</h5></div>
     <div class="panel-body">
         支持。Nekobox 可以独立管理 Shadowsocks、Clash 等客户端节点，互不干扰。结合策略组，可实现多客户端流量分流和网络优化，提高节点管理效率和使用便利性。<hr />    </div>
@@ -344,24 +354,9 @@ V2Ray协议中，许多握手和认证机制都依赖于时间戳。一旦设备
         首先确认订阅 URL 是否有效，并确保网络连接正常。可手动刷新或重新添加订阅链接，保证节点列表最新。结合策略组使用，确保稳定科学上网体验。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>WinXray 多策略组如何管理大量节点？</h5></div>
-    <div class="panel-body">
-        多策略组可将节点按地区、延迟或用途分类，并结合规则文件自动分流流量。这样可快速选择最优节点，提高访问速度和稳定性，同时优化节点管理和维护效率。<hr />    </div>
-</div>
-<div class="panel panel-default">
     <div class="panel-heading"><h5>如何给 Clash 或 Sing-box 添加本地广告屏蔽规则？</h5></div>
     <div class="panel-body">
         可导入公共广告域名列表（如 ads、trackers）并将其指向 `REJECT` 或 `DIRECT`（根据需求）；还可以使用 rule-provider 自动更新广告规则，并结合 hosts 或 DNS 层面进行联合拦截以提升屏蔽效果。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>VMess AEAD 加密在高封锁网络中有何优势？</h5></div>
-    <div class="panel-body">
-        AEAD 加密能防止流量被篡改或重放，并隐藏流量特征。在高封锁网络中，使用 AEAD 可以提高节点稳定性和长期可用性，同时确保数据安全和隐蔽性。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Nekoray 与 Nekobox 有什么不同？</h5></div>
-    <div class="panel-body">
-        Nekoray 是一款基于 Qt 的跨平台代理前端，而 Nekobox 更偏向移动端简化使用。两者均支持 V2Ray/VLESS/Trojan 协议，但 Nekobox 提供了更轻量的界面和更快的连接启动速度。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>如何在 Windows 上安装 Clash for Windows？</h5></div>
@@ -369,19 +364,24 @@ V2Ray协议中，许多握手和认证机制都依赖于时间戳。一旦设备
         在 Windows 上安装 Clash for Windows 十分简单。只需前往官方 GitHub 页面下载最新版安装包，运行安装程序后导入订阅链接或配置文件即可。安装完成后，用户可以通过图形化界面方便地切换节点、编辑规则和控制代理模式。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Quantumult X 的“分流规则”如何管理？</h5></div>
-    <div class="panel-body">
-        Quantumult X 使用策略组管理分流规则。用户可将规则文件导入应用，通过“policy group”定义不同流量走向，实现国内直连、国外代理、广告拦截等功能的自动分配。<hr />    </div>
-</div>
-<div class="panel panel-default">
     <div class="panel-heading"><h5>PassWall2 如何定时自动更新节点？</h5></div>
     <div class="panel-body">
         可在计划任务中添加命令 `passwall update` 并设定时间间隔，例如每日凌晨自动更新。这样可确保节点信息实时同步，避免旧节点失效影响连接体验。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>SSR 协议混淆如何增强安全性？</h5></div>
+    <div class="panel-heading"><h5>WinXray 多策略组如何管理大量节点？</h5></div>
     <div class="panel-body">
-        SSR 可通过选择混淆方式和协议组合隐藏真实流量特征，降低被 DPI 检测和封锁风险。合理配置可提高节点隐蔽性和长期可用性，保证科学上网体验稳定可靠。    </div>
+        多策略组可将节点按地区、延迟或用途分类，并结合规则文件自动分流流量。这样可快速选择最优节点，提高访问速度和稳定性，同时优化节点管理和维护效率。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Quantumult X 的“分流规则”如何管理？</h5></div>
+    <div class="panel-body">
+        Quantumult X 使用策略组管理分流规则。用户可将规则文件导入应用，通过“policy group”定义不同流量走向，实现国内直连、国外代理、广告拦截等功能的自动分配。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>VMess AEAD 加密在高封锁网络中有何优势？</h5></div>
+    <div class="panel-body">
+        AEAD 加密能防止流量被篡改或重放，并隐藏流量特征。在高封锁网络中，使用 AEAD 可以提高节点稳定性和长期可用性，同时确保数据安全和隐蔽性。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -410,16 +410,16 @@ V2Ray协议中，许多握手和认证机制都依赖于时间戳。一旦设备
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2026-4-26-clash-node-github.htm" title="Clash Nyanpasu - 4月26日22.9M/S|免费SSR节点/Clash节点/Shadowrocket节点/Trojan节点/Singbox节点/V2ray节点节点推荐，V2ray梯子购买推荐">Clash Nyanpasu - 4月26日22.9M/S|免费SSR节点/Clash节点/Shadowrocket节点/Trojan节点/Singbox节点/V2ray节点节点推荐，V2ray梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-4-29-clash-meta-github.htm" title="Clash Nyanpasu - 4月29日21.3M/S|免费Clash节点/Shadowrocket节点/Trojan节点/V2ray节点/SSR节点/Singbox节点节点推荐，V2ray梯子购买推荐">Clash Nyanpasu - 4月29日21.3M/S|免费Clash节点/Shadowrocket节点/Trojan节点/V2ray节点/SSR节点/Singbox节点节点推荐，V2ray梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-4-16-clash-verge-rev-nodes.htm" title="Clash Nyanpasu - 4月16日20.1M/S|免费Clash节点/Singbox节点/V2ray节点/SSR节点/Trojan节点/Shadowrocket节点节点推荐，V2ray梯子购买推荐">Clash Nyanpasu - 4月16日20.1M/S|免费Clash节点/Singbox节点/V2ray节点/SSR节点/Trojan节点/Shadowrocket节点节点推荐，V2ray梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-5-2-clash-stash.htm" title="Clash Nyanpasu - 5月2日20.4M/S|免费Shadowrocket节点/Clash节点/SSR节点/V2ray节点/Singbox节点/Trojan节点节点推荐，V2ray梯子购买推荐">Clash Nyanpasu - 5月2日20.4M/S|免费Shadowrocket节点/Clash节点/SSR节点/V2ray节点/Singbox节点/Trojan节点节点推荐，V2ray梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-4-14-clash-node.htm" title="Clash Nyanpasu - 4月14日22.2M/S|免费Singbox节点/SSR节点/Trojan节点/V2ray节点/Shadowrocket节点/Clash节点节点推荐，V2ray梯子购买推荐">Clash Nyanpasu - 4月14日22.2M/S|免费Singbox节点/SSR节点/Trojan节点/V2ray节点/Shadowrocket节点/Clash节点节点推荐，V2ray梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-4-11-clash-node.htm" title="Clash Nyanpasu - 4月11日19.3M/S|免费Singbox节点/Shadowrocket节点/Trojan节点/SSR节点/V2ray节点/Clash节点节点推荐，V2ray梯子购买推荐">Clash Nyanpasu - 4月11日19.3M/S|免费Singbox节点/Shadowrocket节点/Trojan节点/SSR节点/V2ray节点/Clash节点节点推荐，V2ray梯子购买推荐</a></li>
                         <li class="py-2"><a href="/free-nodes/2026-4-19-clash-verge-rev-nodes.htm" title="Clash Nyanpasu - 4月19日20M/S|免费SSR节点/V2ray节点/Shadowrocket节点/Singbox节点/Clash节点/Trojan节点节点推荐，V2ray梯子购买推荐">Clash Nyanpasu - 4月19日20M/S|免费SSR节点/V2ray节点/Shadowrocket节点/Singbox节点/Clash节点/Trojan节点节点推荐，V2ray梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-4-9-clash-stash.htm" title="Clash Nyanpasu - 4月9日22.1M/S|免费V2ray节点/Trojan节点/Clash节点/Shadowrocket节点/Singbox节点/SSR节点节点推荐，V2ray梯子购买推荐">Clash Nyanpasu - 4月9日22.1M/S|免费V2ray节点/Trojan节点/Clash节点/Shadowrocket节点/Singbox节点/SSR节点节点推荐，V2ray梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-3-23-free-node-subscribe.htm" title="Clash Nyanpasu - 3月23日18.6M/S|免费SSR节点/Trojan节点/Clash节点/V2ray节点/Shadowrocket节点/Singbox节点节点推荐，V2ray梯子购买推荐">Clash Nyanpasu - 3月23日18.6M/S|免费SSR节点/Trojan节点/Clash节点/V2ray节点/Shadowrocket节点/Singbox节点节点推荐，V2ray梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-3-9-clash-node-daily-updates.htm" title="Clash Nyanpasu - 3月9日20.2M/S|免费V2ray节点/Shadowrocket节点/Clash节点/Trojan节点/SSR节点/Singbox节点节点推荐，V2ray梯子购买推荐">Clash Nyanpasu - 3月9日20.2M/S|免费V2ray节点/Shadowrocket节点/Clash节点/Trojan节点/SSR节点/Singbox节点节点推荐，V2ray梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-3-30-clash-verge-rev-node-share.htm" title="Clash Nyanpasu - 3月30日22.5M/S|免费Singbox节点/SSR节点/Clash节点/Shadowrocket节点/Trojan节点/V2ray节点节点推荐，V2ray梯子购买推荐">Clash Nyanpasu - 3月30日22.5M/S|免费Singbox节点/SSR节点/Clash节点/Shadowrocket节点/Trojan节点/V2ray节点节点推荐，V2ray梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-3-17-clash-verge-rev-node-github.htm" title="Clash Nyanpasu - 3月17日19.1M/S|免费Singbox节点/SSR节点/V2ray节点/Shadowrocket节点/Clash节点/Trojan节点节点推荐，V2ray梯子购买推荐">Clash Nyanpasu - 3月17日19.1M/S|免费Singbox节点/SSR节点/V2ray节点/Shadowrocket节点/Clash节点/Trojan节点节点推荐，V2ray梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-3-20-clash-verge-rev-windows.htm" title="Clash Nyanpasu - 3月20日18.3M/S|免费V2ray节点/SSR节点/Clash节点/Shadowrocket节点/Trojan节点/Singbox节点节点推荐，V2ray梯子购买推荐">Clash Nyanpasu - 3月20日18.3M/S|免费V2ray节点/SSR节点/Clash节点/Shadowrocket节点/Trojan节点/Singbox节点节点推荐，V2ray梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-3-27-clash-stash-node.htm" title="Clash Nyanpasu - 3月27日19M/S|免费Trojan节点/Singbox节点/Shadowrocket节点/V2ray节点/Clash节点/SSR节点节点推荐，V2ray梯子购买推荐">Clash Nyanpasu - 3月27日19M/S|免费Trojan节点/Singbox节点/Shadowrocket节点/V2ray节点/Clash节点/SSR节点节点推荐，V2ray梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-3-7-clash-v2ray-ss-ssr.htm" title="Clash Nyanpasu - 3月7日18.2M/S|免费V2ray节点/Shadowrocket节点/Clash节点/Singbox节点/Trojan节点/SSR节点节点推荐，V2ray梯子购买推荐">Clash Nyanpasu - 3月7日18.2M/S|免费V2ray节点/Shadowrocket节点/Clash节点/Singbox节点/Trojan节点/SSR节点节点推荐，V2ray梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-3-26-clash-meta-github.htm" title="Clash Nyanpasu - 3月26日19.3M/S|免费Trojan节点/Clash节点/V2ray节点/Singbox节点/SSR节点/Shadowrocket节点节点推荐，V2ray梯子购买推荐">Clash Nyanpasu - 3月26日19.3M/S|免费Trojan节点/Clash节点/V2ray节点/Singbox节点/SSR节点/Shadowrocket节点节点推荐，V2ray梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-4-30-clash-node-github.htm" title="Clash Nyanpasu - 4月30日20.8M/S|免费V2ray节点/Clash节点/Trojan节点/SSR节点/Singbox节点/Shadowrocket节点节点推荐，V2ray梯子购买推荐">Clash Nyanpasu - 4月30日20.8M/S|免费V2ray节点/Clash节点/Trojan节点/SSR节点/Singbox节点/Shadowrocket节点节点推荐，V2ray梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-4-24-clash-verge-rev-node.htm" title="Clash Nyanpasu - 4月24日22.6M/S|免费Trojan节点/SSR节点/Singbox节点/Clash节点/V2ray节点/Shadowrocket节点节点推荐，V2ray梯子购买推荐">Clash Nyanpasu - 4月24日22.6M/S|免费Trojan节点/SSR节点/Singbox节点/Clash节点/V2ray节点/Shadowrocket节点节点推荐，V2ray梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-4-27-clash-verge-rev-node-github.htm" title="Clash Nyanpasu - 4月27日21.9M/S|免费Trojan节点/V2ray节点/Singbox节点/Shadowrocket节点/Clash节点/SSR节点节点推荐，V2ray梯子购买推荐">Clash Nyanpasu - 4月27日21.9M/S|免费Trojan节点/V2ray节点/Singbox节点/Shadowrocket节点/Clash节点/SSR节点节点推荐，V2ray梯子购买推荐</a></li>
                     </ul>
     </div>
 </div>
@@ -431,10 +431,10 @@ V2Ray协议中，许多握手和认证机制都依赖于时间戳。一旦设备
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">13</span> <a href="/date/2026-04/" title="2026-04 归档">2026-04</a></h4>
+                <h4><span class="badge" style="float: right;">2</span> <a href="/date/2026-05/" title="2026-05 归档">2026-05</a></h4>
             </li>
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">26</span> <a href="/date/2026-03/" title="2026-03 归档">2026-03</a></h4>
+                <h4><span class="badge" style="float: right;">22</span> <a href="/date/2026-04/" title="2026-04 归档">2026-04</a></h4>
             </li>
                     </ul>
     </div>
