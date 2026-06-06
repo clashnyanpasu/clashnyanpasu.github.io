@@ -397,14 +397,24 @@ A4：完全可以，Shadowsocks、Trojan等也能受益于LSTM的预测与监控
         Clash 结合策略组和延迟检测功能，可自动选择延迟低、稳定性高的节点处理网页流量。提高访问速度和稳定性，减少加载时间和浏览卡顿，优化网络体验。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Nekoray 如何实现节点订阅自动更新？</h5></div>
+    <div class="panel-heading"><h5>Potatso Lite 显示证书错误，如何修复？</h5></div>
     <div class="panel-body">
-        支持订阅 URL 自动更新节点，程序定期下载并替换旧节点。保证节点列表最新，减少手动维护，提高使用效率和便利性，同时保证网络访问稳定性。<hr />    </div>
+        证书错误通常由域名与证书不匹配或证书链不完整引起。请检查服务器证书是否为有效域名签发并包含完整链，如果使用 Let's Encrypt，请确保证书未过期并已正确安装到反向代理或服务端。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Mihomo 的节点批量操作功能有哪些优势？</h5></div>
+    <div class="panel-heading"><h5>如何优化 Clash 的 DNS 设置？</h5></div>
     <div class="panel-body">
-        Mihomo 支持批量导入、删除和更新节点，结合策略组管理，可高效维护大量节点。用户可以快速选择最佳节点，优化访问速度，同时减少手动操作的复杂度。<hr />    </div>
+        在 Clash 中使用自定义 DNS 可以加快域名解析速度。建议使用 doh（DNS over HTTPS）或 dot（DNS over TLS）配置方式，既能提升速度，也能保护隐私防止 DNS 泄露。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>V2Ray 的 TCP + TLS 模式适合什么场景？</h5></div>
+    <div class="panel-body">
+        TCP + TLS 模式可模拟 HTTPS 流量，增强抗封锁能力。适合网络封锁严格的环境，通过策略组选择最佳节点，可保证访问速度和连接稳定性，尤其适用于网页浏览和视频播放。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>V2Ray 如何实现分流规则？</h5></div>
+    <div class="panel-body">
+        V2Ray 使用 routing 模块实现分流，可根据目标域名、IP、端口或协议类型决定流量走向。用户可自定义多个 outbound，并通过规则实现国内直连、国外代理等智能路由功能。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Hiddify Next 是否兼容 Clash 或 V2Ray 配置文件？</h5></div>
@@ -422,24 +432,14 @@ A4：完全可以，Shadowsocks、Trojan等也能受益于LSTM的预测与监控
         QuantumultX 可按端口、协议或应用设置分流规则，将游戏流量走低延迟节点。结合策略组自动切换，可保证游戏连接稳定，减少掉线和延迟，提高流畅度。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>V2Ray 如何实现分流规则？</h5></div>
+    <div class="panel-heading"><h5>Mihomo 的节点批量操作功能有哪些优势？</h5></div>
     <div class="panel-body">
-        V2Ray 使用 routing 模块实现分流，可根据目标域名、IP、端口或协议类型决定流量走向。用户可自定义多个 outbound，并通过规则实现国内直连、国外代理等智能路由功能。<hr />    </div>
+        Mihomo 支持批量导入、删除和更新节点，结合策略组管理，可高效维护大量节点。用户可以快速选择最佳节点，优化访问速度，同时减少手动操作的复杂度。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Potatso Lite 显示证书错误，如何修复？</h5></div>
+    <div class="panel-heading"><h5>Nekoray 如何实现节点订阅自动更新？</h5></div>
     <div class="panel-body">
-        证书错误通常由域名与证书不匹配或证书链不完整引起。请检查服务器证书是否为有效域名签发并包含完整链，如果使用 Let's Encrypt，请确保证书未过期并已正确安装到反向代理或服务端。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>如何优化 Clash 的 DNS 设置？</h5></div>
-    <div class="panel-body">
-        在 Clash 中使用自定义 DNS 可以加快域名解析速度。建议使用 doh（DNS over HTTPS）或 dot（DNS over TLS）配置方式，既能提升速度，也能保护隐私防止 DNS 泄露。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>V2Ray 的 TCP + TLS 模式适合什么场景？</h5></div>
-    <div class="panel-body">
-        TCP + TLS 模式可模拟 HTTPS 流量，增强抗封锁能力。适合网络封锁严格的环境，通过策略组选择最佳节点，可保证访问速度和连接稳定性，尤其适用于网页浏览和视频播放。    </div>
+        支持订阅 URL 自动更新节点，程序定期下载并替换旧节点。保证节点列表最新，减少手动维护，提高使用效率和便利性，同时保证网络访问稳定性。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -489,16 +489,16 @@ A4：完全可以，Shadowsocks、Trojan等也能受益于LSTM的预测与监控
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2026-4-29-clash-meta-github.htm" title="Clash Nyanpasu - 4月29日21.3M/S|免费Clash节点/Shadowrocket节点/Trojan节点/V2ray节点/SSR节点/Singbox节点节点推荐，V2ray梯子购买推荐">Clash Nyanpasu - 4月29日21.3M/S|免费Clash节点/Shadowrocket节点/Trojan节点/V2ray节点/SSR节点/Singbox节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-5-30-clash-v2ray-ss-ssr.htm" title="Clash Nyanpasu - 5月30日18.2M/S|免费Trojan节点/Singbox节点/Shadowrocket节点/V2ray节点/Clash节点/SSR节点节点推荐，V2ray梯子购买推荐">Clash Nyanpasu - 5月30日18.2M/S|免费Trojan节点/Singbox节点/Shadowrocket节点/V2ray节点/Clash节点/SSR节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-5-29-clash-verge-rev-windows.htm" title="Clash Nyanpasu - 5月29日21.9M/S|免费Trojan节点/V2ray节点/Shadowrocket节点/Singbox节点/SSR节点/Clash节点节点推荐，V2ray梯子购买推荐">Clash Nyanpasu - 5月29日21.9M/S|免费Trojan节点/V2ray节点/Shadowrocket节点/Singbox节点/SSR节点/Clash节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-5-31-clash-meta-github.htm" title="Clash Nyanpasu - 5月31日20M/S|免费SSR节点/Trojan节点/Singbox节点/V2ray节点/Shadowrocket节点/Clash节点节点推荐，V2ray梯子购买推荐">Clash Nyanpasu - 5月31日20M/S|免费SSR节点/Trojan节点/Singbox节点/V2ray节点/Shadowrocket节点/Clash节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-5-13-node-share.htm" title="Clash Nyanpasu - 5月13日19.9M/S|免费Singbox节点/Shadowrocket节点/Trojan节点/Clash节点/V2ray节点/SSR节点节点推荐，V2ray梯子购买推荐">Clash Nyanpasu - 5月13日19.9M/S|免费Singbox节点/Shadowrocket节点/Trojan节点/Clash节点/V2ray节点/SSR节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-5-12-clash-verge-rev-node-share.htm" title="Clash Nyanpasu - 5月12日18.7M/S|免费SSR节点/Singbox节点/Shadowrocket节点/V2ray节点/Clash节点/Trojan节点节点推荐，V2ray梯子购买推荐">Clash Nyanpasu - 5月12日18.7M/S|免费SSR节点/Singbox节点/Shadowrocket节点/V2ray节点/Clash节点/Trojan节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-5-2-clash-stash.htm" title="Clash Nyanpasu - 5月2日20.4M/S|免费Shadowrocket节点/Clash节点/SSR节点/V2ray节点/Singbox节点/Trojan节点节点推荐，V2ray梯子购买推荐">Clash Nyanpasu - 5月2日20.4M/S|免费Shadowrocket节点/Clash节点/SSR节点/V2ray节点/Singbox节点/Trojan节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-6-2-clash-stash.htm" title="Clash Nyanpasu - 6月2日22.2M/S|免费V2ray节点/Shadowrocket节点/Singbox节点/Clash节点/Trojan节点/SSR节点节点推荐，V2ray梯子购买推荐">Clash Nyanpasu - 6月2日22.2M/S|免费V2ray节点/Shadowrocket节点/Singbox节点/Clash节点/Trojan节点/SSR节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-5-7-clash-verge-rev-nodes.htm" title="Clash Nyanpasu - 5月7日22.6M/S|免费Shadowrocket节点/Clash节点/SSR节点/V2ray节点/Trojan节点/Singbox节点节点推荐，V2ray梯子购买推荐">Clash Nyanpasu - 5月7日22.6M/S|免费Shadowrocket节点/Clash节点/SSR节点/V2ray节点/Trojan节点/Singbox节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-6-6-clash-verge-rev-github.htm" title="Clash Nyanpasu - 6月6日22.1M/S|免费Clash节点/Shadowrocket节点/V2ray节点/Trojan节点/SSR节点/Singbox节点节点推荐，V2ray梯子购买推荐">Clash Nyanpasu - 6月6日22.1M/S|免费Clash节点/Shadowrocket节点/V2ray节点/Trojan节点/SSR节点/Singbox节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-5-19-clash-stash.htm" title="Clash Nyanpasu - 5月19日21.8M/S|免费Shadowrocket节点/Trojan节点/Clash节点/SSR节点/Singbox节点/V2ray节点节点推荐，V2ray梯子购买推荐">Clash Nyanpasu - 5月19日21.8M/S|免费Shadowrocket节点/Trojan节点/Clash节点/SSR节点/Singbox节点/V2ray节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-5-17-clash-verge-rev-windows.htm" title="Clash Nyanpasu - 5月17日19.2M/S|免费Shadowrocket节点/SSR节点/Clash节点/Trojan节点/V2ray节点/Singbox节点节点推荐，V2ray梯子购买推荐">Clash Nyanpasu - 5月17日19.2M/S|免费Shadowrocket节点/SSR节点/Clash节点/Trojan节点/V2ray节点/Singbox节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-5-21-free-node-subscribe.htm" title="Clash Nyanpasu - 5月21日19M/S|免费SSR节点/Trojan节点/Singbox节点/Clash节点/V2ray节点/Shadowrocket节点节点推荐，V2ray梯子购买推荐">Clash Nyanpasu - 5月21日19M/S|免费SSR节点/Trojan节点/Singbox节点/Clash节点/V2ray节点/Shadowrocket节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-5-27-clash-verge-rev-windows.htm" title="Clash Nyanpasu - 5月27日19.8M/S|免费V2ray节点/Trojan节点/SSR节点/Clash节点/Shadowrocket节点/Singbox节点节点推荐，V2ray梯子购买推荐">Clash Nyanpasu - 5月27日19.8M/S|免费V2ray节点/Trojan节点/SSR节点/Clash节点/Shadowrocket节点/Singbox节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-5-26-clash-node.htm" title="Clash Nyanpasu - 5月26日18.1M/S|免费Singbox节点/Clash节点/Shadowrocket节点/Trojan节点/V2ray节点/SSR节点节点推荐，V2ray梯子购买推荐">Clash Nyanpasu - 5月26日18.1M/S|免费Singbox节点/Clash节点/Shadowrocket节点/Trojan节点/V2ray节点/SSR节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
                         <li class="py-2"><a href="/free-nodes/2026-5-22-clash-meta-github.htm" title="Clash Nyanpasu - 5月22日18M/S|免费Shadowrocket节点/Singbox节点/Trojan节点/Clash节点/SSR节点/V2ray节点节点推荐，V2ray梯子购买推荐">Clash Nyanpasu - 5月22日18M/S|免费Shadowrocket节点/Singbox节点/Trojan节点/Clash节点/SSR节点/V2ray节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-5-3-clash-v2ray-ss-ssr.htm" title="Clash Nyanpasu - 5月3日20.9M/S|免费Singbox节点/Clash节点/Trojan节点/Shadowrocket节点/SSR节点/V2ray节点节点推荐，V2ray梯子购买推荐">Clash Nyanpasu - 5月3日20.9M/S|免费Singbox节点/Clash节点/Trojan节点/Shadowrocket节点/SSR节点/V2ray节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-5-1-clash-verge-rev-windows.htm" title="Clash Nyanpasu - 5月1日20.8M/S|免费Trojan节点/V2ray节点/Singbox节点/SSR节点/Shadowrocket节点/Clash节点节点推荐，V2ray梯子购买推荐">Clash Nyanpasu - 5月1日20.8M/S|免费Trojan节点/V2ray节点/Singbox节点/SSR节点/Shadowrocket节点/Clash节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-6-3-free-node-subscribe.htm" title="Clash Nyanpasu - 6月3日22M/S|免费Shadowrocket节点/SSR节点/V2ray节点/Clash节点/Singbox节点/Trojan节点节点推荐，V2ray梯子购买推荐">Clash Nyanpasu - 6月3日22M/S|免费Shadowrocket节点/SSR节点/V2ray节点/Clash节点/Singbox节点/Trojan节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
                     </ul>
     </div>
 </div>
@@ -510,13 +510,10 @@ A4：完全可以，Shadowsocks、Trojan等也能受益于LSTM的预测与监控
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">1</span> <a href="/date/2026-06/" title="2026-06 归档">2026-06</a></h4>
+                <h4><span class="badge" style="float: right;">6</span> <a href="/date/2026-06/" title="2026-06 归档">2026-06</a></h4>
             </li>
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">31</span> <a href="/date/2026-05/" title="2026-05 归档">2026-05</a></h4>
-            </li>
-                        <li class="py-2">
-                <h4><span class="badge" style="float: right;">19</span> <a href="/date/2026-04/" title="2026-04 归档">2026-04</a></h4>
+                <h4><span class="badge" style="float: right;">29</span> <a href="/date/2026-05/" title="2026-05 归档">2026-05</a></h4>
             </li>
                     </ul>
     </div>
