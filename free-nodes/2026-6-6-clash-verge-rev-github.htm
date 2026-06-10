@@ -307,17 +307,23 @@ sudo </span><span><span class="hljs-built_in">mv</span></span><span> v2ray /usr/
 <div class="clearfix"></div>
 <div class="col-md-12 mt-5">
         <p>上一个：<a href="/free-nodes/2026-6-5-clash-meta-github.htm">Clash Nyanpasu - 6月5日20.9M/S|免费Singbox节点/SSR节点/Trojan节点/V2ray节点/Clash节点/Shadowrocket节点节点推荐，V2ray梯子购买推荐</a></p>
+        <p>下一个：<a href="/free-nodes/2026-6-7-clash-stash-node.htm">Clash Nyanpasu - 6月7日21.7M/S|免费Shadowrocket节点/Trojan节点/V2ray节点/SSR节点/Clash节点/Singbox节点节点推荐，V2ray梯子购买推荐</a></p>
     </div>
 <h4>FAQ</h4>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>PassWall2 如何定时自动更新节点？</h5></div>
+    <div class="panel-body">
+        可在计划任务中添加命令 `passwall update` 并设定时间间隔，例如每日凌晨自动更新。这样可确保节点信息实时同步，避免旧节点失效影响连接体验。<hr />    </div>
+</div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>为什么使用 CDN 后仍然能被封？如何规避？</h5></div>
     <div class="panel-body">
         若 CDN 回源 IP 或配置不当可能泄露真实服务器信息，或者 CDN 本身被目标防火墙识别。应启用完整的反向代理配置、隐藏源站 IP 与禁用不必要的服务，必要时使用多级中转或更换 CDN 供应商。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>PassWall2 如何定时自动更新节点？</h5></div>
+    <div class="panel-heading"><h5>SSR 节点和 V2Ray 节点可以混合使用吗？</h5></div>
     <div class="panel-body">
-        可在计划任务中添加命令 `passwall update` 并设定时间间隔，例如每日凌晨自动更新。这样可确保节点信息实时同步，避免旧节点失效影响连接体验。<hr />    </div>
+        可以，但要使用支持多协议的客户端，如 Clash、Sing-box、Mihomo 等。这类客户端能在同一配置文件中加载不同协议的节点，通过规则分流让 SSR 与 V2Ray 同时工作。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Vmess 与 Trojan 哪个更快？</h5></div>
@@ -325,9 +331,19 @@ sudo </span><span><span class="hljs-built_in">mv</span></span><span> v2ray /usr/
         在相同环境下，Trojan 通常连接更快，因为它使用原生 TLS 通道；Vmess 则稍有额外的协议开销。但在配置合理的情况下，两者的速度差距不大，主要取决于服务器线路质量。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>SSR 节点和 V2Ray 节点可以混合使用吗？</h5></div>
+    <div class="panel-heading"><h5>SSR 的协议插件如何增强连接稳定性？</h5></div>
     <div class="panel-body">
-        可以，但要使用支持多协议的客户端，如 Clash、Sing-box、Mihomo 等。这类客户端能在同一配置文件中加载不同协议的节点，通过规则分流让 SSR 与 V2Ray 同时工作。<hr />    </div>
+        SSR 的协议插件可以增加流量的伪装特性，模拟常见协议或浏览器行为，从而降低被识别和封锁的风险。这对不稳定网络或高封锁环境尤其有帮助。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Sing-box 的策略组可按 IP 段分流吗？</h5></div>
+    <div class="panel-body">
+        支持。可通过 IP 段匹配将流量分流到指定节点。结合策略组，可实现国内直连、国外代理或游戏加速，实现精细化流量管理和优化网络访问。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Nekoray 的节点排序依据是什么？</h5></div>
+    <div class="panel-body">
+        Nekoray 默认按节点延迟排序。用户可以自定义排序规则，如按订阅来源、名称或连接成功率排列，从而快速找到性能最佳或最常用的节点。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>QuantumultX 如何使用分流策略实现广告屏蔽？</h5></div>
@@ -340,24 +356,9 @@ sudo </span><span><span class="hljs-built_in">mv</span></span><span> v2ray /usr/
         支持。Nekobox 与 Shadowsocks、Clash 等客户端独立运行，互不干扰。用户可通过策略组灵活管理节点，实现多客户端分流和网络优化，提高使用便利性。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Nekoray 的节点排序依据是什么？</h5></div>
-    <div class="panel-body">
-        Nekoray 默认按节点延迟排序。用户可以自定义排序规则，如按订阅来源、名称或连接成功率排列，从而快速找到性能最佳或最常用的节点。<hr />    </div>
-</div>
-<div class="panel panel-default">
     <div class="panel-heading"><h5>VLESS 的 Reality 模式需要额外配置吗？</h5></div>
     <div class="panel-body">
-        Reality 模式需要配置伪装域名、公钥和服务器指纹等参数。正确配置后，可有效隐藏流量特征，提高在高封锁环境下的可用性和安全性。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Sing-box 的策略组可按 IP 段分流吗？</h5></div>
-    <div class="panel-body">
-        支持。可通过 IP 段匹配将流量分流到指定节点。结合策略组，可实现国内直连、国外代理或游戏加速，实现精细化流量管理和优化网络访问。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>SSR 的协议插件如何增强连接稳定性？</h5></div>
-    <div class="panel-body">
-        SSR 的协议插件可以增加流量的伪装特性，模拟常见协议或浏览器行为，从而降低被识别和封锁的风险。这对不稳定网络或高封锁环境尤其有帮助。    </div>
+        Reality 模式需要配置伪装域名、公钥和服务器指纹等参数。正确配置后，可有效隐藏流量特征，提高在高封锁环境下的可用性和安全性。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -407,16 +408,16 @@ sudo </span><span><span class="hljs-built_in">mv</span></span><span> v2ray /usr/
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2026-5-17-clash-verge-rev-windows.htm" title="Clash Nyanpasu - 5月17日19.2M/S|免费Shadowrocket节点/SSR节点/Clash节点/Trojan节点/V2ray节点/Singbox节点节点推荐，V2ray梯子购买推荐">Clash Nyanpasu - 5月17日19.2M/S|免费Shadowrocket节点/SSR节点/Clash节点/Trojan节点/V2ray节点/Singbox节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-5-13-node-share.htm" title="Clash Nyanpasu - 5月13日19.9M/S|免费Singbox节点/Shadowrocket节点/Trojan节点/Clash节点/V2ray节点/SSR节点节点推荐，V2ray梯子购买推荐">Clash Nyanpasu - 5月13日19.9M/S|免费Singbox节点/Shadowrocket节点/Trojan节点/Clash节点/V2ray节点/SSR节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-5-10-clash-verge-rev-github.htm" title="Clash Nyanpasu - 5月10日22.4M/S|免费Clash节点/Trojan节点/Shadowrocket节点/Singbox节点/SSR节点/V2ray节点节点推荐，V2ray梯子购买推荐">Clash Nyanpasu - 5月10日22.4M/S|免费Clash节点/Trojan节点/Shadowrocket节点/Singbox节点/SSR节点/V2ray节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-5-8-clash-v2ray-ss-ssr.htm" title="Clash Nyanpasu - 5月8日20.8M/S|免费SSR节点/Clash节点/Singbox节点/Shadowrocket节点/Trojan节点/V2ray节点节点推荐，V2ray梯子购买推荐">Clash Nyanpasu - 5月8日20.8M/S|免费SSR节点/Clash节点/Singbox节点/Shadowrocket节点/Trojan节点/V2ray节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-6-6-clash-verge-rev-github.htm" title="Clash Nyanpasu - 6月6日22.1M/S|免费Clash节点/Shadowrocket节点/V2ray节点/Trojan节点/SSR节点/Singbox节点节点推荐，V2ray梯子购买推荐">Clash Nyanpasu - 6月6日22.1M/S|免费Clash节点/Shadowrocket节点/V2ray节点/Trojan节点/SSR节点/Singbox节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-5-16-clash-verge-rev-node-github.htm" title="Clash Nyanpasu - 5月16日21.2M/S|免费Singbox节点/Shadowrocket节点/SSR节点/V2ray节点/Clash节点/Trojan节点节点推荐，V2ray梯子购买推荐">Clash Nyanpasu - 5月16日21.2M/S|免费Singbox节点/Shadowrocket节点/SSR节点/V2ray节点/Clash节点/Trojan节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
                         <li class="py-2"><a href="/free-nodes/2026-5-20-clash-meta-github.htm" title="Clash Nyanpasu - 5月20日22.9M/S|免费Singbox节点/SSR节点/V2ray节点/Trojan节点/Clash节点/Shadowrocket节点节点推荐，V2ray梯子购买推荐">Clash Nyanpasu - 5月20日22.9M/S|免费Singbox节点/SSR节点/V2ray节点/Trojan节点/Clash节点/Shadowrocket节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-5-6-clash-v2ray-ss-ssr.htm" title="Clash Nyanpasu - 5月6日19.5M/S|免费SSR节点/Clash节点/Singbox节点/Shadowrocket节点/Trojan节点/V2ray节点节点推荐，V2ray梯子购买推荐">Clash Nyanpasu - 5月6日19.5M/S|免费SSR节点/Clash节点/Singbox节点/Shadowrocket节点/Trojan节点/V2ray节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-5-9-free-node-subscribe.htm" title="Clash Nyanpasu - 5月9日18.5M/S|免费Singbox节点/V2ray节点/SSR节点/Shadowrocket节点/Clash节点/Trojan节点节点推荐，V2ray梯子购买推荐">Clash Nyanpasu - 5月9日18.5M/S|免费Singbox节点/V2ray节点/SSR节点/Shadowrocket节点/Clash节点/Trojan节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
                         <li class="py-2"><a href="/free-nodes/2026-5-12-clash-verge-rev-node-share.htm" title="Clash Nyanpasu - 5月12日18.7M/S|免费SSR节点/Singbox节点/Shadowrocket节点/V2ray节点/Clash节点/Trojan节点节点推荐，V2ray梯子购买推荐">Clash Nyanpasu - 5月12日18.7M/S|免费SSR节点/Singbox节点/Shadowrocket节点/V2ray节点/Clash节点/Trojan节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-5-11-clash-stash.htm" title="Clash Nyanpasu - 5月11日18.7M/S|免费Trojan节点/V2ray节点/Clash节点/SSR节点/Shadowrocket节点/Singbox节点节点推荐，V2ray梯子购买推荐">Clash Nyanpasu - 5月11日18.7M/S|免费Trojan节点/V2ray节点/Clash节点/SSR节点/Shadowrocket节点/Singbox节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-5-7-clash-verge-rev-nodes.htm" title="Clash Nyanpasu - 5月7日22.6M/S|免费Shadowrocket节点/Clash节点/SSR节点/V2ray节点/Trojan节点/Singbox节点节点推荐，V2ray梯子购买推荐">Clash Nyanpasu - 5月7日22.6M/S|免费Shadowrocket节点/Clash节点/SSR节点/V2ray节点/Trojan节点/Singbox节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-5-30-clash-v2ray-ss-ssr.htm" title="Clash Nyanpasu - 5月30日18.2M/S|免费Trojan节点/Singbox节点/Shadowrocket节点/V2ray节点/Clash节点/SSR节点节点推荐，V2ray梯子购买推荐">Clash Nyanpasu - 5月30日18.2M/S|免费Trojan节点/Singbox节点/Shadowrocket节点/V2ray节点/Clash节点/SSR节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-6-7-clash-stash-node.htm" title="Clash Nyanpasu - 6月7日21.7M/S|免费Shadowrocket节点/Trojan节点/V2ray节点/SSR节点/Clash节点/Singbox节点节点推荐，V2ray梯子购买推荐">Clash Nyanpasu - 6月7日21.7M/S|免费Shadowrocket节点/Trojan节点/V2ray节点/SSR节点/Clash节点/Singbox节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-5-27-clash-verge-rev-windows.htm" title="Clash Nyanpasu - 5月27日19.8M/S|免费V2ray节点/Trojan节点/SSR节点/Clash节点/Shadowrocket节点/Singbox节点节点推荐，V2ray梯子购买推荐">Clash Nyanpasu - 5月27日19.8M/S|免费V2ray节点/Trojan节点/SSR节点/Clash节点/Shadowrocket节点/Singbox节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-5-28-clash-verge-rev-nodes.htm" title="Clash Nyanpasu - 5月28日18.2M/S|免费Trojan节点/Shadowrocket节点/Clash节点/SSR节点/V2ray节点/Singbox节点节点推荐，V2ray梯子购买推荐">Clash Nyanpasu - 5月28日18.2M/S|免费Trojan节点/Shadowrocket节点/Clash节点/SSR节点/V2ray节点/Singbox节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-5-24-clash-verge-rev-node-share.htm" title="Clash Nyanpasu - 5月24日19M/S|免费SSR节点/Trojan节点/Shadowrocket节点/Singbox节点/V2ray节点/Clash节点节点推荐，V2ray梯子购买推荐">Clash Nyanpasu - 5月24日19M/S|免费SSR节点/Trojan节点/Shadowrocket节点/Singbox节点/V2ray节点/Clash节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-5-14-node-share.htm" title="Clash Nyanpasu - 5月14日19.9M/S|免费V2ray节点/SSR节点/Singbox节点/Shadowrocket节点/Trojan节点/Clash节点节点推荐，V2ray梯子购买推荐">Clash Nyanpasu - 5月14日19.9M/S|免费V2ray节点/SSR节点/Singbox节点/Shadowrocket节点/Trojan节点/Clash节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
                     </ul>
     </div>
 </div>
@@ -428,7 +429,7 @@ sudo </span><span><span class="hljs-built_in">mv</span></span><span> v2ray /usr/
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">6</span> <a href="/date/2026-06/" title="2026-06 归档">2026-06</a></h4>
+                <h4><span class="badge" style="float: right;">10</span> <a href="/date/2026-06/" title="2026-06 归档">2026-06</a></h4>
             </li>
                         <li class="py-2">
                 <h4><span class="badge" style="float: right;">29</span> <a href="/date/2026-05/" title="2026-05 归档">2026-05</a></h4>
